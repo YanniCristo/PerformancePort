@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# File locali / dati sensibili
+.env
+
+# Log
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
