@@ -4,6 +4,7 @@ from layouts.main_layout import create_layout
 import dash_bootstrap_components as dbc
 import functions as fnc
 from dash import Dash
+import os
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 server = app.server
