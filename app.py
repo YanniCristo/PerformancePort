@@ -7,6 +7,7 @@ from dash import Dash
 import os
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
+
 server = app.server
 
 login_callbacks(app)
@@ -15,5 +16,5 @@ register_callbacks(app)
 app.layout = create_layout()
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8050))
+    port = int(os.environ.get("PORT", 9000))
     app.run(debug=False, host="0.0.0.0", port=port)
