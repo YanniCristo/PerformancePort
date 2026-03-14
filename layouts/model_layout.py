@@ -11,7 +11,7 @@ df = pd.DataFrame({
     "Return": [100, 120, 90, 140]})
 fig = px.line(df, x="Month", y="Return")
 
-def results_layout():
+def model_layout():
     
     return html.Div([
         cards(),

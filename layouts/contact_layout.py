@@ -1,11 +1,12 @@
 import dash_bootstrap_components as dbc
 from components.contact_form import contact_form
+from components.footer import footer
 from dash import html, dcc
 from functions import load_content
 
 
 def contact_layout():
-    txt = load_content("contents/contact/texts.json")
+    txt = load_content("assets/contents/contact/texts.json")
     descr = txt['info']['description']
     
     return html.Div([
@@ -32,6 +33,9 @@ def contact_layout():
         html.Div([
             contact_form(),
             html.Div(style={"minHeight": "20vh"})
-            ],  style={"padding": "0px 520px"})
+            ],  style={"padding": "0px 520px"}),
+
+        html.Div(style={"minHeight": "30vh"}),
+        footer()
         
         ])

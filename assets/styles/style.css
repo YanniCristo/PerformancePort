@@ -1,0 +1,264 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/home.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+.TitlePar-3 {
+    background-color: #1f3e5c83;
+}
+
+.indinvest-tit {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contents/indinvest/indinvest.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indinvest-title {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.indinvest-parOne h1,
+.indinvest-parOne p {
+    color: #2c63b1;
+    white-space: pre-line;
+}
+
+.indinvest-parOne p {
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.timehoriz {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/timehoriz.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TitlePar-tit {
+    color: #2c63b1;
+    margin-bottom: 20px;
+}
+
+.text-col{
+    flex: 1;
+}
+
+.image-col{
+    flex: 1;
+}
+
+.image-col img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.timehoriz-title {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.market {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/market.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.market-title {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.card {
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.nav-link {
+    font-family: 'Arial', sans-serif;  /* Sostituisci con il font che vuoi */
+    font-size: 18px;                   /* Opzionale: dimensione font */
+    font-weight: 500;                  /* Opzionale: boldness */
+    margin: 0 13px;
+}
+
+.cust-care1 {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contact.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+H1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+
+
+.footer {
+    background-color: #1D4B8C;
+    color: white;
+    padding: 50px 40px;
+    font-size: 14px;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #cde7f3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 8px;
+}
+
+.social {
+    margin-right: 12px;
+}
+
+.privacy-text {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu {
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.dropdown-item:hover {
+    background-color: #0d6efd;
+    color: white;
+    padding: 15px 25px;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+}
+
+.metric-card {
+    height: 210px;              /* altezza fissa */
+    display: flex;
+    text-align: Left;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    background-color:  #1d4b8c86;
+}
+
+.metric-card h1{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.metric-card:hover {
+    filter: brightness(1.15);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.metric-card .card-icon {
+    margin-bottom: 11px;
+}

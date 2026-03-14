@@ -25,3 +25,38 @@ def cards():
             ))
         ])
     ], className="mt-4")
+
+def cards_home():
+
+    data = [
+        ("/assets/dollar.png", "Explore the value of Indipendent Investing"),
+        ("/assets/center.png", "Understand how Time Horizon and investor risk profile shape allocation models"),
+        ("/assets/line.png", "See how Market Cycles drives investments allocation"),
+        ("/assets/bars.png", "Stay informed with a coincise Economic Overview - see at a glance what drives our macro allocation"),
+        ("/assets/user.png", "Discover the current Market Phase and how it drives Macro Asset Allocation across risk profiles"),
+        ("/assets/folder.png", "Access Leading Equity Markets Allocation - built from a selection of top index constituents, dynamically adjusted each month and benchmarked against their reference indices")]
+
+    cards = [
+        dbc.Col(
+            dbc.Card(
+                dbc.CardBody([
+                    html.Img(src=title, style={"height": "40px"}, className="card-icon"),
+                    html.H1(value)
+                ]),
+                className="metric-card"
+            ),
+            md=4,
+            className="mb-4"
+        )
+        for title, value in data
+    ]
+
+    return dbc.Container(
+        dbc.Row(cards),
+        className="mt-5"
+    )
+
+
+
+
+

@@ -37,10 +37,10 @@ def footer():
 
                             # COLONNA PP
                             dbc.Col([
-                                html.H5("PerformancePort", className="footer-title"),
+                                html.H5("PERFORMANCEPORT", className="footer-title"),
 
                                 html.Ul([
-                                    html.Li(html.A("Chi siamo", href="#")),
+                                    html.Li(html.A("About us", href="#")),
                                     html.Li(html.A("Contact", href="#")),
                                     html.Li(html.A("Blog", href="#")),
                                     html.Li(html.A("Events", href="#")),
@@ -58,8 +58,6 @@ def footer():
                                     html.Li(html.A("Financial plan", href="#")),
                                     html.Li(html.A("Retirement planning", href="#")),
                                 ]),
-
-                                html.H5("CONSULENTE", className="footer-title mt-3"),
 
                             ], md=3),
 

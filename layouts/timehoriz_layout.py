@@ -6,13 +6,13 @@ from components.footer import footer
 import plotly.express as px
 from dash import html, dcc
 
-def market_layout():
+def timehoriz_layout():
     
     return html.Div([
         
         html.Div([
-            html.H1("Market Cycle", className="market-title"),
-            ], className="market"),
+            html.H1("Time Horizon", className="timehoriz-title"),
+            ], className="timehoriz"),
 
         html.Div(style={"minHeight": "60vh"}),
         footer()

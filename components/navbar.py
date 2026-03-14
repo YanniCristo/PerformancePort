@@ -1,5 +1,6 @@
 from dash import html
 import dash_bootstrap_components as dbc
+import components.dropdown as dd
 
 def navbar():
 
@@ -17,10 +18,15 @@ def navbar():
 
             dbc.Nav([
                 dbc.NavLink("Home", href="/"),
-                dbc.NavLink("Market Cycle", href="/market"),
-                dbc.NavLink("Strategies", href="/strategies"),
-                dbc.NavLink("Results", href="/results"),
+                dbc.NavLink("Indipendent Investing", href="/indinvest"),
+                dbc.NavLink("Time Horizon", href="/timehor"),
+                dbc.NavLink("Market Cycles", href="/market"),
+
+                dd.mkt_view(),
+                dd.model_port(),
+         
                 dbc.NavLink("Contact", href="/contact"),
+                
             ], className="ms-auto",
                     style={'padding-right':'25px'})
 

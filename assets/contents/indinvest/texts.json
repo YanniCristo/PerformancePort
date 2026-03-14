@@ -1,0 +1,27 @@
+{
+  "parOne": {
+    "title": "Preserving and growing your wealth with consistent returns",
+    "description": ["Relying on managed savings (banks, brokers, mutual funds) involves fees that reduce your",
+                    "net portfolio return. Often, these costs are not justified by improved performance.",
+                    "According to economic theory (Efficient Market Hypothesis), excess returns from active",
+                    "management based on fundamental analysis tend to be zero or negative over the long term.", 
+                    "\n\nWith regular access to structured financial information, it is possible to manage investments",
+                    "independently - avoiding unnecessary costs and achieving above-average results through systematic",
+                    "and evidence-based portfolio models."]
+  },
+
+  "parTwo": {
+    "title": "What PerformingPort offers",
+    "description": "Structured Framework - Target model portfolios defined through consistent key rationales that consider the Investor's Time Horizon, adapt to evolving Macroeconomic Conditions, and align with prevailing Market Cycles.\n\nThis approach is designed to:",
+    "list": ["Show a focused selection of model components",
+             "Allow simplified monitoring with limited periodic adjustments",
+             "Provide analytical comparison with relevant market benchmarks"]
+  },
+
+  "parTre": {
+    "title": "",
+    "description": "",
+    "list": []
+  }
+  
+}

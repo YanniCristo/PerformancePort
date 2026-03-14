@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 from components.navbar import navbar
-from components.cards import cards
+from components.cards import cards_home
 from components.footer import footer
 from components.login_modal import login_modal
 import plotly.express as px
@@ -9,7 +9,7 @@ from dash import html, dcc
 import pandas as pd
 
 def home_layout():
-    txt = load_content("contents/home/texts.json")
+    txt = load_content("assets/contents/home/texts.json")
     title = txt['info']['title']
     descr = txt['info']['description']
     
@@ -25,11 +25,11 @@ def home_layout():
         html.Div([
             html.Img(
                     src="/assets/logo2.png",
-                    style={"height": "35px"}
+                    style={"height": "45px"}
                     )
             ],
                  style={"padding-top": "55px",
-                        "text-align": "center"}),
+                        "text-align": "Center"}),
 
         html.Div([
             html.H1(title, className="descr-title"),
@@ -37,6 +37,7 @@ def home_layout():
             ], className="descr",
                  style={"padding": "100px 250px",
                         "text-align": "center"}),
+        cards_home(),
         
         html.Div(style={"minHeight": "20vh"}),
         footer(),
