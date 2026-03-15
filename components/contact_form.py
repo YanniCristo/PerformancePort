@@ -36,7 +36,7 @@ def contact_form():
             ),
 
             dbc.Button(
-                [html.Span("Invia"), html.I(className="ms-2 bi bi-arrow-right")],
+                [html.Span("Send"), html.I(className="ms-2 bi bi-arrow-right")],
                 color="light",
                 className="w-100"
             )

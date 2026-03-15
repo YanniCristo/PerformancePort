@@ -3,9 +3,8 @@ from components.navbar import navbar
 from components.cards import cards
 from components.footer import footer
 from components.paragraph import TitlePar
+from utils.functions import load_content, load_image
 from components.login_modal import login_modal
-from functions import load_content, load_image
-import plotly.express as px
 from dash import html, dcc
 
 
@@ -13,6 +12,9 @@ def indinvest_layout():
     txt = load_content("assets/contents/indinvest/texts.json")
     
     return html.Div([
+
+        # NavBar
+        navbar(),
         
         html.Div([
             html.H1("Indipendent Investing", className="indinvest-title"),
@@ -32,6 +34,7 @@ def indinvest_layout():
                  '3'),
         
         html.Div(style={"minHeight": "20vh"}),
-        footer()
+        footer(),
+        login_modal()
 
     ])

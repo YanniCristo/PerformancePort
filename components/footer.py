@@ -41,7 +41,7 @@ def footer():
 
                                 html.Ul([
                                     html.Li(html.A("About us", href="#")),
-                                    html.Li(html.A("Contact", href="#")),
+                                    html.Li(html.A("Contact", href="/contact")),
                                     html.Li(html.A("Blog", href="#")),
                                     html.Li(html.A("Events", href="#")),
                                     html.Li(html.A("Work with us", href="#")),

@@ -1,36 +1,52 @@
 from dash import html
 import dash_bootstrap_components as dbc
 import components.dropdown as dd
+import components.buttons as butt
 
 def navbar():
-
     return dbc.Navbar(
-        dbc.Container([
+        dbc.Container(
+            [
+                # Logo
+                dbc.NavbarBrand(html.Img(src="/assets/contents/general/logo.png"), href="/"),
 
-            dbc.NavbarBrand(
-                html.Img(
-                    src="/assets/logo.png",
-                    style={"height": "50px"}
+                # Hamburger toggle
+                dbc.NavbarToggler(id="navbar-toggler"),
+
+                # Collapse con link e pulsante
+                dbc.Collapse(
+                    dbc.Container(
+                        [
+                            # Sezione link a sinistra
+                            dbc.Nav(
+                                [
+                                    dbc.NavLink("INDEPENDENCE", href="/indinvest"),
+                                    dbc.NavLink("TIME HORIZON", href="/timehor"),
+                                    dbc.NavLink("MARKET CYCLES", href="/market"),
+                                    dd.mkt_view(),
+                                    dd.model_port(),
+                                    dbc.NavLink("HELP", href="/FAQ"),
+                                ],
+                                navbar=True,
+                                className="flex-grow-1"
+                            ),
+
+                            # Sezione bottone a destra
+                            butt.login(),
+                        ],
+                        className="d-flex flex-column flex-lg-row align-items-lg-center w-100"
+                    ),
+                    id="navbar-collapse",
+                    is_open=False,
+                    navbar=True,
                 ),
-                href="/",
-                style={'padding-left':'25px'}
-            ),
-
-            dbc.Nav([
-                dbc.NavLink("Home", href="/"),
-                dbc.NavLink("Indipendent Investing", href="/indinvest"),
-                dbc.NavLink("Time Horizon", href="/timehor"),
-                dbc.NavLink("Market Cycles", href="/market"),
-
-                dd.mkt_view(),
-                dd.model_port(),
-         
-                dbc.NavLink("Contact", href="/contact"),
-                
-            ], className="ms-auto",
-                    style={'padding-right':'25px'})
-
-        ], fluid=True),
+            ],
+            fluid=True,
+            style={"paddingLeft": "8%", "paddingRight": "8%"},
+            className="d-flex align-items-center"
+        ),
         color="dark",
-        dark=True
+        dark=True,
+        expand="lg",
+        className="main-navbar"
     )

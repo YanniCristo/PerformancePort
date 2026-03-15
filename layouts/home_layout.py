@@ -3,10 +3,8 @@ from components.navbar import navbar
 from components.cards import cards_home
 from components.footer import footer
 from components.login_modal import login_modal
-import plotly.express as px
-from functions import load_content
+from utils.functions import load_content
 from dash import html, dcc
-import pandas as pd
 
 def home_layout():
     txt = load_content("assets/contents/home/texts.json")
@@ -14,17 +12,18 @@ def home_layout():
     descr = txt['info']['description']
     
     return html.Div([
+        # NavBar
+        navbar(),
 
         # hero
         html.Div([
             html.H1("Intelligent investments", className="hero-title"),
-            html.P("Professional invetments insights", className="hero-subtitle"),
-            dbc.Button("Start now", id="start-btn", color="primary", size="lg")
+            html.P("Professional invetments insights", className="hero-subtitle")
             ], className="hero"),
 
         html.Div([
             html.Img(
-                    src="/assets/logo2.png",
+                    src="/assets/contents/general/logo2.png",
                     style={"height": "45px"}
                     )
             ],

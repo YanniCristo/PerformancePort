@@ -7,7 +7,7 @@ body {
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("/assets/home.jpg");
+    url("/assets/contents/home/home.jpg");
 
     background-size: cover;
     background-position: center;
@@ -75,7 +75,7 @@ body {
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("/assets/timehoriz.jpg");
+    url("/assets/contents/timehoriz/timehoriz.jpg");
 
     background-size: cover;
     background-position: center;
@@ -117,7 +117,7 @@ body {
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("/assets/market.jpg");
+    url("/assets/contents/market/market.jpg");
 
     background-size: cover;
     background-position: center;
@@ -141,19 +141,12 @@ body {
     padding: 20px;
 }
 
-.nav-link {
-    font-family: 'Arial', sans-serif;  /* Sostituisci con il font che vuoi */
-    font-size: 18px;                   /* Opzionale: dimensione font */
-    font-weight: 500;                  /* Opzionale: boldness */
-    margin: 0 13px;
-}
-
 .cust-care1 {
     background: linear-gradient(
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("/assets/contact.jpg");
+    url("/assets/contents/contact/contact.jpg");
 
     background-size: cover;
     background-position: center;

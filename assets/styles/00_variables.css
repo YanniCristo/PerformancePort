@@ -1,0 +1,13 @@
+/* default (light) */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #111;
+    --accent-color: #3b82f6;
+}
+
+/* dark mode */
+.dark {
+    --bg-color: #111;
+    --text-color: #f5f5f5;
+    --accent-color: #3b82f6;
+}

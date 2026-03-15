@@ -1,0 +1,23 @@
+
+.main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.main-navbar .nav-link {
+    font-family: Helvetica, sans-serif;
+    font-size: clamp(7px, 1.1vw, 14px) !important;
+    font-weight: 550;
+    margin: 0  clamp(1px, 1.1vw, 5px);
+    white-space: nowrap;
+}
+
+.main-navbar .dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-brand img {
+    height: clamp(12px, 3.3vw, 50px);
+}

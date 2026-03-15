@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 def model_port():
 
     return dbc.DropdownMenu(
-        label="Model Portfolios",
+        label="MODEL PORTFOLIOS",
         nav=True,
         in_navbar=True,
         children=[
@@ -17,7 +17,7 @@ def model_port():
 def mkt_view():
 
     return dbc.DropdownMenu(
-        label="Market View",
+        label="MARKET VIEW",
         nav=True,
         in_navbar=True,
         children=[

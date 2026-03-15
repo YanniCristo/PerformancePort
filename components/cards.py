@@ -29,12 +29,12 @@ def cards():
 def cards_home():
 
     data = [
-        ("/assets/dollar.png", "Explore the value of Indipendent Investing"),
-        ("/assets/center.png", "Understand how Time Horizon and investor risk profile shape allocation models"),
-        ("/assets/line.png", "See how Market Cycles drives investments allocation"),
-        ("/assets/bars.png", "Stay informed with a coincise Economic Overview - see at a glance what drives our macro allocation"),
-        ("/assets/user.png", "Discover the current Market Phase and how it drives Macro Asset Allocation across risk profiles"),
-        ("/assets/folder.png", "Access Leading Equity Markets Allocation - built from a selection of top index constituents, dynamically adjusted each month and benchmarked against their reference indices")]
+        ("/assets/contents/home/dollar.png", "Explore the value of Indipendent Investing"),
+        ("/assets/contents/home/center.png", "Understand how Time Horizon and investor risk profile shape allocation models"),
+        ("/assets/contents/home/line.png", "See how Market Cycles drives investments allocation"),
+        ("/assets/contents/home/bars.png", "Stay informed with a coincise Economic Overview - see at a glance what drives our macro allocation"),
+        ("/assets/contents/home/user.png", "Discover the current Market Phase and how it drives Macro Asset Allocation across risk profiles"),
+        ("/assets/contents/home/folder.png", "Access Leading Equity Markets Allocation - built from a selection of top index constituents, dynamically adjusted each month and benchmarked against their reference indices")]
 
     cards = [
         dbc.Col(
