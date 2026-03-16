@@ -20,8 +20,15 @@
 
   "parTre": {
     "title": "",
-    "description": "",
+    "description": "Macro Allocation - Defining quantitative model portfolios on the Efficient Frontier based on current market cycle and macro investment rationales.\n\nThe framework defines ETF/Funds-based exposure across bond segments (government, corporate IG, corporate HY, short/medium/long maturities) and equity sectors drawn from the S&P 500 and the European index.",
     "list": []
+  },
+
+  "parQua": {
+    "title": "",
+    "description": "Leading Equity Markets Allocation  - Monthly rebalanced model portfolios derived from back-tested algorithms trained on historical daily price momentum data:",
+    "list": ["Country-based portfolios in 10 markets across North America and Europe",
+             "Monthly selection of 7-10 large-cap stocks from national benchmarks"]
   }
   
 }
