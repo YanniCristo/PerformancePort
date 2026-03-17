@@ -1,7 +1,8 @@
 import dash_bootstrap_components as dbc
 from components.navbar import navbar
 from components.footer import footer
-from components.generic.texts import Nome, Divisor
+from components.generic.texts import Nome
+from components.generic.elements import Divisor
 from components.indinvest.paragraph import TitlePar
 from utils.functions import load_content, load_image
 from components.login_modal import login_modal
@@ -18,8 +19,7 @@ def indinvest_layout():
         
         html.Div([
             html.H1("Indipendent Investing", className="indinvest-title"),
-        ], className="indinvest-tit",
-                 style={'margin-top':'20px'}),
+        ], className="indinvest-tit"),
 
         html.Div([
             html.H1(txt['parOne']['title'], className="indinvest-parOne-tit"),

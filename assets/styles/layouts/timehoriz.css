@@ -1,0 +1,16 @@
+.Dist-Time {
+    background-color: #4e7bbbad;
+    height: 20vh;
+}
+
+.fig-time {
+    max-width: clamp(300px, 34vw, 600px);
+    border-radius: 12px;
+    margin-left: auto;
+}
+
+.tab-time {
+    max-width: clamp(400px, 48vw, 1200px);
+    border-radius: 12px;
+    margin-left: auto;
+}
