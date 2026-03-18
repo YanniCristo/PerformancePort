@@ -1,34 +1,19 @@
 {
   "parOne": {
-    "title": "Preserving and growing your wealth with consistent returns",
-    "description": ["Relying on managed savings (banks, brokers, mutual funds) involves fees that reduce your",
-                    "net portfolio return. Often, these costs are not justified by improved performance.",
-                    "According to economic theory (Efficient Market Hypothesis), excess returns from active",
-                    "management based on fundamental analysis tend to be zero or negative over the long term.", 
-                    "\n\nWith regular access to structured financial information, it is possible to manage investments",
-                    "independently - avoiding unnecessary costs and achieving above-average results through systematic",
-                    "and evidence-based portfolio models."]
+    "title": "",
+    "descr": "In portfolio allocation, the weight of risky assets should progressively increase with the investor's time horizon and risk tolerance, reflecting a greater capacity to absorb short-term volatility in pursuit of long-term growth"
   },
 
   "parTwo": {
-    "title": "What PerformingPort offers",
-    "description": "Structured Framework - Target model portfolios defined through consistent key rationales that consider the Investor's Time Horizon, adapt to evolving Macroeconomic Conditions, and align with prevailing Market Cycles.\n\nThis approach is designed to:",
-    "list": ["Show a focused selection of model components",
-             "Allow simplified monitoring with limited periodic adjustments",
-             "Provide analytical comparison with relevant market benchmarks"]
-  },
-
-  "parTre": {
-    "title": "",
-    "description": "Macro Allocation - Defining quantitative model portfolios on the Efficient Frontier based on current market cycle and macro investment rationales.\n\nThe framework defines ETF/Funds-based exposure across bond segments (government, corporate IG, corporate HY, short/medium/long maturities) and equity sectors drawn from the S&P 500 and the European index.",
+    "title": "Time - Equity Allocation",
+    "descr": "The allocation between Equities and Bonds depends on the Investor's time horizon.\nThe longer the Investor's horizon, the larger the equity allocation that becomes feasible, as the risk associated with short-term fluctuations diminishes over time. Historically, equity markets have delivered higher long-term returns compared to bonds, compensating for their greater volatility.\n\nA longer time horizon allows Investors to better withstand equity market swings, increasing the probability of achieving positive outcomes.\nGiven the planned horizon-whether required or preferred-the optimal equity allocation is driven by the prevailing level of bond yields. Lower interest rates make equities relatively more attractive, and vice versa.\n\nBased on market volatility, correlations, and expected returns, the optimal allocations along the so-called 'Efficient Frontier' can be identified for Investors with different risk profiles, given their investment horizons.",
     "list": []
   },
 
-  "parQua": {
-    "title": "",
-    "description": "Leading Equity Markets Allocation  - Monthly rebalanced model portfolios derived from back-tested algorithms trained on historical daily price momentum data:",
-    "list": ["Country-based portfolios in 10 markets across North America and Europe",
-             "Monthly selection of 7-10 large-cap stocks from national benchmarks"]
+  "parTre": {
+    "title": "Time - Credit Allocation (Corporate Bonds)",
+    "descr": "The allocation between corporate bonds and government bonds also depends on the Investor's time horizon.\nWhen considering a specific country (e.g., the US, Germany, etc.), corporate bonds typically offer higher returns to compensate for greater credit risk compared to government bonds (aka 'govies').\n\nThe volatility of corporate bonds-higher for High-Yield issues than for Investment-Grade securities-tends to decline over longer investment periods. The longer the Investor's time horizon, the greater the share of corporate bonds that can be allocated in the portfolio.\n\nBased on expected returns, volatility, and correlations, the optimal percentage of corporate bonds along the 'Efficient Frontier' can be determined for Investors with different risk profiles, given their investment horizon.",
+    "list": []
   }
   
 }

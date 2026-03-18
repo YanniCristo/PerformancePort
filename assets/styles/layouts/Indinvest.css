@@ -3,10 +3,3 @@
     height: 20vh;
 }
 
-.Divisor-Indi {
-    height: 1px;                        /* spessore della linea */
-    width: 70%;                          /* occupa il 70% della larghezza */
-    background-color: #d0d0d0;           /* colore linea, poco più scuro dello sfondo */
-    margin: 0px auto;                   /* centrata orizzontalmente e con spazio sopra/sotto */
-    border-radius: 2px;                  /* arrotonda leggermente gli angoli */
-}
