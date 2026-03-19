@@ -8,7 +8,7 @@ def model_port():
         nav=True,
         in_navbar=True,
         children=[
-            dbc.DropdownMenuItem("Equity Strategies", href="/"),
+            dbc.DropdownMenuItem("Equity Strategies", href="/equitystrat"),
             dbc.DropdownMenuItem("Bond Strategies", href="/"),
             dbc.DropdownMenuItem("Asset Allocation", href="/"),
             ],

@@ -1,0 +1,60 @@
+.Dist-eqystr {
+    background-color: #749fdbad;
+    height: 20vh;
+}
+
+.Cont-eqystr {
+    background-color: #749fdbad;
+}
+
+.title-eqystr {
+    color: #749fdbad;
+    margin-top: 0;
+    margin-left: 300px
+}
+
+.eqystr {
+    margin: 0;
+}
+
+.control-eqystr {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 300px;
+}
+
+.picker-div {
+    width: 300px;
+}
+
+#ticker-dropdown {
+    width: 300px;
+}
+
+.main-graph {
+    margin: 0 300px;
+}
+
+.eqystr {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contents/equitystrategy/home.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 60px;
+    font-weight: 700;
+}
