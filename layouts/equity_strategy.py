@@ -1,12 +1,12 @@
 from components.login_modal import login_modal
 from utils.functions import load_content, load_image
 from components.generic.elements import Divisor
+from components.buttons import timeSelectbtn
 import dash_bootstrap_components as dbc
 from components.navbar import navbar
 from components.footer import footer
 from dash import html, dcc
-import pandas as pd
-import numpy as np
+
 from utils.data import data
 
 def equity_strategy():
@@ -41,9 +41,12 @@ def equity_strategy():
                 ], className='control-eqystr'),
             
             # Grafico
-            dcc.Graph(id='graph',
-                      config={'displayModeBar': False},
-                      className='main-graph'),
+            html.Div([
+                timeSelectbtn(),
+                dcc.Graph(id='graph',
+                          config={'displayModeBar': False},
+                          className='main-graph'),
+                ], className='Graph-eqystr'),
             
             ], className='Cont-eqystr'),
         

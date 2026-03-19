@@ -34,3 +34,26 @@
 .cta-dg-with-icon:hover .cta-icon {
     transform: translateX(3px);
 }
+
+/* Chart Buttons (Chart-btn) */
+
+.Chart-btn {
+    display: flex;                /* Per usare flexbox */
+    justify-content: center;       /* Centra orizzontalmente i bottoni */
+    gap: 15px;                     /* Spazio tra i bottoni */
+}
+
+.Chart-btn .btn {
+    background-color: transparent !important;  /* Nessuno sfondo */
+    border: none !important;                   /* Rimuove bordi */
+    color: rgb(42, 118, 218) !important;                   /* Colore del testo */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.Chart-btn .btn:hover {
+    color: #00ffff !important;                 /* Colore hover opzionale */
+    background-color: rgba(255,255,255,0.1) !important; /* leggero effetto hover */
+}
