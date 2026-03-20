@@ -54,13 +54,11 @@ def chart_callbacks(app):
         # Crea il grafico
         fig = px.line(x=filtered.index, y=cumulative)
         fig.update_layout(
-            yaxis=dict(
-                side="right",
-                title="Cumulativo",
-                ticks="outside",
-                showline=True,
-                mirror=True
-            )
+            yaxis=dict(side="right", title="",
+                       ticks="outside",showline=True,
+                       mirror=True
+                       ),
+            xaxis=dict(title=None)
         )
         return fig, start, end
 

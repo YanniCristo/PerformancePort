@@ -3,14 +3,13 @@
     height: 20vh;
 }
 
-.Cont-eqystr {
+.Dist-eqystr2 {
     background-color: #749fdbad;
+    height: 10vh;
 }
 
-.title-eqystr {
-    color: #749fdbad;
-    margin-top: 0;
-    margin-left: 300px
+.Cont-eqystr {
+    background-color: #749fdbad;
 }
 
 .eqystr {
@@ -22,7 +21,8 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin: 20px 300px;
+    margin: 0px 300px;
+    padding: 20px;
 }
 
 .picker-div {
@@ -36,6 +36,8 @@
 .Graph-eqystr {
     background-color: white;
     margin: 0 300px;
+    border-radius: 12px;
+    border: 2px solid #1a2636;
 }
 
 .eqystr {
@@ -43,7 +45,7 @@
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("/assets/contents/equitystrategy/home.jpg");
+    url("/assets/contents/equitystrategy/market.png");
 
     background-size: cover;
     background-position: center;

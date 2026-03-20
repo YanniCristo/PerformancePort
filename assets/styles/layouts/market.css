@@ -1,0 +1,44 @@
+.Dist-mkt {
+    background-color: #749fdbad;
+    height: 20vh;
+    margin-top: 0;
+}
+
+.Cont-mkt h1 {
+    font-size: clamp(16px, 1.5vw, 28px);
+    color: #1a2636;
+    margin: 0px 14%;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.Cont-mkt p {
+    font-size: clamp(14px, 1.3vw, 18px);
+    color: #1a2636;
+    margin: 0px 14%;
+    padding: 20px;
+    font-weight: 300;
+    white-space: pre-line;
+}
+
+.fig-mkt {
+    max-width: clamp(300px, 35vw, 800px);
+    border-radius: 12px;
+    margin: 0px auto;
+    display: block;
+    border: 2px solid #1a2636;
+}
+
+.tab-mkt {
+    max-width: clamp(300px, 35vw, 1200px);
+    border-radius: 12px;
+    margin: 0px auto;
+    margin-top: 30px;
+    display: block;
+    border: 2px solid #1a2636;
+}
+
+.Cont-mkt {
+    background-color: #749fdbad;
+    margin-bottom: 0;
+}

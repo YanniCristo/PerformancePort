@@ -19,10 +19,9 @@ def equity_strategy():
         html.H1("Equity Strategy", className="eqystr"),
 
         html.Div([
-
-            html.H2("Seleziona strategia", className="title-eqystr"),
-
+            
             html.Div([
+                
                 # Date Picker
                 html.Div(
                     dcc.DatePickerRange(id='date-picker',
