@@ -21,7 +21,7 @@ def mkt_view():
         nav=True,
         in_navbar=True,
         children=[
-            dbc.DropdownMenuItem("Economic Overview", href="/"),
+            dbc.DropdownMenuItem("Economic Overview", href="/ecoview"),
             dbc.DropdownMenuItem("Market Phase", href="/"),
             dbc.DropdownMenuItem("Macro Allocation", href="/"),
             dbc.DropdownMenuItem("Leading Equity Markets Allocation", href="/"),

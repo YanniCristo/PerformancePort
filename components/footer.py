@@ -13,7 +13,7 @@ def footer():
                                 html.H5("CONTACT", className="footer-title"),
 
                                 html.P([
-                                    html.Strong("PerformancePort S.r.l."),
+                                    html.Strong("PerformingPort S.r.l."),
                                     html.Br(),
                                     "Via Roma 45",
                                     html.Br(),
@@ -37,7 +37,7 @@ def footer():
 
                             # COLONNA PP
                             dbc.Col([
-                                html.H5("PERFORMANCEPORT", className="footer-title"),
+                                html.H5("PERFORMINGPORT", className="footer-title"),
 
                                 html.Ul([
                                     html.Li(html.A("About us", href="#")),
@@ -92,7 +92,7 @@ def footer():
                         html.Hr(),
 
                         html.Div(
-                            "© 2026 PerformancePort S.r.l. – All right reserved.",
+                            "© 2026 PerformingPort S.r.l. – All right reserved.",
                             style={"textAlign": "center"}
                         )
 

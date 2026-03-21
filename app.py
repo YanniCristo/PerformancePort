@@ -3,6 +3,7 @@ from callbacks.login_callbacks import login_callbacks
 from callbacks.theme_callbacks import theme_callbacks
 from callbacks.chart_callbacks import chart_callbacks
 from callbacks.navbar_callbacks import navbar_callbacks
+from callbacks.macro_callbacks import macro_callbacks
 from layouts.main_layout import create_layout
 
 import dash_bootstrap_components as dbc
@@ -20,6 +21,7 @@ register_callbacks(app)
 theme_callbacks(app)
 navbar_callbacks(app)
 chart_callbacks(app)
+macro_callbacks(app)
 
 app.layout = create_layout()
 

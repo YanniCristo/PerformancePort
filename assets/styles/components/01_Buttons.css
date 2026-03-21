@@ -35,12 +35,14 @@
     transform: translateX(3px);
 }
 
+/*###########################*/
 /* Chart Buttons (Chart-btn) */
+/*###########################*/
 
 .Chart-btn {
     display: flex;                /* Per usare flexbox */
     justify-content: center;       /* Centra orizzontalmente i bottoni */
-    gap: 15px;                     /* Spazio tra i bottoni */
+    gap: 10px;                     /* Spazio tra i bottoni */
 }
 
 .Chart-btn .btn {
@@ -48,12 +50,14 @@
     border: none !important;                   /* Rimuove bordi */
     color: rgb(42, 118, 218) !important;                   /* Colore del testo */
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
     cursor: pointer;
     padding: 5px 10px;
 }
 
 .Chart-btn .btn:hover {
-    color: #00ffff !important;                 /* Colore hover opzionale */
+    color:rgb(0, 85, 197)  !important;                 /* Colore hover opzionale */
+     transform: scale(1.125);
     background-color: rgba(255,255,255,0.1) !important; /* leggero effetto hover */
+    font-weight: bold;
 }

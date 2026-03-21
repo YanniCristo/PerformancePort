@@ -4,6 +4,7 @@ from layouts.indinvest_layout import indinvest_layout
 from layouts.timehoriz_layout import timehoriz_layout
 from layouts.market_layout import market_layout
 from layouts.equity_strategy import equity_strategy
+from layouts.eco_view import eco_view
 from layouts.contact_layout import contact_layout
 from layouts.FAQ import FAQ_layout
 
@@ -28,6 +29,9 @@ def register_callbacks(app):
 
         elif pathname == "/equitystrat":
             return equity_strategy()
+        
+        elif pathname == "/ecoview":
+            return eco_view()
 
         elif pathname == "/contact":
             return contact_layout()
