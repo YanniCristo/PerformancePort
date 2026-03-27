@@ -1,6 +1,6 @@
 from dash import Input, Output, State
 
-def navbar_callbacks(app):
+def register(app):
     @app.callback(
         Output("navbar-collapse", "is_open"),
         Input("navbar-toggler", "n_clicks"),

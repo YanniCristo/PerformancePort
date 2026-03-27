@@ -1,6 +1,6 @@
 from dash import Input, Output
 
-def theme_callbacks(app):
+def register(app):
     @app.callback(
         Output("page-container", "className"),
         Input("theme-button", "n_clicks"),

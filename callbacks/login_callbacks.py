@@ -1,6 +1,6 @@
 from dash import Input, Output, State
 
-def login_callbacks(app):
+def register(app):
 
     @app.callback(
             Output("login-modal", "is_open"),

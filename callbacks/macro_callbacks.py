@@ -1,10 +1,37 @@
-from utils.functions import load_content, load_image
+from utils.functions import load_content, load_image, q_to_dt
+import plotly.graph_objects as go
 from dash import Input, Output
 from dash import html, dcc
 from pathlib import Path
+import pandas as pd
 import dash
 
-def macro_callbacks(app):
+def AddChart(df, idx, nome):
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=df.index, y=df[idx],
+        mode='lines'))
+    
+    fig.update_layout(
+        margin=dict(l=10, r=10, t=25, b=10),
+        height=250,
+        xaxis=dict(fixedrange=True), yaxis=dict(fixedrange=True),
+        font=dict(color="white"), paper_bgcolor="rgba(116, 159, 219, 0.2)",
+        #plot_bgcolor="rgba(116, 159, 219, 0.68)")
+
+        title=dict(
+            text=nome,
+            x=0.5,  # centro
+            xanchor='center',
+            yanchor='top',
+            font=dict(size=12, color='white')
+            )
+        )
+    
+
+    return dcc.Graph(figure=fig, config={"displayModeBar": False})
+
+def register(app):
 
     @app.callback(
         Output('artic-ecoview', 'children'),
@@ -13,14 +40,20 @@ def macro_callbacks(app):
     def update_article(q):
         data = load_content(f'assets/contents/ecoview/articles/{q}/text.json')
         base_path = Path(f'assets/contents/ecoview/articles/{q}')
+        df = pd.read_excel(f'assets/contents/ecoview/articles/EcoData.xlsx', header=0, index_col=0)
 
+        names = df.iloc[0,:]
+        df.drop('Nome Grafico', inplace=True)
+        end = pd.to_datetime(q_to_dt(q))
+        df = df[df.index <= end]
+        
         content = []
 
         for key in data:
             par = data[key]
 
             title = par.get("title", "")
-            img = par.get("img", "")
+            imgs = par.get("img", [])
             desc = par.get("description", "")
 
             row = []
@@ -29,8 +62,8 @@ def macro_callbacks(app):
             if title:
                 row.append(html.H3(title, className="article-title"))
 
-            # Se immagine
-            if img:
+            # Se grafico
+            if imgs:
                 row.append(
                     html.Div([
                         html.Div(
@@ -38,7 +71,7 @@ def macro_callbacks(app):
                             className="article-column"
                         ),
                         html.Div(
-                            html.Img(src=f"/{base_path}/{img}", style={"width": "100%"}),
+                            [AddChart(df, img, names[img]) for img in imgs],
                             className="article-column"
                         )
                     ], className="article-row")

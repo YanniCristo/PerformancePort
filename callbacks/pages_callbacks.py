@@ -8,7 +8,7 @@ from layouts.eco_view import eco_view
 from layouts.contact_layout import contact_layout
 from layouts.FAQ import FAQ_layout
 
-def register_callbacks(app):
+def register(app):
     @app.callback(
         Output("page-content", "children"),
         Input("url", "pathname")

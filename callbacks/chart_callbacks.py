@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import dash
 
-def chart_callbacks(app):
+def register(app):
 
     @app.callback(
         Output('graph', 'figure'),
