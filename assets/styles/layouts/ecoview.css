@@ -21,6 +21,10 @@
     margin-bottom: 0;
 }
 
+.article-title {
+    font-weight: 600;
+}
+
 .main-ecoview {
     background-color: #749fdbad;
     display: flex;
@@ -37,4 +41,28 @@
 .Dist-ecoview {
     background-color: #749fdbad;
     height: 20vh;
+}
+
+.article-column {
+    width: 50%;
+}
+
+.article-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.article-card {
+    margin: auto 0;
+    height: 100%;
+}
+
+.article-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.article-block {
+    margin-top: 25px;
+    margin-bottom: 99px;
 }

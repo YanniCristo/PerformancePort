@@ -1,4 +1,5 @@
 from utils.functions import load_content, load_image, q_to_dt
+import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 from dash import Input, Output
 from dash import html, dcc
@@ -13,9 +14,9 @@ def AddChart(df, idx, nome):
         mode='lines'))
     
     fig.update_layout(
-        margin=dict(l=10, r=10, t=25, b=10),
+        margin=dict(l=25, r=25, t=25, b=25),
         height=250,
-        xaxis=dict(fixedrange=True), yaxis=dict(fixedrange=True),
+        xaxis=dict(fixedrange=True), yaxis=dict(fixedrange=True, side='right'),
         font=dict(color="white"), paper_bgcolor="rgba(116, 159, 219, 0.2)",
         #plot_bgcolor="rgba(116, 159, 219, 0.68)")
 
@@ -49,7 +50,7 @@ def register(app):
         
         content = []
 
-        for key in data:
+        for i, key in enumerate(data):
             par = data[key]
 
             title = par.get("title", "")
@@ -66,16 +67,19 @@ def register(app):
             if imgs:
                 row.append(
                     html.Div([
-                        html.Div(
-                            html.P(desc, style={"whiteSpace": "pre-line"}),
-                            className="article-column"
-                        ),
+                        
+                        dbc.Card(
+                            dbc.CardBody(
+                                html.P(desc, style={"whiteSpace": "pre-line"})
+                                ), className="article-column article-card"),
+                        
                         html.Div(
                             [AddChart(df, img, names[img]) for img in imgs],
-                            className="article-column"
-                        )
-                    ], className="article-row")
+                            className="article-column")
+                        
+                    ], className=f"article-row {'reverse' if i % 2 else ''}")
                 )
+                
             else:
             # Altrimenti solo testo
                 row.append(html.P(desc, style={"whiteSpace": "pre-line"},
