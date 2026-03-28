@@ -1,0 +1,50 @@
+.macroall-title {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contents/macroallocation/macroallocation.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.Cont-macroall {
+    background-color: #749fdbad;
+    margin-bottom: 0;
+}
+
+.Cont-macroall p {
+    font-size: clamp(14px, 1.3vw, 18px);
+    color: #1a2636;
+    margin: 0px 14%;
+    padding: 20px;
+    font-weight: 300;
+    white-space: pre-line;
+}
+
+.tab-macroall {
+    max-width: clamp(300px, 65vw, 1250px);
+    border-radius: 12px;
+    margin: 0px auto;
+    display: block;
+    border: 2px solid #1a2636;
+}
+
+.Dist-macroall {
+    background-color: #749fdbad;
+    height: 20vh;
+    margin-top: 0;
+}

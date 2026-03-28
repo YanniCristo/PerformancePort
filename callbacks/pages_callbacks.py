@@ -7,6 +7,9 @@ from layouts.equity_strategy import equity_strategy
 from layouts.eco_view import eco_view
 from layouts.contact_layout import contact_layout
 from layouts.FAQ import FAQ_layout
+from layouts.macroallocation import macroallocation
+from layouts.marketphase import marketphase
+
 
 def register(app):
     @app.callback(
@@ -29,6 +32,12 @@ def register(app):
 
         elif pathname == "/equitystrat":
             return equity_strategy()
+
+        elif pathname == "/marketphase":
+            return marketphase()
+
+        elif pathname == "/macroall":
+            return macroallocation()
         
         elif pathname == "/ecoview":
             return eco_view()

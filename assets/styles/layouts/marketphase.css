@@ -1,0 +1,22 @@
+.marketphase-title {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contents/marketphase/marketphase.png");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
