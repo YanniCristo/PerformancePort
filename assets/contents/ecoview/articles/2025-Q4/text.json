@@ -1,13 +1,13 @@
 {
   "parOne": {
     "title": "US",
-    "img": ["(1)","(2)"],
+    "img": ["(1)","(2)-(10)"],
     "description": "The U.S. economy is expected to enter a period of temporary weakness driven by uncertainty surrounding Trump's tariff policy.\nThe business cycle is likely to regain momentum supported by the implementation of the expansionary fiscal plan (the 'One, Big, Beautiful Bill').\nInflation will play a crucial role: it is projected to rise to 3-4% over the next 12 months as tariffs gradually feed into consumer prices \n\nHowever, once inflation stabilizes, the Federal Reserve is expected to return to an easing monetary policy stance."
   },
 
   "parTwo": {
     "title": "EU",
-    "img": ["(3)","(4)"],
+    "img": ["(3)","(4)","(7)"],
     "description": "Euro Area growth is expected to accelerate following a period of stagnation driven by a new wave of fiscal easing, spearheaded by Germany.\nInflation still has room to decline slightly further supported by a stronger euro.\nAs a result, the ECB is likely to maintain its current accommodative monetary policy stance."
   },
   

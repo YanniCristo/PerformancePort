@@ -8,20 +8,35 @@ import pandas as pd
 import dash
 
 def AddChart(df, idx, nome):
+    idx = idx.split('-')
+    show_legend = len(idx) > 1
+    
     fig = go.Figure()
-    fig.add_trace(go.Scatter(
-        x=df.index, y=df[idx],
-        mode='lines'))
+
+    for i, serie in enumerate(idx):
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df[serie],
+            yaxis='y' if i ==0 else 'y2',
+            name=nome[serie],
+            mode='lines'))
     
     fig.update_layout(
-        margin=dict(l=25, r=25, t=25, b=25),
-        height=250,
-        xaxis=dict(fixedrange=True), yaxis=dict(fixedrange=True, side='right'),
-        font=dict(color="white"), paper_bgcolor="rgba(116, 159, 219, 0.2)",
-        #plot_bgcolor="rgba(116, 159, 219, 0.68)")
+        margin=dict(l=25, r=25, t=25, b=60 if show_legend else 25),
+        height=290 if show_legend else 250,
+        
+        xaxis=dict(fixedrange=True),
+        yaxis=dict(fixedrange=True, side='right'),
+        yaxis2=dict(overlaying='y', fixedrange=True, side='left'),
+        
+        font=dict(color="white"),
+        paper_bgcolor="rgba(116, 159, 219, 0.2)", #plot_bgcolor="rgba(116, 159, 219, 0.68)")
 
+        showlegend=show_legend,
+        legend=dict(orientation="h", yanchor="top",
+                    x=0.5, y=-0.2, xanchor="center"),
+        
         title=dict(
-            text=nome,
+            text=nome[idx[0]],
             x=0.5,  # centro
             xanchor='center',
             yanchor='top',
@@ -74,7 +89,7 @@ def register(app):
                                 ), className="article-column article-card"),
                         
                         html.Div(
-                            [AddChart(df, img, names[img]) for img in imgs],
+                            [AddChart(df, img, names) for img in imgs],
                             className="article-column")
                         
                     ], className=f"article-row {'reverse' if i % 2 else ''}")
