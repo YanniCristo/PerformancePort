@@ -48,5 +48,6 @@ def navbar():
         color="dark",
         dark=True,
         expand="lg",
+        fixed="top",
         className="main-navbar"
     )
