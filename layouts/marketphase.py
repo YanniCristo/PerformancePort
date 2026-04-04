@@ -11,15 +11,8 @@ def marketphase():
     path_img = "assets/contents/marketphase/"
     
     return html.Div([
-
-        # NavBar
-        navbar(),
         
-        html.Div(
-            html.H1("Market Phase", className="marketphase-title")
-            ),
+        html.H1("Market Phase", className="marketphase-title"),
 
-        footer(),
-        login_modal()
-        
+        footer()
     ])

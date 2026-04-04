@@ -32,7 +32,7 @@ def navbar():
                             ),
 
                             # Sezione bottone a destra
-                            butt.login(),
+                            html.Div(id="user-status")
                         ],
                         className="d-flex flex-column flex-lg-row align-items-lg-center w-100"
                     ),

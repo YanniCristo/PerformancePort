@@ -12,11 +12,8 @@ def macroallocation():
     
     return html.Div([
 
-        # NavBar
-        navbar(),
-
         # Title
-        html.Div(html.H1("Portfolio Construction", className="macroall-title")),
+        html.H1("Portfolio Construction", className="macroall-title"),
 
         # Contents
         html.Div([
@@ -32,7 +29,5 @@ def macroallocation():
 
         # Bottom
         html.Div(" ", className="Dist-macroall"),
-        footer(),
-        login_modal()
-        
+        footer()
     ])

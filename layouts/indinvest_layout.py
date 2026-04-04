@@ -14,9 +14,6 @@ def indinvest_layout():
     
     return html.Div([
 
-        # NavBar
-        navbar(),
-        
         html.Div([
             html.H1("Indipendent Investing", className="indinvest-title"),
         ], className="indinvest-tit"),
@@ -45,7 +42,5 @@ def indinvest_layout():
                  img= "assets/contents/indinvest/par3.png", num='03'),
 
         html.Div(" ", className="Dist-Indi"),
-        footer(),
-        login_modal()
-
+        footer()
     ])

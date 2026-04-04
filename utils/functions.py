@@ -1,7 +1,11 @@
+import sib_api_v3_sdk
+from sib_api_v3_sdk.rest import ApiException
+
 from datetime import datetime
 from dash import html
 import webbrowser
 import json
+import os
 
 def open_browser(port):
 	webbrowser.open_new('http://localhost:{}'.format(port))
@@ -24,4 +28,38 @@ def q_to_dt(q_str: str) -> datetime:
 
     month, day = quarter_end[quarter]
     return datetime(year, month, day)
+
+
+def send_verification_email_Brevo(to_email, token):
+        
+    # Configurazione API Key
+    configuration = sib_api_v3_sdk.Configuration()
+    configuration.api_key['api-key'] = os.getenv("BREVO_API_KEY")
+
+    api_instance = sib_api_v3_sdk.TransactionalEmailsApi(sib_api_v3_sdk.ApiClient(configuration))
+
+    BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:8015")
+    verify_link = f"{BASE_URL}/verify?token={token}"
+
+    # Definizione del mittente e del destinatario
+    sender = {"name": "PerformingPort", "email": "riera89@hotmail.it"}
+    to = [{"email": to_email}]
+    
+    # Creazione dell'oggetto email
+    send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
+        to=to,
+        sender=sender,
+        subject="Verifica il tuo account",
+        html_content=f"""
+        <p>Grazie per esserti registrato.</p>
+        <p>Clicca qui per verificare il tuo account:</p>
+        <a href="{verify_link}">Verifica account</a>
+        """
+    )
+
+    try:
+        api_response = api_instance.send_transac_email(send_smtp_email)
+        print("Mail inviata con successo!")
+    except ApiException as e:
+        print(f"Errore durante l'invio tramite Brevo: {e}")
 

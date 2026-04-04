@@ -13,9 +13,6 @@ def contact_layout():
     
     return html.Div([
 
-        # NavBar
-        navbar(),
-        
         html.Div([
             html.H1("Customer care", className="hero-title"),
             ], className="cust-care1"),
@@ -41,7 +38,5 @@ def contact_layout():
             ],  style={"padding": "0px 520px"}),
 
         html.Div(style={"minHeight": "30vh"}),
-        footer(),
-        login_modal()
-        
+        footer()
         ])

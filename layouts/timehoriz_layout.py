@@ -12,9 +12,6 @@ def timehoriz_layout():
     
     return html.Div([
 
-        # NavBar
-        navbar(),
-        
         html.Div([
             html.H1("Time Horizon", className="timehoriz-title"),
             ], className="timehoriz"),
@@ -40,7 +37,5 @@ def timehoriz_layout():
         
 
         html.Div(" ", className="Dist-Time"),
-        footer(),
-        login_modal()
-        
+        footer()
     ])

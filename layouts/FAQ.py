@@ -8,17 +8,12 @@ from utils.functions import load_content
 
 
 def FAQ_layout():
-    txt = load_content("assets/contents/contact/texts.json")
-    descr = txt['info']['description']
+    txt = load_content("assets/contents/FAQ/texts.json")
+    descr = txt['parOne']['descr']
     
     return html.Div([
-
-        # NavBar
-        navbar(),
         
-        html.Div([
-            html.H1("FAQ", className="hero-title"),
-            ], className="FAQ"),
+        html.H1("", className="FAQ-title"),
         
         html.Div([
             html.P(descr, className="cont-descr")
@@ -29,6 +24,4 @@ def FAQ_layout():
 
         html.Div(style={"minHeight": "30vh"}),
         footer(),
-        login_modal()
-        
         ])

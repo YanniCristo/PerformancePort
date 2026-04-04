@@ -13,9 +13,6 @@ def equity_strategy():
 
     return html.Div([
 
-        # NavBar
-        navbar(),
-
         html.H1("Equity Strategy", className="eqystr"),
 
         html.Div([
@@ -50,7 +47,5 @@ def equity_strategy():
             ], className='Cont-eqystr'),
         
         html.Div(" ", className="Dist-eqystr"),
-        footer(),
-        login_modal()
-        
+        footer()        
     ])

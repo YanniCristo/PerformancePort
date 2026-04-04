@@ -12,9 +12,7 @@ def home_layout():
     descr = txt['info']['description']
     
     return html.Div([
-        # NavBar
-        navbar(),
-
+        
         # hero
         html.Div([
             html.H1("Intelligent investments", className="hero-title"),
@@ -40,6 +38,4 @@ def home_layout():
         
         html.Div(style={"minHeight": "20vh"}),
         footer(),
-        login_modal(),
-        
         ])

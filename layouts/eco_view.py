@@ -13,9 +13,6 @@ def eco_view():
 
     return html.Div([
 
-        # NavBar
-        navbar(),
-
         html.H1("Economic Overview", className="title-ecoview"),
         
         html.Div([
@@ -32,7 +29,5 @@ def eco_view():
                  ], className="main-ecoview"),
         
         html.Div(" ", className="Dist-ecoview"),
-        footer(),
-        login_modal()
-        
+        footer()
     ])

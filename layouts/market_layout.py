@@ -11,9 +11,6 @@ def market_layout():
     path_img = "assets/contents/market/"
     
     return html.Div([
-
-        # NavBar
-        navbar(),
         
         html.Div([
             html.H1("Market Cycle", className="market-title"),
@@ -52,7 +49,5 @@ def market_layout():
             ], className="Cont-mkt"),
 
         html.Div(" ", className="Dist-mkt"),
-        footer(),
-        login_modal()
-        
+        footer()
     ])
