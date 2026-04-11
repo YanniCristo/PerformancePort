@@ -75,7 +75,6 @@ def handle_webhook(request):
             # Rinnovo fallito → notifica utente o sospendi accesso
             logger.warning(f"Fattura fallita: {session.id}")
 
-
         else:
             logger.debug(f"Evento non gestito: {event_type}")
 

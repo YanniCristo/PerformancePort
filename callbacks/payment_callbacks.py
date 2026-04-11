@@ -9,17 +9,17 @@ logger = logging.getLogger(__name__)
 def register(app):
 
     @app.callback(
-        Output("redirect", "href"), # dcc.Location(id="url", refresh=True)
+        Output("redirect", "href"), # dcc.Location(id="redirect", refresh=True)
         Output("checkout-session", "data"),
 
         Input("pay-btn-10", "n_clicks"),
-##        Input("subscribe-btn", "n_clicks"),
         
         prevent_initial_call=True
     )
-    def start_payment(n1):#, n_sub):
+    def start_payment(n1):
+        
         # Blocca esecuzioni spurie al mount del componente
-        if not any([n1]):#, n_sub]):
+        if not any([n1]):
             return no_update, no_update
         
         user_id = current_user.id if current_user.is_authenticated else None
@@ -31,7 +31,6 @@ def register(app):
                 price_id = os.getenv("STRIPE_MONTHLY_PRICE_ID")
                 session = create_subscription_session(price_id, user_id)
             else:
-                # Salvo il trigger della funzione
                 amount = int(ctx.triggered_id.split("-")[-1]) * 100
                 session = create_checkout_session(amount, user_id)
             

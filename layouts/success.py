@@ -127,7 +127,7 @@ def success_layout(payment=None, session=None):
                     ], className="success-card"),
 
                     width={"size": 8, "offset": 3},
-                    lg={"size": 5, "offset": 4},
+                    lg={"size": 7, "offset": 4},
                 )
             )
         ], fluid=False),
