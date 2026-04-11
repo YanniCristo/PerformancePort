@@ -1,7 +1,7 @@
 from flask_login import logout_user
 from flask import redirect, request
 from db.database import SessionLocal
-from auth.models import User
+from db.models import User
 
 def init_auth_routes(server):
 
@@ -15,20 +15,20 @@ def init_auth_routes(server):
         token = request.args.get("token")
 
         if not token:
-            return "Token mancante"
+            return "Missing Token"
 
         db = SessionLocal()
         try:
             user = db.query(User).filter_by(verification_token=token).first()
 
             if not user:
-                return "Token non valido"
+                return "Invalid Token"
 
             user.is_verified = True
             user.verification_token = None
             db.commit()
 
-            return "Account verificato! Ora puoi fare login."
+            return "Account verified! You can now log in."
 
         finally:
             db.close()

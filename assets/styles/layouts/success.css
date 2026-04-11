@@ -1,0 +1,159 @@
+/* ══════════════════════════════════════════════════
+   success.css  –  Pagina post-pagamento
+   Posiziona in: assets/css/success.css
+   (o includi nel tuo foglio principale)
+   ══════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* Sfondo pagina */
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  background: #f0fdf4;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(134,239,172,.3) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 90% 90%, rgba(167,243,208,.2) 0%, transparent 60%);
+}
+
+.success-page--pending {
+  background: #fffbeb;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(253,230,138,.35) 0%, transparent 70%);
+}
+
+.success-page--sub {
+  background: #faf5ff;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(221,214,254,.4) 0%, transparent 70%);
+}
+
+/* Forza il Container Bootstrap a centrarsi dentro il flex */
+.success-page > .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.success-card {
+  border: 1px solid #d1fae5 !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 4px 6px rgba(0,0,0,.04),
+    0 20px 60px rgba(22,163,74,.10) !important;
+  text-align: center;
+  padding: 1rem;
+  animation: successRise .55s cubic-bezier(.22,.68,0,1.2) both;
+}
+
+.success-page--pending .success-card {
+  border-color: #fde68a !important;
+  box-shadow: 0 20px 60px rgba(245,158,11,.10) !important;
+}
+
+.success-page--sub .success-card {
+  border-color: #ddd6fe !important;
+  box-shadow: 0 20px 60px rgba(124,58,237,.10) !important;
+}
+
+@keyframes successRise {
+  from { opacity: 0; transform: translateY(28px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);   }
+}
+
+/* Icona */
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: .5rem auto 1.25rem;
+  border: 2px solid transparent;
+  animation: successPop .4s .3s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+.badge-success-icon { background: rgba(22,163,74,.08);  border-color: rgba(22,163,74,.25);  }
+.badge-pending-icon  { background: rgba(245,158,11,.08); border-color: rgba(245,158,11,.3);  }
+.badge-sub-icon      { background: rgba(124,58,237,.08); border-color: rgba(124,58,237,.25); }
+
+@keyframes successPop {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* Badge */
+.success-badge {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .3rem .9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.badge-success { background: rgba(22,163,74,.12);  color: #16a34a; }
+.badge-pending { background: rgba(245,158,11,.15); color: #b45309; }
+.badge-sub     { background: rgba(124,58,237,.12); color: #7c3aed; }
+
+/* Testi */
+.success-title {
+  font-family: 'DM Serif Display', serif !important;
+  font-size: 1.85rem;
+  color: #111827;
+  margin-bottom: .5rem;
+}
+
+.success-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+/* Box dettagli */
+.detail-box {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: .85rem 1.1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .9rem;
+  justify-content: center;
+  font-size: .83rem;
+  color: #4b5563;
+}
+
+.detail-item { white-space: nowrap; }
+.detail-id   { color: #9ca3af; font-variant-numeric: tabular-nums; font-size: .78rem; }
+
+/* Divisore */
+.success-divider {
+  border-color: #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+/* Bottone */
+.success-btn {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: .9rem !important;
+  font-weight: 500 !important;
+  border-radius: 10px !important;
+  padding: .65rem 1.6rem !important;
+  transition: transform .18s !important;
+}
+
+.success-btn:hover {
+  transform: translateY(-1px);
+}

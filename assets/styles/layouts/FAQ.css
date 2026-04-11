@@ -1,9 +1,9 @@
-.marketphase-title {
+.FAQ-title {
     background: linear-gradient(
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("/assets/contents/marketphase/marketphase.png");
+    url("/assets/contents/FAQ/FAQ.png");
 
     background-size: cover;
     background-position: center;

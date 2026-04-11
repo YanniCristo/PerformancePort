@@ -1,19 +1,39 @@
+.eqystr {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contents/equitystrategy/market.png");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    margin-top: 59px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
 .Dist-eqystr {
-    background-color: #749fdbad;
+    background-color: #123456;
     height: 20vh;
 }
 
 .Dist-eqystr2 {
-    background-color: #749fdbad;
+    background-color: #123456;
     height: 10vh;
 }
 
 .Cont-eqystr {
-    background-color: #749fdbad;
-}
-
-.eqystr {
-    margin: 0;
+    background-color: #123456;
 }
 
 .control-eqystr {
@@ -40,24 +60,3 @@
     border: 2px solid #1a2636;
 }
 
-.eqystr {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("/assets/contents/equitystrategy/market.png");
-
-    background-size: cover;
-    background-position: center;
-
-    width: 100%;
-    min-height: 390px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 60px;
-    font-weight: 700;
-}

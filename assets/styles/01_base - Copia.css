@@ -15,10 +15,12 @@ body {
     width: 100%;
     min-height: 390px;
 
+    margin-top: 59px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .hero-title {
@@ -48,6 +50,7 @@ body {
     width: 100%;
     min-height: 390px;
 
+    margin-top: 59px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,6 +86,7 @@ body {
     width: 100%;
     min-height: 390px;
 
+    margin-top: 59px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,6 +129,7 @@ body {
     width: 100%;
     min-height: 390px;
 
+    margin-top: 59px;
     display: flex;
     flex-direction: column;
     justify-content: center;

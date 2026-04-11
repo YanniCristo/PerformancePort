@@ -11,11 +11,15 @@ def main_layout():
 
         # Store per forzare refresh auth state dopo login
         dcc.Store(id="auth-event", data=0),
+
+        # Redirect pagamenti Stripe
+        dcc.Location(id="redirect", refresh=True),
         
         navbar(),
         
         html.Div(id="page-content"),
         
         login_modal(),
-        signup_modal()
+        signup_modal(),
+        dcc.Store(id="checkout-session", data={}),
     ])

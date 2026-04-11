@@ -1,5 +1,3 @@
-console.log("JS caricato");
-
 window.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
     const threshold = 5; // evita movimenti per micro-scroll

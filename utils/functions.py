@@ -3,12 +3,8 @@ from sib_api_v3_sdk.rest import ApiException
 
 from datetime import datetime
 from dash import html
-import webbrowser
 import json
 import os
-
-def open_browser(port):
-	webbrowser.open_new('http://localhost:{}'.format(port))
 
 def load_content(path):
     with open(path) as f:
@@ -49,17 +45,15 @@ def send_verification_email_Brevo(to_email, token):
     send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
         to=to,
         sender=sender,
-        subject="Verifica il tuo account",
+        subject="Verify your account",
         html_content=f"""
-        <p>Grazie per esserti registrato.</p>
-        <p>Clicca qui per verificare il tuo account:</p>
-        <a href="{verify_link}">Verifica account</a>
+        <p>Thanks your registration.</p>
+        <p>Click the button to verify your account:</p>
+        <a href="{verify_link}">Click Here</a>
         """
     )
 
     try:
         api_response = api_instance.send_transac_email(send_smtp_email)
-        print("Mail inviata con successo!")
     except ApiException as e:
         print(f"Errore durante l'invio tramite Brevo: {e}")
-

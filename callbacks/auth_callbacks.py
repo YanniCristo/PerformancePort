@@ -12,15 +12,15 @@ def register(app):
     def update_user_status(_pathname, _auth_event):
 
         if current_user.is_authenticated:
-            username = current_user.email
-            initials = username[:2].upper()
+            email = current_user.email
+            initials = email[:2].upper()
 
             return html.Div(
                 [
                     dbc.DropdownMenu(
                         label=initials,
                         children=[
-                            dbc.DropdownMenuItem(f"Logged as {username}", header=True),
+                            dbc.DropdownMenuItem(f"{email}", header=True),
                             dbc.DropdownMenuItem(divider=True),
                             dbc.DropdownMenuItem("Logout", href="/logout", external_link=True),
                         ],
@@ -31,8 +31,18 @@ def register(app):
                             "borderRadius": "50%", "padding": "0",
                             "textAlign": "center", "fontWeight": "bold"
                         }
-                    )
-                ]
+                    ),
+                    dbc.Button(
+                        ["Upgrade now", html.Span("→", className="cta-icon")],
+                        id="pay-btn-10", color="primary",
+                        className="cta-dg cta-dg-primary-white cta-dg-with-icon")
+                ],
+                style={
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "gap": "15px"
+                    }
             )
 
         return dbc.Button(

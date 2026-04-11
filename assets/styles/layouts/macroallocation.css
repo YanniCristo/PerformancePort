@@ -11,6 +11,7 @@
     width: 100%;
     min-height: 390px;
 
+    margin-top: 59px;
     display: flex;
     flex-direction: column;
     justify-content: center;

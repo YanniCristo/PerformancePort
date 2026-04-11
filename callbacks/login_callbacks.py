@@ -5,7 +5,7 @@ from sqlalchemy.exc import IntegrityError
 from dash.exceptions import PreventUpdate
 from db.database import SessionLocal
 from flask_login import login_user
-from auth.models import User
+from db.models import User
 import secrets
 
 def register(app):
