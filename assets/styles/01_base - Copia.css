@@ -2,27 +2,6 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.hero {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("/assets/contents/home/home.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    width: 100%;
-    min-height: 390px;
-
-    margin-top: 59px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-}
-
 .hero-title {
     font-size: 60px;
     font-weight: 700;

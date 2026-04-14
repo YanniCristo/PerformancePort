@@ -1,0 +1,60 @@
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contents/home/home.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    margin-top: 59px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+/* Contenitore carosello */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Pallino base */
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+/* Pallino attivo */
+.carousel-dot-active {
+    background-color: #333;
+}
+
+#carousel-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.6s ease;  /* <-- fondamentale */
+}
+
+/* Su schermi piccoli si adatta */
+@media (max-width: 768px) {
+    #carousel-image {
+        width: 100%;
+        height: 250px;
+    }
+}

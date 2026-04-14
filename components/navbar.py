@@ -8,7 +8,7 @@ def navbar():
         dbc.Container(
             [
                 # Logo
-                dbc.NavbarBrand(html.Img(src="/assets/contents/general/logo.png"), href="/"),
+                dbc.NavbarBrand(html.Img(src="/assets/contents/general/logo.png")),
 
                 # Hamburger toggle
                 dbc.NavbarToggler(id="navbar-toggler"),
@@ -20,6 +20,7 @@ def navbar():
                             # Sezione link a sinistra
                             dbc.Nav(
                                 [
+                                    dbc.NavLink("HOME", href="/"),
                                     dbc.NavLink("INDEPENDENCE", href="/indinvest"),
                                     dbc.NavLink("TIME HORIZON", href="/timehor"),
                                     dbc.NavLink("MARKET CYCLES", href="/market"),

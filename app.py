@@ -58,7 +58,8 @@ app = Dash(
     __name__,
     server=server,
     title="PerformingPort.com",
-    external_stylesheets=[dbc.themes.CYBORG])
+    external_stylesheets=[dbc.themes.CYBORG],
+    update_title=None)
 
 # 8. Importo le callbacks e creo main layout
 register_all_callbacks(app)

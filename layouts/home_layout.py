@@ -3,6 +3,7 @@ from components.navbar import navbar
 from components.cards import cards_home
 from components.footer import footer
 from components.login_modal import login_modal
+from utils.constants import CAROUSEL_IMAGES
 from utils.functions import load_content
 from dash import html, dcc
 
@@ -12,13 +13,35 @@ def home_layout():
     descr = txt['info']['description']
     
     return html.Div([
-        
-        # hero
-        html.Div([
-            html.H1("Intelligent investments", className="hero-title"),
-            html.P("Professional invetments insights", className="hero-subtitle")
-            ], className="hero"),
 
+            # Carosello immagini
+            html.Div([
+                # Immagine corrente
+                html.Img(
+                    id="carousel-image",
+                    src=CAROUSEL_IMAGES[0]
+                ),
+                # Pallini di navigazione
+                html.Div([
+                    html.Span(
+                        id={"type": "carousel-dot", "index": i},
+                        n_clicks=0,
+                        className="carousel-dot" + (" carousel-dot-active" if i == 0 else ""),
+                    )
+                    for i in range(len(CAROUSEL_IMAGES))
+                ], className="carousel-dots"),
+
+                # Timer automatico
+                dcc.Interval(id="carousel-interval", interval=6000, n_intervals=0),
+
+                # Store per indice corrente
+                dcc.Store(id="carousel-index", data=0),
+            ], style={"margin-top": "25px",
+                      "padding-top": "55px",
+                      "text-align": "center", "position": "relative"}),
+
+
+  
         html.Div([
             html.Img(
                     src="/assets/contents/general/logo2.png",
@@ -34,8 +57,8 @@ def home_layout():
             ], className="descr",
                  style={"padding": "100px 250px",
                         "text-align": "center"}),
+            
         cards_home(),
-        
         html.Div(style={"minHeight": "20vh"}),
         footer(),
         ])
