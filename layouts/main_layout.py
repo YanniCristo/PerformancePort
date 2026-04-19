@@ -6,20 +6,25 @@ import dash_bootstrap_components as dbc
 from dash import html, dcc
 
 def main_layout():
-    return html.Div([
-        dcc.Location(id="url", refresh=False),
+    return html.Div(
+        id="page-container",
+        className="light",
+        
+        children=[
+            dcc.Location(id="url", refresh=False),
 
-        # Store per forzare refresh auth state dopo login
-        dcc.Store(id="auth-event", data=0),
+            # Store per forzare refresh auth state dopo login
+            dcc.Store(id="auth-event", data=0),
 
-        # Redirect pagamenti Stripe
-        dcc.Location(id="redirect", refresh=True),
-        
-        navbar(),
-        
-        html.Div(id="page-content"),
-        
-        login_modal(),
-        signup_modal(),
-        dcc.Store(id="checkout-session", data={}),
-    ])
+            # Redirect pagamenti Stripe
+            dcc.Location(id="redirect", refresh=True),
+            
+            navbar(),
+            html.Div(id="page-content"),
+
+            login_modal(),
+            signup_modal(),
+            dcc.Store(id="checkout-session", data={}),
+            dcc.Store(id="theme-store", data="light"),
+        ]
+    )

@@ -33,7 +33,8 @@ def navbar():
                             ),
 
                             # Sezione bottone a destra
-                            html.Div(id="user-status")
+                            html.Div(id="user-status"),
+                            html.Button("🌙", id="theme-button", n_clicks=0, className="theme-toggle-btn")
                         ],
                         className="d-flex flex-column flex-lg-row align-items-lg-center w-100"
                     ),
@@ -46,8 +47,6 @@ def navbar():
             style={"paddingLeft": "8%", "paddingRight": "8%"},
             className="d-flex align-items-center"
         ),
-        color="dark",
-        dark=True,
         expand="lg",
         fixed="top",
         className="main-navbar"

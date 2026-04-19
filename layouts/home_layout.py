@@ -36,29 +36,20 @@ def home_layout():
 
                 # Store per indice corrente
                 dcc.Store(id="carousel-index", data=0),
-            ], style={"margin-top": "25px",
-                      "padding-top": "55px",
-                      "text-align": "center", "position": "relative"}),
+            ], style={"text-align": "center", "position": "relative"}),
 
 
   
         html.Div([
             html.Img(
                     src="/assets/contents/general/logo2.png",
-                    style={"height": "45px"}
+                    style={"height": "65px"}
                     )
-            ],
-                 style={"padding-top": "55px",
-                        "text-align": "Center"}),
-
-        html.Div([
-            html.H1(title, className="descr-title"),
-            html.P(descr, className="descr-descr")
-            ], className="descr",
-                 style={"padding": "100px 250px",
-                        "text-align": "center"}),
-            
+            ], style={"padding-top": "55px",
+                      "text-align": "Center"}),
+      
         cards_home(),
         html.Div(style={"minHeight": "20vh"}),
         footer(),
-        ])
+            
+        ], className="home-content")

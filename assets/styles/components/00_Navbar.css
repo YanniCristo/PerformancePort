@@ -6,6 +6,7 @@
     z-index: 1000;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
+    background-color: var(--bg-color) !important;
 }
 
 .navbar-hidden {
@@ -18,12 +19,35 @@
     font-weight: 550;
     margin: 0  clamp(1px, 1.1vw, 5px);
     white-space: nowrap;
+    color: var(--text-color) !important;
+}
+
+.main-navbar .dropdown-item {
+    color: var(--text-color) !important;
 }
 
 .main-navbar .dropdown-toggle::after {
     display: none;
 }
 
+.main-navbar .dropdown-menu {
+    background-color: var(--bg-color) !important;
+}
+
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: var(--accent-color) !important;
+}
+
 .navbar-brand img {
     height: clamp(16px, 3.3vw, 50px);
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    color: var(--text-color);
 }

@@ -13,34 +13,24 @@ def indinvest_layout():
     txt = load_content("assets/contents/indinvest/texts.json")
     
     return html.Div([
-
+        
         html.Div([
             html.H1("Indipendent Investing", className="indinvest-title"),
         ], className="indinvest-tit"),
-
-        html.Div([
-            html.H1(txt['parOne']['title'], className="indinvest-parOne-tit"),
-            html.P(''.join(txt['parOne']['description']), className="indinvest-parOne-tit")
-        ],
-                 className="indinvest-parOne",
-                 style={'padding': "60px 300px"}),
         
-        html.Div([Nome()], style={"background-color":'#4e7bbbad'}),
-
-        TitlePar(par = txt['parTwo']['description'],
-                 img = "assets/contents/indinvest/par1.png",
-                 lista = txt['parTwo']['list'], num='01'),
-
-        Divisor(col='#4e7bbbad', h=40),
-
-        TitlePar(par = txt['parTre']['description'],
-                 img= "assets/contents/indinvest/par2.png", num='02'),
-
-        Divisor(col='#4e7bbbad', h=40),
-
-        TitlePar(par = txt['parQua']['description'],
-                 img= "assets/contents/indinvest/par3.png", num='03'),
-
+        html.Div([
+            html.H1(txt['parOne']['title']),
+            html.P(''.join(txt['parOne']['description'])),
+            
+            TitlePar(par=txt['parTwo']['description'],
+                     img="assets/contents/indinvest/par1.png", num='01'),
+            TitlePar(par=txt['parTre']['description'],
+                     img="assets/contents/indinvest/par2.png", num='02'),
+            TitlePar(par=txt['parQua']['description'],
+                     img="assets/contents/indinvest/par3.png", num='03'),
+            
+        ], className="Cont-indi"),
+        
         html.Div(" ", className="Dist-Indi"),
         footer()
     ])

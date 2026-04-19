@@ -14,8 +14,8 @@ def contact_layout():
     return html.Div([
 
         html.Div([
-            html.H1("Customer care", className="hero-title"),
-            ], className="cust-care1"),
+            html.H1("Customer care", className="contact-title"),
+            ], className="contact-tit"),
 
         html.Div([
             html.Img(

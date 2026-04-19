@@ -33,7 +33,7 @@ def timehoriz_layout():
             load_image(f"{path_img}fig3.png", 'fig-time'),
             load_image(f"{path_img}tab2.png", 'tab-time'),
             
-            ], className="Cont-Time"),
+        ], className="Cont-Time"),
         
 
         html.Div(" ", className="Dist-Time"),

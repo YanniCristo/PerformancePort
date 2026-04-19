@@ -2,79 +2,12 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.hero-title {
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.hero-subtitle {
-    font-size: 22px;
-    opacity: 0.8;
-}
-
 .TitlePar-3 {
     background-color: #1f3e5c83;
 }
 
-.indinvest-tit {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("/assets/contents/indinvest/indinvest.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    width: 100%;
-    min-height: 390px;
-
-    margin-top: 59px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.indinvest-title {
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.indinvest-parOne h1,
-.indinvest-parOne p {
-    color: #2c63b1;
-    white-space: pre-line;
-}
-
-.indinvest-parOne p {
-    font-weight: 200;
-    margin-top: 20px;
-}
-
-.timehoriz {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("/assets/contents/timehoriz/timehoriz.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    width: 100%;
-    min-height: 390px;
-
-    margin-top: 59px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .TitlePar-tit {
     color: #2c63b1;
-    margin-bottom: 20px;
 }
 
 .text-col{
@@ -90,31 +23,6 @@ body {
     max-width: 400px;
 }
 
-.timehoriz-title {
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.market {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("/assets/contents/market/market.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    width: 100%;
-    min-height: 390px;
-
-    margin-top: 59px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .market-title {
     font-size: 60px;
     font-weight: 700;
@@ -124,38 +32,6 @@ body {
     border-radius: 16px;
     padding: 20px;
 }
-
-.cust-care1 {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("/assets/contents/contact/contact.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    width: 100%;
-    min-height: 390px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-p {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-H1 {
-    font-size: 40px;
-    font-weight: 600;
-}
-
-
-
 
 .footer {
     background-color: #1D4B8C;
@@ -222,7 +98,6 @@ H1 {
     text-align: Left;
     transition: all 0.25s ease;
     cursor: pointer;
-    background-color:  #1d4b8c86;
 }
 
 .metric-card h1{

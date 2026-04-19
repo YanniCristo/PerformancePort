@@ -11,12 +11,17 @@
     width: 100%;
     min-height: 390px;
 
-    margin-top: 59px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+}
+
+.home-content {
+    background-color: var(--bg-color);
+    min-height: 100vh; /* assicura che copra tutta la pagina */
+    padding-top: 59px;
 }
 
 /* Contenitore carosello */
@@ -49,6 +54,7 @@
     object-fit: cover;
     opacity: 1;
     transition: opacity 0.6s ease;  /* <-- fondamentale */
+    display: block;
 }
 
 /* Su schermi piccoli si adatta */

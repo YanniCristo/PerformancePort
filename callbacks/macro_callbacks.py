@@ -86,7 +86,7 @@ def register(app):
                         dbc.Card(
                             dbc.CardBody(
                                 html.P(desc, style={"whiteSpace": "pre-line"})
-                                ), className="article-column article-card"),
+                                ), className="article-column-article-card"),
                         
                         html.Div(
                             [AddChart(df, img, names) for img in imgs],

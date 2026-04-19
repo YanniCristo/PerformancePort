@@ -1,19 +1,42 @@
-.Dist-Time {
-    background-color: #749fdbad;
-    height: 20vh;
+.timehoriz {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/assets/contents/timehoriz/timehoriz.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 390px;
+
+    margin-top: 59px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timehoriz-title {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.Cont-Time {
+    background-color: var(--bg-color);
 }
 
 .Cont-Time h1 {
     font-size: clamp(16px, 1.5vw, 28px);
-    color: #1a2636;
     margin: 0px 14%;
     padding: 12px;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .Cont-Time p {
     font-size: clamp(14px, 1.5vw, 20px);
-    color: #1a2636;
     margin: 0px 14%;
     padding: 20px;
     font-weight: 300;
@@ -37,6 +60,8 @@
     border: 2px solid #1a2636;
 }
 
-.Cont-Time {
-    background-color: #749fdbad;
+.Dist-Time {
+    background-color: var(--bg-color);
+    height: 20vh;
+    margin-top: 0;
 }

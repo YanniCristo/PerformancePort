@@ -1,13 +1,11 @@
-/* light mode */
-.light body {
-    font-family: 'Inter', sans-serif;
+.light { 
     background-color: #f5f5f5;
     color: #111;
+    min-height: 100vh;
 }
 
-
-.dark body {
-    font-family: 'Inter', sans-serif;
+.dark {
     background-color: #111;
     color: #f5f5f5;
+    min-height: 100vh;
 }
