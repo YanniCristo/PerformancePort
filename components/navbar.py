@@ -34,7 +34,14 @@ def navbar():
 
                             # Sezione bottone a destra
                             html.Div(id="user-status"),
-                            html.Button("🌙", id="theme-button", n_clicks=0, className="theme-toggle-btn")
+                            html.Button("🌙", id="theme-button", n_clicks=0, className="theme-toggle-btn"),
+
+                            html.Div([
+                                html.Button("EN", id="lang-en", n_clicks=0, className="lang-btn"),
+                                html.Span("|", className="lang-separator"),
+                                html.Button("IT", id="lang-it", n_clicks=0, className="lang-btn"),
+                            ], className="lang-switcher"),
+                            
                         ],
                         className="d-flex flex-column flex-lg-row align-items-lg-center w-100"
                     ),

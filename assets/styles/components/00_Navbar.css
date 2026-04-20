@@ -51,3 +51,24 @@
     padding: 4px 8px;
     color: var(--text-color);
 }
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-separator {
+    color: #aaa;
+}
+
+.lang-btn {
+    padding: 0 4px !important;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.lang-btn.active-lang {
+    opacity: 1;
+    font-weight: bold;
+}

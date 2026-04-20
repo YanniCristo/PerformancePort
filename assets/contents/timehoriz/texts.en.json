@@ -1,0 +1,19 @@
+{
+  "parOne": {
+    "title": "",
+    "descr": "In portfolio allocation, the weight of risky assets should progressively increase with the investor's time horizon and risk tolerance, reflecting a greater capacity to absorb short-term volatility in pursuit of long-term growth"
+  },
+
+  "parTwo": {
+    "title": "Time - Equity Allocation",
+    "descr": "The allocation between Equities and Bonds depends on the Investor's time horizon.\nThe longer the Investor's horizon, the larger the equity allocation that becomes feasible, as the risk associated with short-term fluctuations diminishes over time. Historically, equity markets have delivered higher long-term returns compared to bonds, compensating for their greater volatility.\n\nA longer time horizon allows Investors to better withstand equity market swings, increasing the probability of achieving positive outcomes.\nGiven the planned horizon-whether required or preferred-the optimal equity allocation is driven by the prevailing level of bond yields. Lower interest rates make equities relatively more attractive, and vice versa.\n\nBased on market volatility, correlations, and expected returns, the optimal allocations along the so-called 'Efficient Frontier' can be identified for Investors with different risk profiles, given their investment horizons.",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Time - Credit Allocation (Corporate Bonds)",
+    "descr": "The allocation between corporate bonds and government bonds also depends on the Investor's time horizon.\nWhen considering a specific country (e.g., the US, Germany, etc.), corporate bonds typically offer higher returns to compensate for greater credit risk compared to government bonds (aka 'govies').\n\nThe volatility of corporate bonds-higher for High-Yield issues than for Investment-Grade securities-tends to decline over longer investment periods. The longer the Investor's time horizon, the greater the share of corporate bonds that can be allocated in the portfolio.\n\nBased on expected returns, volatility, and correlations, the optimal percentage of corporate bonds along the 'Efficient Frontier' can be determined for Investors with different risk profiles, given their investment horizon.",
+    "list": []
+  }
+  
+}

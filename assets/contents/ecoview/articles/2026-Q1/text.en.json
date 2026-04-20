@@ -1,0 +1,25 @@
+{
+  "parOne": {
+    "title": "US",
+    "img": [],
+    "description": "The U.S. economy is expected to enter a period of temporary weakness driven by uncertainty surrounding Trump's tariff policy.\nThe business cycle is likely to regain momentum supported by the implementation of the expansionary fiscal plan (the 'One, Big, Beautiful Bill').\nInflation will play a crucial role: it is projected to rise to 3-4% over the next 12 months as tariffs gradually feed into consumer prices \n\nHowever, once inflation stabilizes, the Federal Reserve is expected to return to an easing monetary policy stance."
+  },
+
+  "parTwo": {
+    "title": "EU",
+    "img": [],
+    "description": "Euro Area growth is expected to accelerate following a period of stagnation driven by a new wave of fiscal easing, spearheaded by Germany.\nInflation still has room to decline slightly further supported by a stronger euro.\nAs a result, the ECB is likely to maintain its current accommodative monetary policy stance."
+  },
+  
+  "parTre": {
+    "title": "Asia",
+    "img": [],
+    "description": "China's economy will extend its moderate recovery driven by targeted fiscal support and a gradual rebound in domestic consumption, despite ongoing weakness in the property sector.\nInflation pressures remain muted as excess capacity, subdued consumer demand, and falling property prices weigh on overall price dynamics.\nThis backdrop gives the PBoC room to maintain a supportive monetary stance including liquidity injections and lower reserve requirements, while avoiding broad credit expansion."
+  },
+
+  "parFou": {
+    "title": "Macro Summary - Key Developments at a Glance",
+    "img": [],
+    "description": "Equity market sentiment is set to rebuild after the so-called Tariff Liberation Day as investor expectations turn constructive following a period of trade-related uncertainty.\nU.S. inflation is likely to rise in the short-term reflecting the delayed pass-through of recent tariffs. The Federal Reserve is expected to stay on hold and resume its easing cycle within a few quarters as inflation pressures fade.\n\nSupportive fiscal and monetary policies across the U.S., Euro Area, and China will create a favorable backdrop for equity markets, within a global environment of renewed growth momentum in Europe and economic stabilization in China.\nAhead of key U.S. inflation data a short-duration positioning remains advisable. Once the Fed resumes its easing cycle shifting towards the long end of the yield curve becomes appropriate.\n\nIn a context of improving global growth exposure to High Yield and Investment Grade corporate bonds is recommended - including in the Euro Area In the Eurozone, with inflation contained and the euro strengthening long-duration positioning is preferred."
+  }
+}

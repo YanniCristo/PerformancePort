@@ -18,48 +18,14 @@ def stripe_webhook():
 @payment_bp.route("/success")
 def success():
     session_id = request.args.get("session_id")
+    lang = request.args.get("lang", "en")
 
     if not session_id:
         logger.warning("Redirect /success senza session_id")
-        return redirect("/pagamento-completato")
+        return redirect(f"/{lang}/pagamento-completato")
 
     # Redirect alla pagina Dash passando il session_id come query param
-    return redirect(f"/pagamento-completato?session_id={session_id}")
-
-
-
-##    session_id = request.args.get("session_id")
-##    if not session_id:
-##        return "Pagamento completato, ma session_id mancante.", 400
-##
-##    # Caso 1: webhook già arrivato → DB aggiornato, fonte di verità
-##    payment = get_payment_by_id(session_id)
-##
-##    if payment:
-##        if payment["status"] == "paid":
-##            return f"Pagamento riuscito! Sessione: {session_id}"
-##        else:
-##            # Record presente ma non pagato (es. async pending o failed)
-##            return f"Pagamento non confermato. Stato: {payment['status']}", 202
-##
-##    # Caso 2: webhook non ancora arrivato → fallback su Stripe API
-##    try:
-##        session = retrieve_checkout_session(session_id)
-##        if session.payment_status == "paid":
-##            return f"Pagamento riuscito! Sessione: {session_id}"
-##        else:
-##            # Fix 1: non mostrare "completato" se non è effettivamente paid
-##            return f"Pagamento non confermato. Stato: {payment['status']}", 202
-##
-##    except stripe.error.InvalidRequestError:
-##        # Fix 2: session_id non valido o manomesso
-##        logger.warning(f"session_id non valido ricevuto in /success: {session_id}")
-##        return "Sessione non valida.", 400
-##
-##    except stripe.error.StripeError as e:
-##        # Stripe irraggiungibile o altri errori API
-##        logger.error(f"Errore Stripe in /success: {e}")
-##        return "Pagamento completato, in attesa di conferma webhook.", 202
+    return redirect(f"/{lang}/pagamento-completato?session_id={session_id}")
 
 
 # Browser post redirect su '/cancel' - utente annulla pagamento

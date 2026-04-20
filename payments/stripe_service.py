@@ -5,7 +5,7 @@ import stripe
 logger = logging.getLogger(__name__)
 
 
-def create_checkout_session(amount: int, user_id: int) -> dict:
+def create_checkout_session(amount: int, user_id: int, lang: str = "en") -> dict:
     DOMAIN = os.getenv("DOMAIN")
 
     # Dico a Stripe: crea una sessione di pagamento ospitata da te
@@ -21,6 +21,7 @@ def create_checkout_session(amount: int, user_id: int) -> dict:
             "quantity": 1,
         }],
         mode="payment", # Pagamento singolo (no abbonamento)
+        metadata={"lang": lang},
         success_url=f"{DOMAIN}/success?session_id={{CHECKOUT_SESSION_ID}}",
         cancel_url=f"{DOMAIN}/cancel", # Fallback se utente annulla
     )
@@ -30,7 +31,7 @@ def create_checkout_session(amount: int, user_id: int) -> dict:
     return {"url": session.url, "session_id": session.id}
 
 
-def create_subscription_session(price_id: str, user_id: int) -> dict:
+def create_subscription_session(price_id: str, user_id: int, lang: str = "en") -> dict:
     """
     Crea una Checkout Session per abbonamento mensile.
     price_id deve essere un Price ricorrente creato su Stripe Dashboard
@@ -45,6 +46,7 @@ def create_subscription_session(price_id: str, user_id: int) -> dict:
             "quantity": 1,
         }],
         mode="subscription",    # ← chiave: abbonamento, non pagamento singolo
+        metadata={"lang": lang},
         success_url=f"{DOMAIN}/success?session_id={{CHECKOUT_SESSION_ID}}",
         cancel_url=f"{DOMAIN}/cancel",
     )

@@ -9,8 +9,8 @@ from components.login_modal import login_modal
 from dash import html, dcc
 
 
-def indinvest_layout():
-    txt = load_content("assets/contents/indinvest/texts.json")
+def indinvest_layout(lang='en'):
+    txt = load_content("assets/contents/indinvest/texts.json", lang)
     
     return html.Div([
         

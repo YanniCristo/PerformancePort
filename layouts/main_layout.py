@@ -13,6 +13,9 @@ def main_layout():
         children=[
             dcc.Location(id="url", refresh=False),
 
+            # Store lingua: 'en' - persiste durante la sessione
+            dcc.Store(id="lang-store", data="en", storage_type="local"),
+
             # Store per forzare refresh auth state dopo login
             dcc.Store(id="auth-event", data=0),
 

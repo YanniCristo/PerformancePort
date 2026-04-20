@@ -2,7 +2,7 @@ import dash_bootstrap_components as dbc
 from dash import html
 
 
-def success_layout(payment=None, session=None):
+def success_layout(payment=None, session=None, lang='en'):
     """
     Layout della pagina di successo post-pagamento.
 

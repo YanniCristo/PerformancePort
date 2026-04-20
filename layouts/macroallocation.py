@@ -6,8 +6,8 @@ from components.navbar import navbar
 from components.footer import footer
 from dash import html, dcc
 
-def macroallocation():
-    txt = load_content("assets/contents/macroallocation/texts.json")
+def macroallocation(lang='en'):
+    txt = load_content("assets/contents/macroallocation/texts.json", lang)
     path_img = "assets/contents/macroallocation/"
     
     return html.Div([

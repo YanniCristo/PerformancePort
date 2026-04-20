@@ -1,0 +1,18 @@
+{
+  "parOne": {
+    "title": "",
+    "descr": "Nell'allocazione del portafoglio, il peso delle attivita' rischiose dovrebbe aumentare progressivamente con l'orizzonte temporale e la tolleranza al rischio dell'investitore, riflettendo una maggiore capacita' di assorbire la volatilita' di breve periodo nel perseguimento di una crescita a lungo termine."
+  },
+
+  "parTwo": {
+    "title": "Tempo - Allocazione Azionaria",
+    "descr": "L'allocazione tra Azioni e Obbligazioni dipende dall'orizzonte temporale dell'investitore.\nPiu' lungo e' l'orizzonte dell'investitore, maggiore e' l'allocazione azionaria che diventa fattibile, poiche' il rischio associato alle fluttuazioni di breve termine diminuisce nel tempo. Storicamente, i mercati azionari hanno offerto rendimenti a lungo termine piu' elevati rispetto alle obbligazioni, compensando la loro maggiore volatilita'.\n\nUn orizzonte temporale piu' lungo consente agli investitori di resistere meglio alle oscillazioni del mercato azionario, aumentando la probabilita' di ottenere risultati positivi.\nDato l'orizzonte pianificato - sia esso necessario o preferito - l'allocazione azionaria ottimale e' guidata dal livello prevalente dei rendimenti obbligazionari. Tassi di interesse piu' bassi rendono le azioni relativamente piu' interessanti, e viceversa.\n\nSulla base della volatilita' del mercato, delle correlazioni e dei rendimenti attesi, e' possibile identificare le allocazioni ottimali lungo la cosiddetta 'Frontiera Efficiente' per investitori con diversi profili di rischio, dati i loro orizzonti di investimento.",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Tempo - Allocazione del Credito (Obbligazioni Societarie)",
+    "descr": "Anche l'allocazione tra obbligazioni societarie e titoli di stato dipende dall'orizzonte temporale dell'investitore.\nQuando si considera un paese specifico (es. USA, Germania, ecc.), le obbligazioni societarie offrono tipicamente rendimenti piu' elevati per compensare il maggior rischio di credito rispetto ai titoli di stato (noti come 'govies').\n\nLa volatilita' delle obbligazioni societarie - piu' elevata per le emissioni High-Yield rispetto ai titoli Investment-Grade - tende a diminuire su periodi di investimento piu' lunghi. Piu' lungo e' l'orizzonte temporale dell'investitore, maggiore e' la quota di obbligazioni societarie che puo' essere allocata nel portafoglio.\n\nSulla base dei rendimenti attesi, della volatilita' e delle correlazioni, e' possibile determinare la percentuale ottimale di obbligazioni societarie lungo la 'Frontiera Efficiente' per investitori con diversi profili di rischio, dato il loro orizzonte di investimento.",
+    "list": []
+  }
+}

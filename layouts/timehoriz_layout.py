@@ -6,8 +6,8 @@ from components.navbar import navbar
 from components.footer import footer
 from dash import html, dcc
 
-def timehoriz_layout():
-    txt = load_content("assets/contents/timehoriz/texts.json")
+def timehoriz_layout(lang='en'):
+    txt = load_content("assets/contents/timehoriz/texts.json", lang)
     path_img = "assets/contents/timehoriz/"
     
     return html.Div([

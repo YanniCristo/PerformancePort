@@ -9,7 +9,7 @@ from dash import html, dcc
 
 from utils.data import data
 
-def equity_strategy():
+def equity_strategy(lang='en'):
 
     return html.Div([
 

@@ -1,0 +1,12 @@
+{
+  "parOne": {
+    "title":"Equity Phase",
+    "descr": "Equities are supported by\n\n1) economic growth, which fuels corporate earnings\n2) falling interest rates, which boost credit for consumption and investment.\nThe stock market alternates between positive phases (shaded areas) and negative phases.\nThe duration of these phases tends to be fairly regular and is driven by the fluctuations of the economic cycle and bond yields.\nTurning points in bond yields often precede turning points in equity markets."
+  },
+
+  "parTwo": {
+    "title": "Bond Yields Phase",
+    "descr": "Bond yields fluctuate consistently with Central Bank interest rate maneuvers.\nIt is beneficial to hold bonds during periods of declining yields (shaded area), when the Central Bank lowers interest rates (dashed in red)."
+  }
+
+}

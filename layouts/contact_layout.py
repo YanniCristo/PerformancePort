@@ -7,8 +7,8 @@ from dash import html, dcc
 from utils.functions import load_content
 
 
-def contact_layout():
-    txt = load_content("assets/contents/contact/texts.json")
+def contact_layout(lang='en'):
+    txt = load_content("assets/contents/contact/texts.json", lang)
     descr = txt['info']['description']
     
     return html.Div([

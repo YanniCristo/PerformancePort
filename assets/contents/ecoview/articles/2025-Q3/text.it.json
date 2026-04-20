@@ -1,0 +1,25 @@
+{
+  "parOne": {
+    "title": "US",
+    "img": ["(1)","(2)"],
+    "description": "Si prevede che l'economia statunitense entrera' in un periodo di temporanea debolezza guidato dall'incertezza che circonda la politica tariffaria di Trump.\nIl ciclo economico riprendera' probabilmente slancio sostenuto dall'attuazione del piano fiscale espansivo (il 'One, Big, Beautiful Bill').\n\nL'inflazione giochera' un ruolo cruciale: si stima che salira' al 3-4% nei prossimi 12 mesi, a mano a mano che i dazi si trasferiranno sui prezzi al consumo.\nTuttavia, una volta che l'inflazione si sara' stabilizzata, si prevede che la Federal Reserve torni a un orientamento di politica monetaria accomodante."
+  },
+
+  "parTwo": {
+    "title": "EU",
+    "img": ["(3)","(4)"],
+    "description": "Si prevede che la crescita nell'area euro subira' un'accelerazione dopo un periodo di stagnazione, spinta da una nuova ondata di allentamento fiscale guidata dalla Germania.\nL'inflazione ha ancora margini per un lieve, ulteriore calo, sostenuta da un euro piu' forte. Di conseguenza, e' probabile che la BCE mantenga il suo attuale orientamento di politica monetaria accomodante."
+  },
+  
+  "parTre": {
+    "title": "Asia",
+    "img": ["(1)","(2)"],
+    "description": "L'economia cinese estendera' la sua moderata ripresa guidata da un supporto fiscale mirato e da un graduale rimbalzo dei consumi interni, nonostante la persistente debolezza del settore immobiliare. Le pressioni inflazionistiche rimangono contenute poiche' l'eccesso di capacita', la debole domanda dei consumatori e il calo dei prezzi degli immobili gravano sulla dinamica generale dei prezzi.\nQuesto scenario offre alla PBoC il margine per mantenere una postura monetaria di supporto, inclusi l'iniezione di liquidita' e la riduzione dei requisiti di riserva, evitando al contempo un'ampia espansione del credito."
+  },
+
+  "parFou": {
+    "title": "Macro Summary - Key Developments at a Glance",
+    "img": [],
+    "description": "Il sentiment del mercato azionario e' destinato a rafforzarsi dopo il cosiddetto 'Tariff Liberation Day', con le aspettative degli investitori che diventano costruttive a seguito di un periodo di incertezza legata agli scambi commerciali. L'inflazione statunitense probabilmente salira' nel breve termine, riflettendo il ritardo nella trasmissione dei recenti dazi (pass-through). Si prevede che la Federal Reserve rimarra' in attesa per poi riprendere il ciclo di allentamento entro pochi trimestri, con l'attenuarsi delle pressioni inflazionistiche.\nLe politiche fiscali e monetarie di supporto negli Stati Uniti, nell'Eurozona e in Cina creeranno un contesto favorevole per i mercati azionari, all'interno di un ambiente globale caratterizzato da un rinnovato slancio della crescita in Europa e dalla stabilizzazione economica in Cina. In vista dei dati chiave sull'inflazione USA, rimane consigliabile un posizionamento sulla 'short-duration' (breve durata). Una volta che la Fed avra' ripreso il suo ciclo di allentamento, diventera' opportuno spostarsi verso la parte lunga della curva dei rendimenti.\nIn un contesto di miglioramento della crescita globale, si raccomanda l'esposizione alle obbligazioni societarie High Yield e Investment Grade, anche nell'Eurozona. In quest'ultima, con un'inflazione contenuta e un euro in rafforzamento, è preferibile un posizionamento sulla 'long-duration'."
+  }
+}

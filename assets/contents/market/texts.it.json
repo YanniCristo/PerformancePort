@@ -1,0 +1,36 @@
+{
+  "parOne": {
+    "title": "Fasi Risk-on / Risk-off",
+    "descr": "Un portafoglio ben strutturato combina asset rischiosi - Azioni vs Obbligazioni, Obbligazioni Societarie vs Titoli di Stato - per ottenere diversificazione e rendimenti sostenibili.\nL'allocazione tra attivita' rischiose e a minor rischio dipende sia dalla fase del Ciclo Economico che dal contesto prevalente dei Tassi di Interesse.\nDurante i periodi di espansione economica, i mercati entrano tipicamente in fasi 'risk-on', favorendo posizioni di sovrappeso (overweight) in Azioni e Obbligazioni Societarie. Al contrario, durante i rallentamenti economici, prevalgono le fasi 'risk-off', che richiedono un'allocazione piu' difensiva con un peso maggiore in asset a basso rischio.\n\nL'interazione tra il Ciclo Economico (riflesso nell'andamento del PIL), l'Inflazione e la dinamica dei Tassi di Interesse (guidata dalla politica della Banca Centrale) genera modelli di rotazione abbastanza regolari tra le fasi risk-on e risk-off.\nConsiderando la principale fonte di diversificazione all'interno di un portafoglio - che guida l'equilibrio tra asset rischiosi e a basso rischio - l'allocazione tra Azioni e Titoli di Stato dovrebbe rispondere a una domanda chiave: in quale fase del ciclo si trovano attualmente i mercati?\nL'analisi storica degli ultimi 60 anni fornisce preziosi spunti sulla direzione tipica e sulla durata dei trend di mercato - informazioni essenziali per l'allocazione strategica del portafoglio nel tempo.\n\nDate le sue dimensioni e il suo ruolo centrale nell'economia globale, il mercato statunitense funge da riferimento primario per l'esame di queste dinamiche. Considerando i trend del mercato azionario e i rendimenti dei Treasury a 10 anni come proxy per identificare le fasi risk-on e risk-off, e' possibile stimare la durata media dei cicli di mercato - sia nel mercato azionario (S&P 500) che nei rendimenti obbligazionari a lungo termine - sulla base dei dati storici degli Stati Uniti."
+  },
+
+  "parTwo": {
+    "title": "Cicli di Mercato - Azioni vs Obbligazioni",
+    "descr": "Il posizionamento del portafoglio dovrebbe essere coerente con la fase prevalente del ciclo economico: le allocazioni azionarie dovrebbero essere aumentate in contesti risk-on e ridotte nei periodi risk-off",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Cicli di Mercato - Obbligazioni Societarie vs Titoli di Stato",
+    "descr": "Anche l'allocazione del portafoglio obbligazionario dovrebbe adattarsi al ciclo economico: l'esposizione alle Obbligazioni Societarie (High Yield & Investment Grade) tende ad essere aumentata durante le fasi risk-on, quando i differenziali di rendimento (credit spread) generalmente si restringono",
+    "list": []
+  },
+
+  "parFou": {
+    "title": "Cicli di Mercato - Scadenza delle obbligazioni (Maturity)",
+    "descr": "A livello aggregato, i rendimenti obbligazionari riflettono due fonti chiave di rischio:\n1. Rischio di Inflazione (IR)\n2. Rischio di Credito Sistemico (SCR) - rappresentato dallo spread creditizio aggregato, ovvero la differenza tra i rendimenti delle obbligazioni societarie e i rendimenti dei titoli di stato con la stessa scadenza.\n\nIl peso relativo di queste due componenti varia tra le classi di attivita' obbligazionarie:\nTitoli di Stato (o Govies): IR=80-90% | SCR=10-20%\nNei titoli sovrani, il rischio di default e' percepito come minimo o trascurabile. I rendimenti riflettono principalmente le aspettative sull'inflazione futura.\nNei paesi con finanze pubbliche meno solide, il peso del rischio di credito può aumentare leggermente, ma rimane secondario rispetto all'inflazione. Obbligazioni Societarie Investment Grade (es. Apple, IBM, ENI): IR=60-70% | SCR=30-40%\nL'inflazione rimane un driver fondamentale. Tuttavia, il rischio di credito societario e' reale, sebbene generalmente limitato. Obbligazioni Societarie High Yield (es. Ford, Altice, Carnival): IR=20-30% | SCR=70-80%\nIn questo caso, il rischio di default e il deterioramento del credito dominano chiaramente. L'inflazione conta meno perché i rendimenti sono guidati principalmente dai credit spread - la differenza di rendimento tra le obbligazioni societarie e i titoli di stato con la stessa scadenza.",
+    "list": []
+  },
+
+  "parFiv": {
+    "title": "Cicli di Mercato - Rischio di Inflazione (IR)",
+    "descr": "Quando il Rischio di Inflazione (IR) diminuisce, i rendimenti dei Govies e delle obbligazioni societarie IG tendono a scendere (i prezzi salgono). In questo caso, l'esposizione del portafoglio dovrebbe essere orientata verso scadenze piu' lunghe (piu' sensibili rispetto a quelle brevi). Il contrario vale quando l'IR aumenta.",
+    "list": []
+  },
+
+  "parSix": {
+    "title": "Cicli di Mercato - Rischio di Credito Sistemico (SCR)",
+    "descr": "Quando il Rischio di Credito Sistemico (SCR) diminuisce - tipicamente durante periodi di crescita economica positiva o ripresa (fase risk-on) - i credit spread sulle obbligazioni High Yield (HY) e societarie IG tendono a restringersi (assumendo che l'IR rimanga stabile). In questo caso, l'esposizione del portafoglio dovrebbe essere orientata verso scadenze piu' lunghe (piu' sensibili rispetto a quelle brevi). Il contrario vale quando l'SCR aumenta.",
+    "list": []
+  }
+}

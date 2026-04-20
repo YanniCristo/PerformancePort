@@ -1,0 +1,11 @@
+{
+  "parOne": {
+    "title": "Fase Azionaria",
+    "descr": "Le azioni sono sostenute da:\n\n1) la crescita economica, che alimenta gli utili societari\n2) il calo dei tassi di interesse, che stimola il credito per i consumi e gli investimenti.\nIl mercato azionario alterna fasi positive (aree ombreggiate) e fasi negative.\nLa durata di queste fasi tende a essere abbastanza regolare ed e' guidata dalle fluttuazioni del ciclo economico e dai rendimenti obbligazionari.\nI punti di inversione dei rendimenti obbligazionari spesso precedono i punti di inversione dei mercati azionari."
+  },
+
+  "parTwo": {
+    "title": "Fase dei Rendimenti Obbligazionari",
+    "descr": "I rendimenti obbligazionari fluttuano coerentemente con le manovre sui tassi di interesse delle Banche Centrali.\nE' vantaggioso detenere obbligazioni durante i periodi di calo dei rendimenti (area ombreggiata), ovvero quando la Banca Centrale taglia i tassi di interesse (linea rossa tratteggiata)."
+  }
+}

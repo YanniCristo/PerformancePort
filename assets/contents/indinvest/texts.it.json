@@ -1,0 +1,22 @@
+{
+  "parOne": {
+    "title": "Preservare e far crescere il patrimonio con rendimenti costanti",
+    "description": "Affidarsi al risparmio gestito (banche, broker, fondi comuni) comporta commissioni che riducono il rendimento netto del portafoglio. Spesso, questi costi non sono giustificati da performance migliori. Secondo la teoria economica (Ipotesi di Mercati Efficienti), i rendimenti in eccesso derivanti dalla gestione attiva basata sull'analisi fondamentale tendono a essere nulli o negativi nel lungo periodo.\n\nCon un accesso regolare a informazioni finanziarie strutturate, e' possibile gestire gli investimenti in modo indipendente - evitando costi non necessari e ottenendo risultati superiori alla media attraverso modelli di portafoglio sistematici e basati sull'evidenza."
+  },
+
+  "parTwo": {
+    "title": "Cosa offre PerformingPort",
+    "description": "Framework Strutturato - Portafogli modello target definiti attraverso logiche chiave coerenti che considerano l'orizzonte temporale dell'investitore, si adattano all'evoluzione delle condizioni macroeconomiche e si allineano ai cicli di mercato prevalenti.\nQuesto approccio e' progettato per:\n-Mostrare una selezione mirata dei componenti del modello\n-Consentire un monitoraggio semplificato con limitati aggiustamenti periodici\n-Fornire un confronto analitico con i benchmark di mercato rilevanti"
+  },
+
+  "parTre": {
+    "title": "",
+    "description": "Macro Allocazione - Definizione di portafogli modello quantitativi sulla Frontiera Efficiente, basati sul ciclo di mercato attuale e sulle logiche macroeconomiche di investimento.\nIl framework definisce l'esposizione (tramite ETF/Fondi) tra i vari segmenti obbligazionari (governativi, corporate IG, corporate HY, scadenze brevi/medie/lunghe) e i settori azionari tratti dall'S&P 500 e dall'indice europeo."
+  },
+
+  "parQua": {
+    "title": "",
+    "description": "Allocazione sui principali mercati azionari - Portafogli modello ribilanciati mensilmente, derivati da algoritmi sottoposti a back-test e addestrati su dati storici di momentum dei prezzi giornalieri:\nPortafogli su base nazionale in 10 mercati tra Nord America ed Europa\nSelezione mensile di 7-10 titoli large-cap dai benchmark nazionali"
+  }
+  
+}

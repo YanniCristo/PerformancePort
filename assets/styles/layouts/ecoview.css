@@ -23,12 +23,12 @@
 }
 
 .article-title {
-    color: #002060;
+    color: var(--text-color);
     font-weight: 600;
 }
 
 .main-ecoview {
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     align-items: center;      /* opzionale */
@@ -36,13 +36,9 @@
 }
 
 .quarter-dd {
+    color: var(--text-color);
     margin: 15px;
     width: 100%;  /* oppure 300px se vuoi controllo preciso */
-}
-
-.Dist-ecoview {
-    background-color: #ffffff;
-    height: 20vh;
 }
 
 .article-column {
@@ -51,12 +47,14 @@
 }
 
 .article-column-article-card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     width: 50%;
     margin: 0;
     align-self: stretch;   /* si estende all'altezza del fratello più alto */
     display: flex;         /* rende la card stessa un flex container */
     flex-direction: column;
-    background-color: #002060;
+    text-align: justify;
 }
 
 .article-column-article-card .card-body {
@@ -64,7 +62,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ffffff;
 }
 
 .article-row {
@@ -80,4 +77,10 @@
 .article-block {
     margin-top: 25px;
     margin-bottom: 99px;
+}
+
+.Dist-ecoview {
+    background-color: var(--bg-color);
+    height: 20vh;
+    margin-top: 0;
 }

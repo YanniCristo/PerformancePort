@@ -9,7 +9,7 @@ from dash import html, dcc
 
 from utils.macrodata import macro
 
-def eco_view():
+def eco_view(lang='en'):
 
     return html.Div([
 

@@ -1,0 +1,15 @@
+{
+  "info": {
+    "title":"What is PerformancePort?",
+    "description": "Project PP is a proprietary quantitative investment strategy designed to deliver consistent alpha by exploiting market inefficiencies through Multi-Factor Modeling and Dynamic Risk Parity. While traditional 'Buy & Hold' strategies are vulnerable to systemic drawdowns, PP utilizes a regime-switching algorithm to maximize risk-adjusted returns across various market cycles."
+  },
+
+  "cards": {
+    "1": ["/assets/contents/home/dollar.png", "Explore the value of Indipendent Investing"],
+    "2": ["/assets/contents/home/center.png", "Understand how Time Horizon and investor risk profile shape allocation models"],
+    "3": ["/assets/contents/home/line.png", "See how Market Cycles drives investments allocation"],
+    "4": ["/assets/contents/home/bars.png", "Stay informed with a coincise Economic Overview - see at a glance what drives our macro allocation"],
+    "5": ["/assets/contents/home/user.png", "Discover the current Market Phase and how it drives Macro Asset Allocation across risk profiles"],
+    "6": ["/assets/contents/home/folder.png", "Access Leading Equity Markets Allocation - built from a selection of top index constituents, dynamically adjusted each month and benchmarked against their reference indices"]
+  }
+}

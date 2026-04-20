@@ -6,8 +6,8 @@ from components.navbar import navbar
 from components.footer import footer
 from dash import html, dcc
 
-def market_layout():
-    txt = load_content("assets/contents/market/texts.json")
+def market_layout(lang='en'):
+    txt = load_content("assets/contents/market/texts.json", lang)
     path_img = "assets/contents/market/"
     
     return html.Div([

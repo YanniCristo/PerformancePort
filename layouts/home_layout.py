@@ -7,8 +7,8 @@ from utils.constants import CAROUSEL_IMAGES
 from utils.functions import load_content
 from dash import html, dcc
 
-def home_layout():
-    txt = load_content("assets/contents/home/texts.json")
+def home_layout(lang='en'):
+    txt = load_content(f"assets/contents/home/texts.json", lang)
     title = txt['info']['title']
     descr = txt['info']['description']
     
@@ -48,7 +48,7 @@ def home_layout():
             ], style={"padding-top": "55px",
                       "text-align": "Center"}),
       
-        cards_home(),
+        cards_home(txt),
         html.Div(style={"minHeight": "20vh"}),
         footer(),
             

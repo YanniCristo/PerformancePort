@@ -7,8 +7,8 @@ from dash import html, dcc
 from utils.functions import load_content
 
 
-def FAQ_layout():
-    txt = load_content("assets/contents/FAQ/texts.json")
+def FAQ_layout(lang='en'):
+    txt = load_content("assets/contents/FAQ/texts.json", lang)
     descr = txt['parOne']['descr']
     
     return html.Div([

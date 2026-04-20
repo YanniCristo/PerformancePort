@@ -1,7 +1,7 @@
 from flask_login import current_user
 import logging, os
 import stripe
-from dash import Input, Output, no_update, ctx
+from dash import Input, Output, no_update, ctx, State
 from payments.stripe_service import create_checkout_session, create_subscription_session
 
 logger = logging.getLogger(__name__)
@@ -13,14 +13,18 @@ def register(app):
         Output("checkout-session", "data"),
 
         Input("pay-btn-10", "n_clicks"),
+        State("url", "pathname"),
         
         prevent_initial_call=True
     )
-    def start_payment(n1):
+    def start_payment(n1, pathname):
         
         # Blocca esecuzioni spurie al mount del componente
         if not any([n1]):
             return no_update, no_update
+
+        parts = (pathname or "/en").split("/")
+        lang = parts[1] if len(parts) > 1 and parts[1] in ["en", "it"] else "en"
         
         user_id = current_user.id if current_user.is_authenticated else None
         
@@ -29,10 +33,10 @@ def register(app):
 
             if triggered == "subscribe-btn":
                 price_id = os.getenv("STRIPE_MONTHLY_PRICE_ID")
-                session = create_subscription_session(price_id, user_id)
+                session = create_subscription_session(price_id, user_id, lang=lang)
             else:
                 amount = int(ctx.triggered_id.split("-")[-1]) * 100
-                session = create_checkout_session(amount, user_id)
+                session = create_checkout_session(amount, user_id, lang=lang)
             
             # Faccio redirect a url Stripe per far procedere al pagamento
             return session["url"], {"session_id": session["session_id"]}
