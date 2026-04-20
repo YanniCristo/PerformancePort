@@ -6,8 +6,9 @@ from dash import html
 import json
 import os
 
-def load_content(path):
-    with open(path) as f:
+def load_content(path, lang="en"):
+    localized = path.replace(".json", f".{lang}.json")
+    with open(localized) as f:
         return json.load(f)
 
 def load_image(path, name='images'):
