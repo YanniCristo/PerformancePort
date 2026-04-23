@@ -1,9 +1,6 @@
-from components.login_modal import login_modal
 from utils.functions import load_content, load_image
 from components.generic.elements import Divisor
 import dash_bootstrap_components as dbc
-from components.navbar import navbar
-from components.footer import footer
 from dash import html, dcc
 
 def timehoriz_layout(lang='en'):
@@ -35,7 +32,5 @@ def timehoriz_layout(lang='en'):
             
         ], className="Cont-Time"),
         
-
-        html.Div(" ", className="Dist-Time"),
-        footer()
+        html.Div(" ", className="Dist-Time")
     ])

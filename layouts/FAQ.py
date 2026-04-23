@@ -1,8 +1,5 @@
-from components.login_modal import login_modal
 import dash_bootstrap_components as dbc
 from components.contact_form import contact_form
-from components.navbar import navbar
-from components.footer import footer
 from dash import html, dcc
 from utils.functions import load_content
 
@@ -22,6 +19,5 @@ def FAQ_layout(lang='en'):
                  style={"padding": "80px 200px",
                         "text-align": "center"}),
 
-        html.Div(style={"minHeight": "30vh"}),
-        footer(),
+        html.Div(style={"minHeight": "30vh"})
         ])

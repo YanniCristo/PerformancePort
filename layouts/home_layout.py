@@ -1,8 +1,5 @@
 import dash_bootstrap_components as dbc
-from components.navbar import navbar
 from components.cards import cards_home
-from components.footer import footer
-from components.login_modal import login_modal
 from utils.constants import CAROUSEL_IMAGES
 from utils.functions import load_content
 from dash import html, dcc
@@ -50,6 +47,5 @@ def home_layout(lang='en'):
       
         cards_home(txt),
         html.Div(style={"minHeight": "20vh"}),
-        footer(),
             
         ], className="home-content")

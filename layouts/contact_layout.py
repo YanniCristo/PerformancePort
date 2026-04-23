@@ -1,8 +1,5 @@
-from components.login_modal import login_modal
 import dash_bootstrap_components as dbc
 from components.contact_form import contact_form
-from components.footer import footer
-from components.navbar import navbar
 from dash import html, dcc
 from utils.functions import load_content
 
@@ -37,6 +34,5 @@ def contact_layout(lang='en'):
             html.Div(style={"minHeight": "20vh"})
             ],  style={"padding": "0px 520px"}),
 
-        html.Div(style={"minHeight": "30vh"}),
-        footer()
+        html.Div(style={"minHeight": "30vh"})
         ])

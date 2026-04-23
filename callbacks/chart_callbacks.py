@@ -53,12 +53,33 @@ def register(app):
 
         # Crea il grafico
         fig = px.line(x=filtered.index, y=cumulative)
+        
         fig.update_layout(
+
             yaxis=dict(side="right", title="",
-                       ticks="outside",showline=True,
-                       mirror=True
+                       ticks="outside",showline=False,
+                       showgrid=True,mirror=True,
+                       gridcolor="rgba(150,150,150,0.3)",
+                       griddash="dot", zeroline=False
                        ),
-            xaxis=dict(title=None)
+            
+            xaxis=dict(title=None, showline=False, showgrid=False),
+
+            autosize=True,
+            margin=dict(l=10, r=10, t=10, b=10),
+            dragmode=False,
+            plot_bgcolor="rgba(0,0,0,0)",
+            paper_bgcolor="rgba(0,0,0,0)",
+            hovermode="x"
         )
+
+        fig.update_xaxes(
+            showspikes=True,          # attiva la linea verticale
+            spikemode="across",       # attraversa tutto il grafico
+            spikesnap="cursor",
+            spikecolor="rgba(150,150,150,0.6)",
+            spikethickness=1
+        )
+        
         return fig, start, end
 

@@ -1,9 +1,6 @@
-from components.login_modal import login_modal
 from utils.functions import load_content, load_image
 import dash_bootstrap_components as dbc
 from components.generic.elements import Divisor
-from components.navbar import navbar
-from components.footer import footer
 from dash import html, dcc
 
 def market_layout(lang='en'):
@@ -48,6 +45,5 @@ def market_layout(lang='en'):
 
             ], className="Cont-mkt"),
 
-        html.Div(" ", className="Dist-mkt"),
-        footer()
+        html.Div(" ", className="Dist-mkt")
     ])

@@ -1,6 +1,7 @@
 from components.signup_modal import signup_modal
 from components.login_modal import login_modal
 from components.navbar import navbar
+from components.footer import footer
 
 import dash_bootstrap_components as dbc
 from dash import html, dcc
@@ -29,5 +30,7 @@ def main_layout():
             signup_modal(),
             dcc.Store(id="checkout-session", data={}),
             dcc.Store(id="theme-store", data="light"),
+
+            footer()
         ]
     )
