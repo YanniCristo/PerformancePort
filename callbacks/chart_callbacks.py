@@ -1,14 +1,51 @@
+import dash_bootstrap_components as dbc
+from dash import html
 from dash import Input, Output
 import plotly.express as px
 from utils.data import data
 from datetime import datetime, timedelta
 import pandas as pd
 import dash
+import numpy as np
+
+def build_metrics(cumulative, returns):
+    
+    total_return = cumulative.iloc[-1] - 1
+    volatility = returns.std() * np.sqrt(252)
+    sharpe = (returns.mean() * 252) / volatility if volatility != 0 else 0
+    rolling_max = cumulative.cummax()
+    max_dd = ((cumulative - rolling_max) / rolling_max).min()
+    calmar = (total_return / abs(max_dd)) if max_dd != 0 else 0
+
+    metrics_data = [("Return", total_return, f"{total_return:.1%}"),
+                    ("Sharpe Ratio", sharpe, f"{sharpe:.2f}"),
+                    ("Volatility", volatility, f"{volatility:.1%}"),
+                    ("Max Drawdown", max_dd, f"{max_dd:.1%}"),
+                    ("Calmar Ratio", calmar, f"{calmar:.2f}")]
+    cols = []
+    for name, raw, value in metrics_data:
+        if name in ['Return','Sharpe Ratio','Calmar Ratio']:
+            if raw > 0: segno = "positive"
+            elif raw < 0: segno = "negative"
+        else:
+            segno = "neutral"
+        cols.append(
+            dbc.Col(
+                dbc.Card(
+                    dbc.CardBody([
+                        html.Div(name, className="metric-title"),
+                        html.Div(value, className="metric-value", **{"data-sign": segno}),
+                    ])
+                ), xs=12, sm=6, md=4, lg=3, xl=2
+            )
+        )
+    return dbc.Row(cols, className="metrics-row")
 
 def register(app):
 
     @app.callback(
         Output('graph', 'figure'),
+        Output('metrics-wrapper', 'children'),
         Output('date-picker', 'start_date'),
         Output('date-picker', 'end_date'),
         Input('date-picker', 'start_date'),
@@ -80,6 +117,9 @@ def register(app):
             spikecolor="rgba(150,150,150,0.6)",
             spikethickness=1
         )
+
+        # Calcolo le metriche
+        metrics = build_metrics(cumulative, returns)
         
-        return fig, start, end
+        return fig, metrics, start, end
 

@@ -10,13 +10,10 @@ def equity_strategy(lang='en'):
 
     accordion = dbc.Accordion([
         dbc.AccordionItem(
-            title="Description",
+            title="Strategy description",
             children=[
-                html.Div("Descrizione della strategia"),
-                html.Div(""),
-                html.Div(""),
-            ],
-            item_id="metrics"
+                html.Div("Strategy description"),
+            ], item_id="strat-descript"
         )
     ], start_collapsed=True)
 
@@ -29,32 +26,8 @@ def equity_strategy(lang='en'):
             end_date=data.index.max()
     ), className='picker-eqystr')
 
-
-    metrics_data = [
-        ("Return", "12.5%"),
-        ("Sharpe Ratio", "1.45"),
-        ("Volatility", "8.2%"),
-        ("Max Drawdown", "-6.3%"),
-        ("Calmar Ratio", "1.98")]
-
     metric = html.Div(
-        dbc.Row([
-            dbc.Col(
-                dbc.Card(
-                    dbc.CardBody([
-                        html.Div(name, className="metric-title"),
-                        html.Div(value, className="metric-value"),
-                    ])
-                ),
-                xs=12,
-                sm=6,
-                md=4,
-                lg=3,
-                xl=2
-            )
-            for name, value in metrics_data
-        ], className="g-3 justify-content-center"),
-        
+        id="metrics-wrapper",
         className="metrics-wrapper"
     )
 
@@ -76,16 +49,17 @@ def equity_strategy(lang='en'):
 
             accordion,
             
-            # ---- METRICHE + GRAFICO (STESSO LIVELLO) ----
+            # ---- TOP PICKS + GRAFICO ----
             html.Div([
 
+                # TOP PICKS
                 html.Div([
                     html.H4("Selezione del mese"),
 
                     html.Div([
-                        html.Span("Return"),
-                        html.Span("12.5%")
+                        html.Span(" ")
                     ], className="selection-row"),
+                    
                 ], className="selection-box"),
         
                 # GRAFICO
@@ -104,6 +78,7 @@ def equity_strategy(lang='en'):
                 
             ], className='Graph-eqystr'),
 
+            # ---- METRICHE ----
             metric,
 
         ], className='Cont-eqystr'),

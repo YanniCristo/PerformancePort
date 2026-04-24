@@ -73,7 +73,7 @@
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* Colonna dx del grafico */
+/* Colonna destra del grafico */
 .Graph-container {
     flex-grow: 1;
     min-width: 0;
@@ -131,39 +131,60 @@
     font-size: 20px;
 }
 
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Metric box */
 .metrics-wrapper {
     max-width: 1500px;
-    margin: 10px auto 0 auto;
+    margin: 30px auto 0;
 }
 
 .metrics-row {
-    max-width: 1500px;   /* scegli tu */
-    margin: 0px auto;
+    column-gap: 24px;
+    row-gap: 24px;
+    justify-content: center;
     background-color: var(--bg-color);
 }
 
 .metric-title {
     font-size: 24px;
-    color: #888;
-    white-space: nowrap;
     font-weight: 600;
+    white-space: nowrap;
+    color: black;
 }
 
 .metric-value {
     font-size: 20px;
     font-weight: 300;
+    transition: color 0.2s ease;
 }
 
-.card {
+.metrics-wrapper .card {
     text-align: center;
     border-radius: 12px;
+    background-color: white;
 }
 
-.card-body {
+.metrics-wrapper .card-body {
     padding: 1px 2px;
 }
+
+/* Conditional colors */
+.metric-value[data-sign="positive"] {
+    color: #16a34a;
+}
+
+.metric-value[data-sign="negative"] {
+    color: #dc2626;
+}
+
+.metric-value[data-sign="neutral"] {
+    color: black;
+}
+
+
+
+
 
 .main-graph {
     background-color: transparent !important;
