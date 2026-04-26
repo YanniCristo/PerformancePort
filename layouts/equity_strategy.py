@@ -1,5 +1,5 @@
 from utils.functions import load_content
-from components.generic.elements import Divisor
+from components.strat_slider import card_slider
 from components.buttons import timeSelectbtn
 import dash_bootstrap_components as dbc
 from dash import html, dcc
@@ -12,7 +12,7 @@ def equity_strategy(lang='en'):
         dbc.AccordionItem(
             title="Strategy description",
             children=[
-                html.Div("Strategy description"),
+                html.Div(id="strat-description-content"),
             ], item_id="strat-descript"
         )
     ], start_collapsed=True)
@@ -25,28 +25,18 @@ def equity_strategy(lang='en'):
             start_date=data.index.min(),
             end_date=data.index.max()
     ), className='picker-eqystr')
-
-    metric = html.Div(
-        id="metrics-wrapper",
-        className="metrics-wrapper"
-    )
+    
 
     return html.Div([
 
         html.H1("Equity Strategy", className="eqystr"),
 
         html.Div([
-            
-            # ---- CONTROLLI ----
-            html.Div([
-                dcc.Dropdown(
-                    id='ticker-dropdown',
-                    options=[{'label': t, 'value': t} for t in data.columns],
-                    value='S&P',
-                    clearable=False
-                ),
-            ], className='control-eqystr'),
 
+            # ---- SLIDER ----
+            card_slider(),
+
+            # ---- DESCRIPTION ----
             accordion,
             
             # ---- TOP PICKS + GRAFICO ----
@@ -79,7 +69,10 @@ def equity_strategy(lang='en'):
             ], className='Graph-eqystr'),
 
             # ---- METRICHE ----
-            metric,
+            html.Div(
+                id="metrics-wrapper",
+                className="metrics-wrapper"
+            ),
 
         ], className='Cont-eqystr'),
 

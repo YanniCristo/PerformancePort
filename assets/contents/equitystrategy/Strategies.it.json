@@ -1,0 +1,47 @@
+{
+  "S&P": {
+    "title":"US Top Momentum 10",
+    "desc": "Descrizione US",
+    "freq":"Monthly",
+    "value":"111",
+    "tag":"Marketing",
+    "color":"blue"
+  },
+
+  "EuroStoxx600": {
+    "title":"EU Top Momentum 10",
+    "desc": "Descrizione euro",
+    "freq":"Monthly",
+    "value":"222",
+    "tag":"Vendite",
+    "color":"green"
+  },
+
+  "Nasdaq": {
+    "title":"Emerging Top Momentum 10",
+    "desc": "Descrizione euro",
+    "freq":"Monthly",
+    "value":"222",
+    "tag":"Vendite",
+    "color":"green"
+  },
+
+  "ITMom10": {
+    "title":"ITA Top Momentum 10",
+    "desc": "Descrizione euro",
+    "freq":"Monthly",
+    "value":"222",
+    "tag":"Vendite",
+    "color":"green"
+  },
+
+  "UKMom10": {
+    "title":"UK Top Momentum 10",
+    "desc": "Descrizione euro",
+    "freq":"Monthly",
+    "value":"222",
+    "tag":"Vendite",
+    "color":"green"
+  }
+
+}

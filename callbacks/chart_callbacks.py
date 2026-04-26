@@ -1,12 +1,21 @@
 import dash_bootstrap_components as dbc
+from utils.functions import load_content, hex_to_rgba
 from dash import html
 from dash import Input, Output
 import plotly.express as px
 from utils.data import data
 from datetime import datetime, timedelta
+import plotly.graph_objects as go
 import pandas as pd
 import dash
 import numpy as np
+
+CARDS_DICT = load_content('assets/contents/equitystrategy/Strategies.json')
+
+COLOR_MAP = {
+    "blue":   "#0C447C", "green":  "#27500A",
+    "amber":  "#633806", "coral":  "#712B13",
+    "purple": "#3C3489", "red":    "#880000"}
 
 def build_metrics(cumulative, returns):
     
@@ -50,7 +59,7 @@ def register(app):
         Output('date-picker', 'end_date'),
         Input('date-picker', 'start_date'),
         Input('date-picker', 'end_date'),
-        Input('ticker-dropdown', 'value'),
+        Input('selected-strategy', 'data'),
         Input("1Y-btn", "n_clicks"),
         Input("3Y-btn", "n_clicks"),
         Input("5Y-btn", "n_clicks"),
@@ -62,6 +71,10 @@ def register(app):
         # default: usare date-picker
         start = pd.to_datetime(start_date)
         end = pd.to_datetime(end_date)
+
+        # Colore dalla card selezionata
+        card_color_name = CARDS_DICT.get(ticker, {}).get("color", "blue")
+        line_color = COLOR_MAP.get(card_color_name, "#0C447C")
 
         # se un pulsante è stato premuto, sovrascrivi start/end
         ctx = dash.callback_context
@@ -84,12 +97,21 @@ def register(app):
         # Filtra i dati per l'intervallo selezionato
         filtered = data.loc[start:end, ticker]
 
-        # Calcola il rendimento cumulativo a partire dalla prima data selezionata
-        returns = filtered.pct_change().fillna(0)  # rendimenti giornalieri
-        cumulative = (1 + returns).cumprod()      # cumulativo a partire da start_date
+        # Rendimento cumulato
+        returns = filtered.pct_change().fillna(0)
+        cumulative = (1 + returns).cumprod()
 
         # Crea il grafico
-        fig = px.line(x=filtered.index, y=cumulative)
+        fig = go.Figure()
+
+        fig.add_trace(go.Scatter(
+            x=filtered.index,
+            y=cumulative,
+            mode="lines",
+            line=dict(color=line_color, width=1.5),
+            fill="tozeroy",
+            fillcolor=hex_to_rgba(line_color, 0.05)
+        ))
         
         fig.update_layout(
 
@@ -97,11 +119,9 @@ def register(app):
                        ticks="outside",showline=False,
                        showgrid=True,mirror=True,
                        gridcolor="rgba(150,150,150,0.3)",
-                       griddash="dot", zeroline=False
-                       ),
+                       griddash="dot", zeroline=False),
             
             xaxis=dict(title=None, showline=False, showgrid=False),
-
             autosize=True,
             margin=dict(l=10, r=10, t=10, b=10),
             dragmode=False,

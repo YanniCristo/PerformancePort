@@ -26,6 +26,10 @@ def q_to_dt(q_str: str) -> datetime:
     month, day = quarter_end[quarter]
     return datetime(year, month, day)
 
+def hex_to_rgba(hex_color, alpha=0.1):
+    hex_color = hex_color.lstrip("#")
+    r, g, b = int(hex_color[0:2], 16), int(hex_color[2:4], 16), int(hex_color[4:6], 16)
+    return f"rgba({r},{g},{b},{alpha})"
 
 def send_verification_email_Brevo(to_email, token):
         

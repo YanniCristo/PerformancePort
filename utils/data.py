@@ -5,7 +5,8 @@ import numpy as np
 np.random.seed(42)
 
 dates = pd.date_range(start="2018-01-01", end="2023-12-31", freq='B')
-tickers = ['S&P', 'EuroStoxx600', 'Nasdaq']
+tickers = ['S&P', 'EuroStoxx600', 'Nasdaq', 'EuroStoxx50',
+           'ITMom10', 'UKMom10', 'FRMom10', 'DEMom10']
 
 data = pd.DataFrame(index=dates, columns=tickers)
 for t in tickers:

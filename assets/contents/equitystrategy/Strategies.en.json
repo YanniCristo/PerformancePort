@@ -1,0 +1,74 @@
+{
+  "S&P": {
+    "title":"S&P Top Momentum 10",
+    "desc": "Description US",
+    "freq":"Updated: Monthly",
+    "value":"12.1%",
+    "tag":"SPMom10",
+    "color":"blue"
+  },
+
+  "Nasdaq": {
+    "title":"Nasdaq Top Momentum 10",
+    "desc": "Description emerging",
+    "freq":"Updated: Monthly",
+    "value":"15.4%",
+    "tag":"QQMom10",
+    "color":"red"
+  },
+
+  "EuroStoxx600": {
+    "title":"EU600 Top Momentum 10",
+    "desc": "Description euro 600",
+    "freq":"Updated: Monthly",
+    "value":"8.4%",
+    "tag":"EUMom10",
+    "color":"purple"
+  },
+
+  "EuroStoxx50": {
+    "title":"EU50 Top Momentum 10",
+    "desc": "Description euro",
+    "freq":"Updated: Monthly",
+    "value":"9.0%",
+    "tag":"EUMom10",
+    "color":"coral"
+  },
+
+  "ITMom10": {
+    "title":"ITA Top Momentum 10",
+    "desc": "Description Italy",
+    "freq":"Updated: Monthly",
+    "value":"11.3%",
+    "tag":"ITMom10",
+    "color":"amber"
+  },
+
+  "UKMom10": {
+    "title":"UK Top Momentum 10",
+    "desc": "Description UK",
+    "freq":"Updated: Monthly",
+    "value":"7.4%",
+    "tag":"UKMom10",
+    "color":"red"
+  },
+
+  "FRMom10": {
+    "title":"Fra Top Momentum 10",
+    "desc": "Description France",
+    "freq":"Updated: Monthly",
+    "value":"9.3%",
+    "tag":"FRMom10",
+    "color":"coral"
+  },
+
+  "DEMom10": {
+    "title":"Ger Top Momentum 10",
+    "desc": "Description Germany",
+    "freq":"Updated: Monthly",
+    "value":"8.8%",
+    "tag":"DEMom10",
+    "color":"purple"
+  }
+
+}
