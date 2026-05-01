@@ -234,3 +234,131 @@
     background-color: white !important;
     border: none;
 }
+
+
+
+/* ==========================================================================
+   Selection-box: intestazione con titolo + controlli navigazione
+   ========================================================================== */
+.selection-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.selection-box-title {
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+}
+
+.holdings-nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.holdings-date-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    min-width: 52px;
+    text-align: center;
+}
+
+.holdings-nav-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, opacity 0.15s;
+    padding: 0;
+    line-height: 1;
+}
+
+.holdings-nav-btn:hover {
+    background: #f0f0f0;
+}
+
+.holdings-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* ==========================================================================
+   Tabella holdings strategia
+   ========================================================================== */
+.holdings-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-size: 13px;
+    width: 100%;
+}
+
+.holdings-row {
+    display: flex;
+    align-items: center;
+    padding: 6px 4px;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 6px;
+}
+
+.holdings-row:last-child {
+    border-bottom: none;
+}
+
+.holdings-header {
+    font-weight: 700;
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1.5px solid #ddd !important;
+    padding-bottom: 8px;
+}
+
+.holdings-col {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.col-ticker {
+    flex: 0 0 60px;
+    font-weight: 600;
+    color: #0C447C;
+}
+
+.col-name {
+    flex: 1 1 0;
+    color: #222;
+}
+
+.col-weight {
+    flex: 0 0 44px;
+    text-align: right;
+    color: #444;
+}
+
+.col-price {
+    flex: 0 0 54px;
+    text-align: right;
+    color: #444;
+}
+
+.holdings-empty {
+    color: #999;
+    font-size: 13px;
+    padding: 12px 4px;
+}

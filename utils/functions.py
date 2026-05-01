@@ -1,8 +1,11 @@
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 
+from db.database import engine
+from sqlalchemy import text
 from datetime import datetime
 from dash import html
+import pandas as pd
 import json
 import os
 
@@ -62,3 +65,40 @@ def send_verification_email_Brevo(to_email, token):
         api_response = api_instance.send_transac_email(send_smtp_email)
     except ApiException as e:
         print(f"Errore durante l'invio tramite Brevo: {e}")
+
+def get_strategy(strategy_id: str, start_date, end_date) -> pd.DataFrame:
+
+        start_str = pd.to_datetime(start_date).strftime("%Y-%m-%d")
+        end_str = pd.to_datetime(end_date).strftime("%Y-%m-%d")
+    
+        # Prende i benchmark associati alla strategia
+        with engine.connect() as conn:
+                benchmarks = conn.execute(text(
+                    "SELECT benchmark_ticker FROM strategy_benchmarks WHERE strategy_id = :s"
+                ), {"s": strategy_id}).fetchall()
+
+        benchmark_tickers = [r[0] for r in benchmarks]
+
+        # Serie storica della strategia
+        df_strategy = pd.read_sql(
+                        """SELECT date, value FROM strategy_prices WHERE strategy_id = :s
+                        AND date >= :start_date AND date < :end_date ORDER BY date""",
+                engine, params={"s": strategy_id,
+                                "start_date": start_str,
+                                "end_date": end_str}, index_col="date", parse_dates=["date"]
+        )
+        df_strategy.columns = [strategy_id]
+
+        # Serie storiche dei benchmark
+        for ticker in benchmark_tickers:
+                df_bmk = pd.read_sql(
+                    """SELECT date, close FROM benchmark_prices WHERE benchmark_ticker = :t
+                        AND date >= :start_date AND date < :end_date ORDER BY date""",
+                    engine, params={"t": ticker,
+                                    "start_date": start_str,
+                                    "end_date": end_str}, index_col="date", parse_dates=["date"]
+                )
+                df_bmk.columns = [ticker]
+                df_strategy = df_strategy.join(df_bmk, how="left")
+
+        return df_strategy

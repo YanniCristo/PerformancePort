@@ -3,16 +3,20 @@ from components.strat_slider import card_slider
 from components.buttons import timeSelectbtn
 import dash_bootstrap_components as dbc
 from dash import html, dcc
-
 from utils.data import data
 
 def equity_strategy(lang='en'):
+    intest = load_content(f"assets/contents/equitystrategy/Info.json", lang)['INTEST']
 
+    strategies = load_content('assets/contents/equitystrategy/Strategies.json', lang=lang)
+    first_key = list(strategies.keys())[0]
+    default_description = strategies[first_key].get("desc", "")
+        
     accordion = dbc.Accordion([
         dbc.AccordionItem(
-            title="Strategy description",
+            title=intest['descr'],
             children=[
-                html.Div(id="strat-description-content"),
+                html.Div(default_description, id="strat-description-content"),
             ], item_id="strat-descript"
         )
     ], start_collapsed=True)
@@ -25,16 +29,30 @@ def equity_strategy(lang='en'):
             start_date=data.index.min(),
             end_date=data.index.max()
     ), className='picker-eqystr')
+
+    # Store per l'indice della composizione visualizzata (0 = più recente)
+    holdings_store = dcc.Store(id="holdings-date-index", data=0)
+
+    # Intestazione selection-box con titolo e frecce di navigazione
+    selection_header = html.Div([
+        html.H4(intest['topMO'], className="selection-box-title"),
+        html.Div([
+            html.Button("←", id="holdings-prev-btn", className="holdings-nav-btn", n_clicks=0),
+            html.Span(id="holdings-date-label", className="holdings-date-label"),
+            html.Button("→", id="holdings-next-btn", className="holdings-nav-btn", n_clicks=0),
+        ], className="holdings-nav-controls"),
+    ], className="selection-box-header")
     
 
     return html.Div([
 
         html.H1("Equity Strategy", className="eqystr"),
+        holdings_store,
 
         html.Div([
 
             # ---- SLIDER ----
-            card_slider(),
+            card_slider(lang=lang),
 
             # ---- DESCRIPTION ----
             accordion,
@@ -44,14 +62,10 @@ def equity_strategy(lang='en'):
 
                 # TOP PICKS
                 html.Div([
-                    html.H4("Selezione del mese"),
-
-                    html.Div([
-                        html.Span(" ")
-                    ], className="selection-row"),
-                    
+                    selection_header,
+                    html.Div(id="selection-row", className="selection-row"),
                 ], className="selection-box"),
-        
+                
                 # GRAFICO
                 html.Div([
                     html.Div([
@@ -63,7 +77,6 @@ def equity_strategy(lang='en'):
                         id='graph',
                         config={'displayModeBar': False},
                         className='main-graph'
-                        
                     )], className='Graph-container'),
                 
             ], className='Graph-eqystr'),

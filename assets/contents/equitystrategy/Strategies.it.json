@@ -1,47 +1,82 @@
 {
   "S&P": {
-    "title":"US Top Momentum 10",
-    "desc": "Descrizione US",
-    "freq":"Monthly",
-    "value":"111",
-    "tag":"Marketing",
-    "color":"blue"
-  },
-
-  "EuroStoxx600": {
-    "title":"EU Top Momentum 10",
-    "desc": "Descrizione euro",
-    "freq":"Monthly",
-    "value":"222",
-    "tag":"Vendite",
-    "color":"green"
+    "title": "S&P Top Momentum 10",
+    "desc": "Seleziona ogni mese i 10 titoli dell'S&P 500 con il momentum pi forte. Punta a cavalcare i trend del mercato USA con un portafoglio dinamico e focalizzato sui leader del momento.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "12.1%",
+    "tag": "SPMom10",
+    "color": "blue"
   },
 
   "Nasdaq": {
-    "title":"Emerging Top Momentum 10",
-    "desc": "Descrizione euro",
-    "freq":"Monthly",
-    "value":"222",
-    "tag":"Vendite",
-    "color":"green"
+    "title": "Nasdaq Top Momentum 10",
+    "desc": "Investe nei 10 titoli Nasdaq con la migliore forza relativa aggiornata mensilmente. Strategia orientata alla crescita e ai settori innovativi con maggiore spinta rialzista.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "15.4%",
+    "tag": "QQMom10",
+    "color": "red"
+  },
+
+  "EuroStoxx600": {
+    "title": "EU600 Top Momentum 10",
+    "desc": "Individua i 10 titoli piu' forti dell'Euro Stoxx 600 tra large, mid e small cap europee. Offre esposizione ampia ai trend piu' solidi del mercato continentale.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "8.4%",
+    "tag": "EUMom10",
+    "color": "purple"
+  },
+
+  "EuroStoxx50": {
+    "title": "EU50 Top Momentum 10",
+    "desc": "Seleziona i migliori 10 titoli tra le blue chip dell'Euro Stoxx 50. Mira a combinare qualita' e momentum sulle principali societa' dell'area euro.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "9.0%",
+    "tag": "EUMom10",
+    "color": "coral"
   },
 
   "ITMom10": {
-    "title":"ITA Top Momentum 10",
-    "desc": "Descrizione euro",
-    "freq":"Monthly",
-    "value":"222",
-    "tag":"Vendite",
-    "color":"green"
+    "title": "ITA Top Momentum 10",
+    "desc": "Portafoglio mensile dei 10 titoli italiani con performance relativa piu' elevata. Concentrato sulle opportunita' piu' forti di Piazza Affari.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "11.3%",
+    "tag": "ITMom10",
+    "color": "amber"
   },
 
   "UKMom10": {
-    "title":"UK Top Momentum 10",
-    "desc": "Descrizione euro",
-    "freq":"Monthly",
-    "value":"222",
-    "tag":"Vendite",
-    "color":"green"
-  }
+    "title": "UK Top Momentum 10",
+    "desc": "Seleziona ogni mese i 10 titoli piu' forti del mercato britannico. Espone ai trend migliori del Regno Unito tra energia, finanziari e consumer.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "7.4%",
+    "tag": "UKMom10",
+    "color": "red"
+  },
 
+  "FRMom10": {
+    "title": "CAC40 Top Momentum 10",
+    "desc": "Investe nei 10 titoli francesi con momentum piu' elevato, aggiornati mensilmente. Strategia focalizzata sui leader del mercato di Parigi.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "9.3%",
+    "tag": "FRMom10",
+    "color": "coral"
+  },
+
+  "DEMom10": {
+    "title": "DAX Top Momentum 10",
+    "desc": "Seleziona i 10 titoli tedeschi piu' forti per trend e performance relativa. Mira a sfruttare la solidita' industriale e finanziaria del mercato tedesco.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "8.8%",
+    "tag": "DEMom10",
+    "color": "purple"
+  },
+
+  "SPMom10": {
+    "title": "IBEX Top Momentum 10",
+    "desc": "Portafoglio dei 10 titoli spagnoli con il momentum piu' elevato, rivisto ogni mese. Espone ai leader del mercato iberico nei momenti di maggiore forza.",
+    "freq": "Aggiornamento: Mensile",
+    "value": "12.8%",
+    "tag": "SPMom10",
+    "color": "red"
+  }
 }

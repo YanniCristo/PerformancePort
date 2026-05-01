@@ -1,0 +1,33 @@
+/* Wrapper posizionato in alto a sinistra nella card */
+.metric-info-wrapper {
+    position: absolute;
+    top: 1px;
+    left: 90%;
+}
+
+/* Icona circolare con la "i" */
+.metric-info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #6c757d;   /* grigio neutro, cambia a piacere */
+    color: #fff;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 700;
+    cursor: default;
+    user-select: none;
+    line-height: 1;
+}
+
+.metric-info-icon:hover {
+    background-color: #495057;
+}
+
+/* La card deve avere position relative per ancorare l'icona */
+.metrics-row .card {
+    position: relative;
+}

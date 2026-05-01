@@ -1,9 +1,9 @@
 import dash_bootstrap_components as dbc
-from utils.functions import load_content, hex_to_rgba
-from dash import html
-from dash import Input, Output
-import plotly.express as px
+from utils.functions import load_content, hex_to_rgba, get_strategy
 from utils.data import data
+from dash import html
+from dash import Input, Output, State
+import plotly.express as px
 from datetime import datetime, timedelta
 import plotly.graph_objects as go
 import pandas as pd
@@ -17,7 +17,8 @@ COLOR_MAP = {
     "amber":  "#633806", "coral":  "#712B13",
     "purple": "#3C3489", "red":    "#880000"}
 
-def build_metrics(cumulative, returns):
+def build_metrics(cumulative, returns, lang):
+    METRIC_INFO = load_content('assets/contents/equitystrategy/Info.json', lang=lang)['METRIC_INFO']
     
     total_return = cumulative.iloc[-1] - 1
     volatility = returns.std() * np.sqrt(252)
@@ -38,10 +39,18 @@ def build_metrics(cumulative, returns):
             elif raw < 0: segno = "negative"
         else:
             segno = "neutral"
+
+        tooltip_id = f"info-{name.lower().replace(' ', '-')}"
+        
         cols.append(
             dbc.Col(
                 dbc.Card(
                     dbc.CardBody([
+                        html.Div([
+                                html.Span("i", id=tooltip_id, className="metric-info-icon"),
+                                dbc.Tooltip(METRIC_INFO[name], target=tooltip_id, placement="right"),
+                            ], className="metric-info-wrapper",
+                        ),
                         html.Div(name, className="metric-title"),
                         html.Div(value, className="metric-value", **{"data-sign": segno}),
                     ])
@@ -63,10 +72,11 @@ def register(app):
         Input("1Y-btn", "n_clicks"),
         Input("3Y-btn", "n_clicks"),
         Input("5Y-btn", "n_clicks"),
-        Input("Max-btn", "n_clicks")
+        Input("Max-btn", "n_clicks"),
+        State("lang-store", "data")
     )
     def update_graph(start_date, end_date, ticker,
-                     one, three, five, max_):
+                     one, three, five, max_, lang):
 
         # default: usare date-picker
         start = pd.to_datetime(start_date)
@@ -75,6 +85,7 @@ def register(app):
         # Colore dalla card selezionata
         card_color_name = CARDS_DICT.get(ticker, {}).get("color", "blue")
         line_color = COLOR_MAP.get(card_color_name, "#0C447C")
+        COLORS = [line_color, "#2563EB", "#DC2626", "#16A34A", "#D97706", "#7C3AED", "#0891B2"]
 
         # se un pulsante è stato premuto, sovrascrivi start/end
         ctx = dash.callback_context
@@ -95,23 +106,27 @@ def register(app):
                 end = today
 
         # Filtra i dati per l'intervallo selezionato
-        filtered = data.loc[start:end, ticker]
+##        filtered = data.loc[start:end, ticker]
+        filtered = get_strategy(ticker, start, end)
 
         # Rendimento cumulato
         returns = filtered.pct_change().fillna(0)
         cumulative = (1 + returns).cumprod()
+        cols = cumulative.columns.tolist()
 
         # Crea il grafico
         fig = go.Figure()
 
-        fig.add_trace(go.Scatter(
-            x=filtered.index,
-            y=cumulative,
-            mode="lines",
-            line=dict(color=line_color, width=1.5),
-            fill="tozeroy",
-            fillcolor=hex_to_rgba(line_color, 0.05)
-        ))
+        for i, col in enumerate(cols):
+            fig.add_trace(go.Scatter(
+                x=filtered.index,
+                y=cumulative[col].round(2),
+                name=col,
+                mode="lines",
+                line=dict(color=COLORS[i % len(COLORS)], width=1.8),
+                fill="tozeroy",
+                fillcolor=hex_to_rgba(line_color, 0.05)
+            ))
         
         fig.update_layout(
 
@@ -123,23 +138,27 @@ def register(app):
             
             xaxis=dict(title=None, showline=False, showgrid=False),
             autosize=True,
-            margin=dict(l=10, r=10, t=10, b=10),
+            margin=dict(l=10, r=10, t=40, b=0),
             dragmode=False,
             plot_bgcolor="rgba(0,0,0,0)",
             paper_bgcolor="rgba(0,0,0,0)",
-            hovermode="x"
-        )
+            hovermode="x",
+            
+            legend=dict(orientation="h",
+                        yanchor="bottom",
+                        y=1.02,
+                        xanchor="center",
+                        x=0.5))
 
         fig.update_xaxes(
             showspikes=True,          # attiva la linea verticale
             spikemode="across",       # attraversa tutto il grafico
             spikesnap="cursor",
             spikecolor="rgba(150,150,150,0.6)",
-            spikethickness=1
-        )
+            spikethickness=1)
 
         # Calcolo le metriche
-        metrics = build_metrics(cumulative, returns)
+        metrics = build_metrics(cumulative[ticker], returns[ticker], lang)
         
         return fig, metrics, start, end
 

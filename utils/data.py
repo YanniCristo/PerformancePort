@@ -1,14 +1,12 @@
+from db.database import engine
 import pandas as pd
-import numpy as np
+from sqlalchemy import text
 
-# Carico i dati
-np.random.seed(42)
+with engine.connect() as conn:
+    row = conn.execute(text("SELECT MIN(date), MAX(date) FROM strategy_prices")).fetchone()
 
-dates = pd.date_range(start="2018-01-01", end="2023-12-31", freq='B')
-tickers = ['S&P', 'EuroStoxx600', 'Nasdaq', 'EuroStoxx50',
-           'ITMom10', 'UKMom10', 'FRMom10', 'DEMom10']
-
-data = pd.DataFrame(index=dates, columns=tickers)
-for t in tickers:
-    returns = np.random.normal(loc=0.0005, scale=0.02, size=len(dates))  # rendimenti giornalieri
-    data[t] = (1 + pd.Series(returns, index=dates)).cumprod()  # prezzo simulato cumulativo
+class data:
+    index = type('obj', (object,), {
+        'min': lambda self: pd.to_datetime(row[0]),
+        'max': lambda self: pd.to_datetime(row[1]),
+    })()

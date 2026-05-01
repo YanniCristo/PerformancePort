@@ -1,10 +1,6 @@
 from utils.functions import load_content
 from dash import html, dcc
 
-CARDS_DICT = load_content('assets/contents/equitystrategy/Strategies.json')
-CARDS = list(CARDS_DICT.values())
-CARDS_KEYS = list(CARDS_DICT.keys())
-
 def make_card(card, key, index, width="240px", selected=False):
     color = card.get('color', 'blue')
     classe = "slider-card selected-card" if selected else "slider-card"
@@ -22,13 +18,16 @@ def make_card(card, key, index, width="240px", selected=False):
         n_clicks=0
     )
 
-def card_slider(card_width=240):
-    cards = CARDS
+def card_slider(card_width=240, lang='en'):
+    
+    CARDS_DICT = load_content('assets/contents/equitystrategy/Strategies.json', lang=lang)
+    cards = list(CARDS_DICT.values())
+    CARDS_KEYS = list(CARDS_DICT.keys())
 
     return html.Div([
         dcc.Store(id="slider-index", data=0),
         dcc.Store(id="slider-dummy", data=0),   # output dummy per clientside callback
-        dcc.Store(id="selected-strategy", data=CARDS_KEYS[0]),
+        dcc.Store(id="selected-strategy", data=CARDS_DICT[CARDS_KEYS[0]]['tag']),
         
         html.Div([
             html.Button("←", id="prev-btn", n_clicks=0, disabled=True, className="arrow-btn"),
