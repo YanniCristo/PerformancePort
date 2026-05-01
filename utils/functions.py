@@ -67,38 +67,51 @@ def send_verification_email_Brevo(to_email, token):
         print(f"Errore durante l'invio tramite Brevo: {e}")
 
 def get_strategy(strategy_id: str, start_date, end_date) -> pd.DataFrame:
-
         start_str = pd.to_datetime(start_date).strftime("%Y-%m-%d")
         end_str = pd.to_datetime(end_date).strftime("%Y-%m-%d")
+
+        params = {
+                "s":          strategy_id,
+                "start_date": start_str,
+                "end_date":   end_str}
     
         # Prende i benchmark associati alla strategia
         with engine.connect() as conn:
-                benchmarks = conn.execute(text(
-                    "SELECT benchmark_ticker FROM strategy_benchmarks WHERE strategy_id = :s"
-                ), {"s": strategy_id}).fetchall()
-
+                benchmarks = conn.execute(
+                        text("SELECT benchmark_ticker FROM strategy_benchmarks WHERE strategy_id = :s"),
+                        {"s": strategy_id}).fetchall()
         benchmark_tickers = [r[0] for r in benchmarks]
 
         # Serie storica della strategia
-        df_strategy = pd.read_sql(
-                        """SELECT date, value FROM strategy_prices WHERE strategy_id = :s
-                        AND date >= :start_date AND date < :end_date ORDER BY date""",
-                engine, params={"s": strategy_id,
-                                "start_date": start_str,
-                                "end_date": end_str}, index_col="date", parse_dates=["date"]
-        )
-        df_strategy.columns = [strategy_id]
+        with engine.connect() as conn:
+                result = conn.execute(
+                        text("""SELECT date, value FROM strategy_prices WHERE strategy_id = :s
+                                  AND date >= :start_date
+                                  AND date < :end_date
+                                  ORDER BY date"""), params
+                )
+                df_strategy = pd.DataFrame(result.fetchall(), columns=["date", "value"])
 
+        df_strategy["date"] = pd.to_datetime(df_strategy["date"])
+        df_strategy = df_strategy.set_index("date")
+        df_strategy.columns = [strategy_id]
+    
         # Serie storiche dei benchmark
         for ticker in benchmark_tickers:
-                df_bmk = pd.read_sql(
-                    """SELECT date, close FROM benchmark_prices WHERE benchmark_ticker = :t
-                        AND date >= :start_date AND date < :end_date ORDER BY date""",
-                    engine, params={"t": ticker,
-                                    "start_date": start_str,
-                                    "end_date": end_str}, index_col="date", parse_dates=["date"]
-                )
+                with engine.connect() as conn:
+                    result = conn.execute(
+                        text("""SELECT date, close FROM benchmark_prices WHERE benchmark_ticker = :t
+                                AND date >= :start_date
+                                AND date < :end_date
+                                ORDER BY date"""),
+                        {"t": ticker, "start_date": start_str, "end_date": end_str}
+                    )
+                    df_bmk = pd.DataFrame(result.fetchall(), columns=["date", "close"])
+
+                df_bmk["date"] = pd.to_datetime(df_bmk["date"])
+                df_bmk = df_bmk.set_index("date")
                 df_bmk.columns = [ticker]
+                
                 df_strategy = df_strategy.join(df_bmk, how="left")
 
         return df_strategy

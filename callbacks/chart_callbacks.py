@@ -106,7 +106,6 @@ def register(app):
                 end = today
 
         # Filtra i dati per l'intervallo selezionato
-##        filtered = data.loc[start:end, ticker]
         filtered = get_strategy(ticker, start, end)
 
         # Rendimento cumulato
