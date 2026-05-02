@@ -7,7 +7,8 @@ def get_rebalancing_dates(strategy_id: str) -> list:
    # Restituisce la lista di date di ribilanciamento, dalla più recente alla più vecchia.
    with engine.connect() as conn:
       dates = conn.execute(text(
-         "SELECT DISTINCT valid_from FROM strategy_holdings WHERE strategy_id = :s ORDER BY valid_from DESC"
+         """SELECT DISTINCT valid_from FROM strategy_holdings
+            WHERE strategy_id = :s ORDER BY valid_from DESC"""
       ), {"s": strategy_id}).fetchall()
    return [str(r[0]) for r in dates]
 
@@ -17,7 +18,7 @@ def get_holdings_at_date(strategy_id: str, date: str) -> list[dict]:
 
     with engine.connect() as conn:
         rows = conn.execute(text(
-            """SELECT ticker, name, weight, BuyPrice, SellPrice FROM strategy_holdings
+            """SELECT ticker, name, weight, "BuyPrice", "SellPrice" FROM strategy_holdings
                WHERE strategy_id = :s AND valid_from = :d ORDER BY weight DESC"""
         ), {"s": strategy_id, "d": date}).fetchall()
         
