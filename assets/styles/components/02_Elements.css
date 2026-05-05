@@ -32,3 +32,14 @@
     margin: 15px auto;   /* centro orizzontale */
     width: 70%;          /* controlli tu la larghezza */
 }
+
+.card-link {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.card-link:hover {
+    opacity: 0.75;
+}

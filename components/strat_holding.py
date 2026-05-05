@@ -7,20 +7,17 @@ def holdings_table(holdings: list[dict]) -> html.Div:
         return html.Div("Nessun dato disponibile.", className="holdings-empty")
  
     header = html.Div([
-        html.Span("Ticker",   className="holdings-col col-ticker"),
-        html.Span("Nome",     className="holdings-col col-name"),
-        html.Span("Peso",     className="holdings-col col-weight"),
+        html.Span("ISIN",   className="holdings-col col-ticker"),
+        html.Span("Asset",     className="holdings-col col-name"),
         html.Span("Prezzo",   className="holdings-col col-price"),
     ], className="holdings-row holdings-header")
  
     rows = [header]
     for h in holdings:
-        weight_pct = f"{h['weight'] * 100:.1f}%" if h['weight'] is not None else "—"
         price = f"{h['buy_price']:.2f}" if h['buy_price'] is not None else "—"
         rows.append(html.Div([
             html.Span(h["ticker"], className="holdings-col col-ticker"),
             html.Span(h["name"],   className="holdings-col col-name"),
-            html.Span(weight_pct,  className="holdings-col col-weight"),
             html.Span(price,       className="holdings-col col-price"),
         ], className="holdings-row"))
  

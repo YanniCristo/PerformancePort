@@ -44,16 +44,18 @@ def AddChart(df, idx, nome):
             )
         )
     
-
     return dcc.Graph(figure=fig, config={"displayModeBar": False})
 
 def register(app):
 
     @app.callback(
         Output('artic-ecoview', 'children'),
-        Input('quarter-dd', 'value')
+        Input('selected-q', 'data'),
+        Input('lang-store', 'data'),
     )
-    def update_article(q):
+    def update_article(q, lang):
+        lang = lang or 'en'
+        
         data = load_content(f'assets/contents/ecoview/articles/{q}/text.json')
         base_path = Path(f'assets/contents/ecoview/articles/{q}')
         df = pd.read_excel(f'assets/contents/ecoview/articles/EcoData.xlsx', header=0, index_col=0)
@@ -64,7 +66,6 @@ def register(app):
         df = df[df.index <= end]
         
         content = []
-
         for i, key in enumerate(data):
             par = data[key]
 

@@ -8,5 +8,27 @@ def marketphase(lang='en'):
     path_img = "assets/contents/marketphase/"
     
     return html.Div([
-        html.H1("Market Phase", className="marketphase-title")
+
+        # Title
+        html.H1("Market Phase", className="mktphse-title"),
+
+        # Contents
+        html.Div([
+
+            html.H1(txt['parOne']['title'], className='title-mktphse'),
+            html.P(txt['parOne']['descr'], className='par-mktphse'),
+            load_image(f"{path_img}EquityTab.png", 'tab-mktphse'),
+            load_image(f"{path_img}EquityChart.png", 'fig-mktphse'),
+            Divisor(col='#4e7bbbad', h=30),
+            
+            html.H1(txt['parTwo']['title'], className='title-mktphse'),
+            html.P(txt['parTwo']['descr'], className='par-mktphse'),
+            load_image(f"{path_img}BondTab.png", 'tab-mktphse'),
+            load_image(f"{path_img}BondChart.png", 'fig-mktphse'),
+
+            ], className="Cont-mktphse"),
+
+        # Bottom
+        html.Div(" ", className="Dist-mktphse")
+        
     ])

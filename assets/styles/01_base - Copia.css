@@ -115,3 +115,8 @@ body {
 .metric-card .card-icon {
     margin-bottom: 11px;
 }
+
+.metric-card h1 b,
+.metric-card h1 strong {
+    font-weight: 700 !important;
+}

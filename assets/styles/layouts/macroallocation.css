@@ -23,13 +23,13 @@
 }
 
 .Cont-macroall {
-    background-color: #749fdbad;
+    background-color: var(--bg-color);
     margin-bottom: 0;
 }
 
 .Cont-macroall p {
     font-size: clamp(14px, 1.3vw, 18px);
-    color: #1a2636;
+    color: var(--text-color);
     margin: 0px 14%;
     padding: 20px;
     font-weight: 300;
@@ -45,7 +45,7 @@
 }
 
 .Dist-macroall {
-    background-color: #749fdbad;
+    background-color: var(--bg-color);
     height: 20vh;
     margin-top: 0;
 }

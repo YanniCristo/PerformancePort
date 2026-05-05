@@ -115,3 +115,4 @@ def get_strategy(strategy_id: str, start_date, end_date) -> pd.DataFrame:
                 df_strategy = df_strategy.join(df_bmk, how="left")
 
         return df_strategy
+

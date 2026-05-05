@@ -48,6 +48,7 @@ def register(app):
         prevent_initial_call=True
     )
 
+
     ############################################################################
     # Click sulla card → aggiorna selected-strategy e classi CSS
     @app.callback(
@@ -79,6 +80,7 @@ def register(app):
         strategy = card_data.get("tag", "-")
         
         return strategy, classes, description, 0
+
 
     ############################################################################
     # Frecce navigazione composizioni → aggiorna indice data

@@ -16,6 +16,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 0;
 }
 
 .timehoriz-title {
