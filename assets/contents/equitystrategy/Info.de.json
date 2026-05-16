@@ -1,0 +1,14 @@
+{
+  "METRIC_INFO": {
+    "Return": "Gesamtrendite des Zeitraums: (Endwert / Anfangswert) - 1",
+    "Sharpe Ratio": "Risikobereinigte Rendite: (Durchschnittliche Jahresrendite) / Jahresvolatilität",
+    "Volatility": "Standardabweichung der täglichen Renditen, annualisiert \u00D7 \u221A252",
+    "Max Drawdown": "Maximaler Rückgang vom Hoch zum Tief: min((Wert - Hoch) / Hoch)",
+    "Calmar Ratio": "Gesamtrendite / |Max Drawdown|. Misst die Rendite pro Einheit des Drawdown-Risikos"
+  },
+
+  "INTEST": {
+    "descr": "Strategiebeschreibung",
+    "topMO": "Auswahlen des Monats"
+  }
+}

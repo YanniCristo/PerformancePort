@@ -1,0 +1,14 @@
+{
+  "METRIC_INFO": {
+    "Return": "Rentabilidad total del período: (Valor Final / Valor Inicial) - 1",
+    "Sharpe Ratio": "Rentabilidad ajustada al riesgo: (Rentabilidad media anual) / Volatilidad anual",
+    "Volatility": "Desviación estándar de los rendimientos diarios, anualizada \u00D7 \u221A252",
+    "Max Drawdown": "Máxima caída desde un pico hasta un mínimo: min((Valor - Pico) / Pico)",
+    "Calmar Ratio": "Rentabilidad total / |Máx Drawdown|. Mide la rentabilidad por unidad de riesgo de caída"
+  },
+
+  "INTEST": {
+    "descr": "Descripción de la estrategia",
+    "topMO": "Selecciones del mes"
+  }
+}

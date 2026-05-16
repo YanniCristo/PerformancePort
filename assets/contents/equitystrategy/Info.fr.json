@@ -1,0 +1,14 @@
+{
+  "METRIC_INFO": {
+    "Return": "Rendement total sur la période : (Valeur finale / Valeur initiale) - 1",
+    "Sharpe Ratio": "Rendement ajusté au risque : (Rendement annuel moyen) / Volatilité annuelle",
+    "Volatility": "Écart-type des rendements quotidiens, annualisé \u00D7 \u221A252",
+    "Max Drawdown": "Perte maximale entre un sommet et un creux : min((Valeur - Pic) / Pic)",
+    "Calmar Ratio": "Rendement total / |Max Drawdown|. Mesure le rendement par unité de risque de baisse"
+  },
+
+  "INTEST": {
+    "descr": "Description de la stratégie",
+    "topMO": "Sélections du mois"
+  }
+}

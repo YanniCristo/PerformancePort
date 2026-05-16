@@ -1,0 +1,21 @@
+{
+  "parOne": {
+    "title": "Ihr Vermögen mit konstanten Renditen erhalten und ausbauen",
+    "description": "Die Nutzung verwalteter Spar- und Anlageprodukte (Banken, Broker, Investmentfonds) bringt Gebühren mit sich, die die Nettorendite Ihres Portfolios verringern. Häufig sind diese Kosten nicht durch eine bessere Performance gerechtfertigt. Laut der ökonomischen Theorie (Effizienzmarkthypothese) tendieren Überrenditen aus aktivem Management auf Basis fundamentaler Analysen langfristig gegen null oder ins Negative.\n\nMit regelmäßigem Zugang zu strukturierten Finanzinformationen ist es möglich, Investitionen eigenständig zu verwalten, unnötige Kosten zu vermeiden und durch systematische sowie evidenzbasierte Portfoliomodelle überdurchschnittliche Ergebnisse zu erzielen."
+  },
+
+  "parTwo": {
+    "title": "Was PerformingPort bietet",
+    "description": "Strukturierter Rahmen - Zielorientierte Modellportfolios, definiert durch konsistente Kernlogiken, die den Anlagehorizont des Investors berücksichtigen, sich an veränderte makroökonomische Bedingungen anpassen und mit den vorherrschenden Marktzyklen übereinstimmen.\n\nDieser Ansatz wurde entwickelt, um:\nEine fokussierte Auswahl von Modellkomponenten aufzuzeigen\nEine vereinfachte Überwachung mit begrenzten periodischen Anpassungen zu ermöglichen\nAnalytische Vergleiche mit relevanten Marktbenchmarks bereitzustellen"
+  },
+
+  "parTre": {
+    "title": "",
+    "description": "Makro-Allokation - Definition quantitativer Modellportfolios auf der Effizienzgrenze basierend auf dem aktuellen Marktzyklus und makroökonomischen Investmentlogiken.\n\nDer Rahmen definiert ETF-/Fondsbasierte Exponierungen über verschiedene Anleihesegmente (Staatsanleihen, Unternehmensanleihen IG, Unternehmensanleihen HY, kurze/mittlere/lange Laufzeiten) sowie Aktiensektoren aus dem S&P 500 und dem europäischen Index."
+  },
+
+  "parQua": {
+    "title": "",
+    "description": "Allokation in führenden Aktienmärkten - Monatlich neu gewichtete Modellportfolios, abgeleitet aus backgetesteten Algorithmen, die mit historischen täglichen Kursmomentum-Daten trainiert wurden:\nLänderbasierte Portfolios in 10 Märkten Nordamerikas und Europas\nMonatliche Auswahl von 7–10 Large-Cap-Aktien aus nationalen Benchmarks"
+  }
+}

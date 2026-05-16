@@ -1,0 +1,25 @@
+{
+  "parOne": {
+    "title": "US",
+    "img": ["(1)", "(2)"],
+    "description": "Es wird erwartet, dass die US-Wirtschaft in eine Phase vorübergehender Schwäche eintritt, die durch Unsicherheiten im Zusammenhang mit Trumps Zollpolitik verursacht wird.\nDer Konjunkturzyklus dürfte durch die Umsetzung des expansiven Fiskalplans („One, Big, Beautiful Bill“) wieder an Dynamik gewinnen.\nDie Inflation wird eine entscheidende Rolle spielen: Es wird erwartet, dass sie in den nächsten 12 Monaten auf 3–4 % ansteigt, da die Zölle schrittweise an die Verbraucherpreise weitergegeben werden.\n\nSobald sich die Inflation jedoch stabilisiert, dürfte die Federal Reserve wieder zu einer lockereren Geldpolitik zurückkehren."
+  },
+
+  "parTwo": {
+    "title": "EU",
+    "img": ["(3)", "(4)"],
+    "description": "Es wird erwartet, dass sich das Wachstum im Euroraum nach einer Phase der Stagnation beschleunigt, angetrieben durch eine neue Welle fiskalischer Lockerungen unter Führung Deutschlands.\nDie Inflation hat weiterhin Spielraum für einen leichten weiteren Rückgang, unterstützt durch einen stärkeren Euro.\nInfolgedessen dürfte die EZB ihre derzeitige expansive geldpolitische Ausrichtung beibehalten."
+  },
+
+  "parTre": {
+    "title": "Asia",
+    "img": ["(1)", "(2)"],
+    "description": "Die chinesische Wirtschaft wird ihre moderate Erholung fortsetzen, gestützt durch gezielte fiskalische Maßnahmen und eine schrittweise Erholung des Binnenkonsums, trotz anhaltender Schwäche im Immobiliensektor.\nDer Inflationsdruck bleibt gedämpft, da Überkapazitäten, schwache Konsumnachfrage und fallende Immobilienpreise die allgemeine Preisentwicklung belasten.\nDieses Umfeld gibt der PBoC Spielraum, eine unterstützende geldpolitische Haltung beizubehalten, einschließlich Liquiditätsspritzen und niedrigerer Mindestreserveanforderungen, während eine breit angelegte Kreditausweitung vermieden wird."
+  },
+
+  "parFou": {
+    "title": "Macro Summary - Key Developments at a Glance",
+    "img": [],
+    "description": "Die Stimmung an den Aktienmärkten dürfte sich nach dem sogenannten Tariff Liberation Day wieder verbessern, da die Erwartungen der Anleger nach einer Phase handelsbezogener Unsicherheit konstruktiver werden.\nDie US-Inflation dürfte kurzfristig ansteigen, was die verzögerte Weitergabe der jüngsten Zölle widerspiegelt. Es wird erwartet, dass die Federal Reserve ihre derzeitige Haltung beibehält und ihren Lockerungszyklus innerhalb weniger Quartale wieder aufnimmt, sobald der Inflationsdruck nachlässt.\n\nUnterstützende fiskal- und geldpolitische Maßnahmen in den USA, im Euroraum und in China werden ein günstiges Umfeld für die Aktienmärkte schaffen – in einem globalen Umfeld mit erneutem Wachstumsimpuls in Europa und wirtschaftlicher Stabilisierung in China.\nVor wichtigen US-Inflationsdaten bleibt eine Positionierung mit kurzer Duration ratsam. Sobald die Fed ihren Lockerungszyklus wieder aufnimmt, wird eine Verlagerung an das lange Ende der Zinskurve angemessen.\n\nIn einem Umfeld verbesserten globalen Wachstums wird ein Engagement in High-Yield- und Investment-Grade-Unternehmensanleihen empfohlen, auch im Euroraum. Im Euroraum wird bei kontrollierter Inflation und einem stärkeren Euro eine Positionierung mit langer Duration bevorzugt."
+  }
+}

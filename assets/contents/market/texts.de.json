@@ -1,0 +1,36 @@
+{
+  "parOne": {
+    "title": "Risk-on / Risk-off-Phasen",
+    "descr": "Ein gut strukturiertes Portfolio kombiniert risikoreiche Anlagen – Aktien vs. Anleihen, Unternehmensanleihen vs. Staatsanleihen – um Diversifikation und nachhaltige Renditen zu erzielen.\nDie Allokation zwischen risikoreichen und risikoärmeren Anlagen hängt sowohl von der Phase des Konjunkturzyklus als auch vom vorherrschenden Zinsumfeld ab.\nWährend wirtschaftlicher Expansionsphasen treten Märkte typischerweise in Risk-on-Phasen ein, die Übergewichtungen in Aktien und Unternehmensanleihen begünstigen. Umgekehrt dominieren während wirtschaftlicher Abschwünge Risk-off-Phasen, die eine defensivere Allokation mit höherem Anteil risikoarmer Anlagen erfordern.\n\nDas Zusammenspiel von Konjunkturzyklus (wie durch das BIP-Wachstum widergespiegelt), Inflation und Zinsdynamik (gesteuert durch die Politik der Zentralbanken) erzeugt relativ regelmäßige Rotationsmuster zwischen Risk-on- und Risk-off-Phasen.\nWenn man die wichtigste Diversifikationsquelle innerhalb eines Portfolios betrachtet – also das Gleichgewicht zwischen Risiko- und risikoarmen Anlagen – sollte die Allokation zwischen Aktien und Staatsanleihen eine zentrale Frage beantworten: In welcher Phase des Zyklus befinden sich die Märkte derzeit?\nDie historische Analyse der vergangenen 60 Jahre liefert wertvolle Erkenntnisse über die typische Richtung und Dauer von Markttrends – Informationen, die für die strategische Portfolioallokation über die Zeit hinweg essenziell sind.\n\nAufgrund seiner Größe und seiner zentralen Rolle in der Weltwirtschaft dient der US-Markt als wichtigste Referenz zur Analyse dieser Dynamiken. Betrachtet man Aktienmarkttrends und die Renditen 10-jähriger US-Staatsanleihen als Indikatoren für Risk-on- und Risk-off-Phasen, lässt sich auf Basis historischer US-Daten die durchschnittliche Dauer von Marktzyklen – sowohl am Aktienmarkt (S&P 500) als auch bei langfristigen Anleiherenditen – abschätzen."
+  },
+
+  "parTwo": {
+    "title": "Marktzyklen - Aktien vs. Anleihen",
+    "descr": "Die Portfolioausrichtung sollte mit der vorherrschenden Phase des Konjunkturzyklus übereinstimmen: Aktienallokationen sollten in Risk-on-Umfeldern erhöht und in Risk-off-Phasen reduziert werden",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Marktzyklen - Unternehmens- vs. Staatsanleihen",
+    "descr": "Auch die Allokation des Anleiheportfolios sollte an den Konjunkturzyklus angepasst werden: Die Exponierung gegenüber Unternehmensanleihen (High Yield & Investment Grade) wird typischerweise während Risk-on-Phasen erhöht, wenn sich Kreditspreads im Allgemeinen verengen",
+    "list": []
+  },
+
+  "parFou": {
+    "title": "Marktzyklen - Laufzeiten von Anleihen",
+    "descr": "Auf aggregierter Ebene spiegeln Anleiherenditen zwei zentrale Risikofaktoren wider:\n1. Inflationsrisiko (IR)\n2. Systemisches Kreditrisiko (SCR) – dargestellt durch den aggregierten Kreditspread, d. h. die Differenz zwischen den Renditen von Unternehmensanleihen und Staatsanleihen gleicher Laufzeit.\n\nDie relative Gewichtung dieser beiden Komponenten variiert je nach Anleiheklasse:\nStaatsanleihen (Govies): IR=80-90% | SCR=10-20%\nBei Staatsanleihen wird das Ausfallrisiko als minimal oder vernachlässigbar angesehen. Die Renditen spiegeln hauptsächlich Erwartungen hinsichtlich der zukünftigen Inflation wider.\nIn fiskalisch schwächeren Ländern kann das Gewicht des Kreditrisikos leicht steigen, bleibt jedoch gegenüber der Inflation zweitrangig.\nInvestment-Grade-Unternehmensanleihen (z. B. Apple, IBM, ENI): IR=60-70% | SCR=30-40%\nDie Inflation bleibt ein wesentlicher Treiber. Das Kreditrisiko von Unternehmen ist jedoch real, wenn auch im Allgemeinen begrenzt.\nHigh-Yield-Unternehmensanleihen (z. B. Ford, Altice, Carnival): IR=20-30% | SCR=70-80%\nHier dominieren eindeutig Ausfallrisiko und Verschlechterung der Kreditqualität. Inflation spielt eine geringere Rolle, da die Renditen hauptsächlich durch Kreditspreads bestimmt werden – also die Renditedifferenz zwischen Unternehmens- und Staatsanleihen gleicher Laufzeit.",
+    "list": []
+  },
+
+  "parFiv": {
+    "title": "Marktzyklen - Inflationsrisiko (IR)",
+    "descr": "Wenn das Inflationsrisiko (IR) sinkt, tendieren die Renditen von Staatsanleihen und IG-Unternehmensanleihen dazu zu fallen (die Preise steigen). In diesem Fall sollte die Portfolioexponierung auf längere Laufzeiten ausgerichtet werden (die sensibler sind als kürzere Laufzeiten). Das Gegenteil gilt, wenn das IR steigt.",
+    "list": []
+  },
+
+  "parSix": {
+    "title": "Marktzyklen - Systemisches Kreditrisiko (SCR)",
+    "descr": "Wenn das systemische Kreditrisiko (SCR) sinkt – typischerweise während Phasen positiven Wirtschaftswachstums oder einer Erholung (Risk-on-Phase) – tendieren die Kreditspreads von High-Yield- (HY) und IG-Unternehmensanleihen dazu, sich zu verengen (vorausgesetzt, das IR bleibt stabil). In diesem Fall sollte die Portfolioexponierung auf längere Laufzeiten ausgerichtet werden (die sensibler sind als kürzere Laufzeiten). Das Gegenteil gilt, wenn das SCR steigt.",
+    "list": []
+  }
+}

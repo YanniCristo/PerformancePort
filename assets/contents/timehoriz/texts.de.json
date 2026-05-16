@@ -1,0 +1,18 @@
+{
+  "parOne": {
+    "title": "",
+    "descr": "Bei der Portfolioallokation sollte der Anteil risikoreicher Anlagen mit dem Anlagehorizont und der Risikotoleranz des Investors schrittweise steigen, was eine größere Fähigkeit widerspiegelt, kurzfristige Volatilität im Streben nach langfristigem Wachstum zu verkraften"
+  },
+
+  "parTwo": {
+    "title": "Zeit - Aktienallokation",
+    "descr": "Die Allokation zwischen Aktien und Anleihen hängt vom Anlagehorizont des Investors ab.\nJe länger der Anlagehorizont des Investors ist, desto größer kann der Aktienanteil ausfallen, da das Risiko kurzfristiger Schwankungen mit der Zeit abnimmt. Historisch gesehen haben Aktienmärkte langfristig höhere Renditen erzielt als Anleihen und damit ihre höhere Volatilität kompensiert.\n\nEin längerer Anlagehorizont ermöglicht es Investoren, Schwankungen an den Aktienmärkten besser auszuhalten, wodurch die Wahrscheinlichkeit positiver Ergebnisse steigt.\nAngesichts des geplanten Horizonts — ob erforderlich oder bevorzugt — wird die optimale Aktienallokation durch das vorherrschende Niveau der Anleiherenditen bestimmt. Niedrigere Zinssätze machen Aktien relativ attraktiver und umgekehrt.\n\nBasierend auf Marktvolatilität, Korrelationen und erwarteten Renditen können die optimalen Allokationen entlang der sogenannten „Effizienzgrenze“ für Investoren mit unterschiedlichen Risikoprofilen und Anlagehorizonten bestimmt werden.",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Zeit - Kreditallokation (Unternehmensanleihen)",
+    "descr": "Die Allokation zwischen Unternehmensanleihen und Staatsanleihen hängt ebenfalls vom Anlagehorizont des Investors ab.\nBetrachtet man ein bestimmtes Land (z. B. die USA, Deutschland usw.), bieten Unternehmensanleihen typischerweise höhere Renditen als Ausgleich für das höhere Kreditrisiko im Vergleich zu Staatsanleihen (auch „Govies“ genannt).\n\nDie Volatilität von Unternehmensanleihen — höher bei High-Yield-Anleihen als bei Investment-Grade-Wertpapieren — nimmt über längere Anlagezeiträume tendenziell ab. Je länger der Anlagehorizont des Investors ist, desto größer kann der Anteil von Unternehmensanleihen im Portfolio sein.\n\nBasierend auf erwarteten Renditen, Volatilität und Korrelationen kann der optimale Anteil von Unternehmensanleihen entlang der „Effizienzgrenze“ für Investoren mit unterschiedlichen Risikoprofilen und Anlagehorizonten bestimmt werden.",
+    "list": []
+  }
+}

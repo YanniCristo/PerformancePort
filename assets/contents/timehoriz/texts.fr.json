@@ -1,0 +1,18 @@
+{
+  "parOne": {
+    "title": "",
+    "descr": "Dans l’allocation de portefeuille, le poids des actifs risqués devrait augmenter progressivement avec l’horizon temporel et la tolérance au risque de l’investisseur, reflétant une plus grande capacité à absorber la volatilité à court terme dans la recherche d’une croissance à long terme"
+  },
+
+  "parTwo": {
+    "title": "Temps - Allocation en Actions",
+    "descr": "L’allocation entre actions et obligations dépend de l’horizon temporel de l’investisseur.\nPlus l’horizon de l’investisseur est long, plus une allocation importante en actions devient envisageable, car le risque associé aux fluctuations de court terme diminue avec le temps. Historiquement, les marchés actions ont généré des rendements supérieurs à long terme par rapport aux obligations, compensant leur volatilité plus élevée.\n\nUn horizon temporel plus long permet aux investisseurs de mieux résister aux fluctuations des marchés actions, augmentant ainsi la probabilité d’obtenir des résultats positifs.\nCompte tenu de l’horizon prévu — qu’il soit nécessaire ou souhaité —, l’allocation optimale en actions est déterminée par le niveau dominant des rendements obligataires. Des taux d’intérêt plus faibles rendent les actions relativement plus attractives, et inversement.\n\nSur la base de la volatilité des marchés, des corrélations et des rendements attendus, les allocations optimales le long de la « Frontière Efficiente » peuvent être identifiées pour des investisseurs présentant différents profils de risque, compte tenu de leur horizon d’investissement.",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Temps - Allocation Crédit (Obligations d’Entreprise)",
+    "descr": "L’allocation entre obligations d’entreprise et obligations souveraines dépend également de l’horizon temporel de l’investisseur.\nLorsqu’on considère un pays spécifique (par exemple les États-Unis, l’Allemagne, etc.), les obligations d’entreprise offrent généralement des rendements plus élevés afin de compenser un risque de crédit supérieur par rapport aux obligations souveraines (également appelées « govies »).\n\nLa volatilité des obligations d’entreprise — plus élevée pour les émissions High Yield que pour les titres Investment Grade — tend à diminuer sur des périodes d’investissement plus longues. Plus l’horizon temporel de l’investisseur est long, plus la part d’obligations d’entreprise pouvant être allouée au portefeuille est importante.\n\nSur la base des rendements attendus, de la volatilité et des corrélations, le pourcentage optimal d’obligations d’entreprise le long de la « Frontière Efficiente » peut être déterminé pour des investisseurs présentant différents profils de risque, compte tenu de leur horizon d’investissement.",
+    "list": []
+  }
+}

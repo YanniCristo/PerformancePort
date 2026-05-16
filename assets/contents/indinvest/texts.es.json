@@ -1,0 +1,21 @@
+{
+  "parOne": {
+    "title": "Preservar y hacer crecer tu patrimonio con rendimientos consistentes",
+    "description": "Confiar en el ahorro gestionado (bancos, brokers, fondos de inversión) implica costes que reducen la rentabilidad neta de tu cartera. A menudo, estos costes no están justificados por una mejora en el rendimiento. Según la teoría económica (Hipótesis de los Mercados Eficientes), los rendimientos extra derivados de la gestión activa basada en análisis fundamental tienden a ser nulos o negativos a largo plazo.\n\nCon acceso regular a información financiera estructurada, es posible gestionar las inversiones de forma independiente, evitando costes innecesarios y logrando resultados superiores a la media mediante modelos de cartera sistemáticos y basados en evidencia."
+  },
+
+  "parTwo": {
+    "title": "Qué ofrece PerformingPort",
+    "description": "Marco estructurado - Carteras modelo objetivo definidas mediante criterios coherentes que consideran el horizonte temporal del inversor, se adaptan a las condiciones macroeconómicas cambiantes y se alinean con los ciclos de mercado predominantes.\n\nEste enfoque está diseñado para:\nMostrar una selección enfocada de componentes modelo\nPermitir un seguimiento simplificado con ajustes periódicos limitados\nProporcionar una comparación analítica con benchmarks de mercado relevantes"
+  },
+
+  "parTre": {
+    "title": "",
+    "description": "Asignación macro - Definición de carteras modelo cuantitativas en la Frontera Eficiente basadas en el ciclo de mercado actual y en fundamentos macroeconómicos de inversión.\n\nEl marco define exposición mediante ETF/Fondos en segmentos de renta fija (gubernamental, corporativa IG, corporativa HY, vencimientos cortos/medios/largos) y sectores de renta variable extraídos del S&P 500 y del índice europeo."
+  },
+
+  "parQua": {
+    "title": "",
+    "description": "Asignación en mercados bursátiles líderes - Carteras modelo rebalanceadas mensualmente derivadas de algoritmos back-tested entrenados con datos históricos diarios de momentum de precios:\nCarteras basadas en países en 10 mercados de Norteamérica y Europa\nSelección mensual de 7-10 acciones de gran capitalización de índices nacionales"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parOne": {
+    "title": "Aktienmarktphase",
+    "descr": "Aktien werden unterstützt durch\n\n\t1) wirtschaftliches Wachstum, das Unternehmensgewinne antreibt\n\t2) sinkende Zinssätze, die Kredite für Konsum und Investitionen fördern.\n\nDer Aktienmarkt wechselt zwischen positiven Phasen (schattierte Bereiche) und negativen Phasen.\nDie Dauer dieser Phasen ist tendenziell recht regelmäßig und wird durch die Schwankungen des Konjunkturzyklus und der Anleiherenditen bestimmt.\nWendepunkte bei den Anleiherenditen gehen Wendepunkten an den Aktienmärkten häufig voraus."
+  },
+
+  "parTwo": {
+    "title": "Phase der Anleiherenditen",
+    "descr": "Anleiherenditen schwanken im Einklang mit den Zinsmaßnahmen der Zentralbanken.\nEs ist vorteilhaft, Anleihen während Phasen sinkender Renditen (schattierter Bereich) zu halten, wenn die Zentralbank die Zinssätze senkt (rot gestrichelte Linie)."
+  }
+}

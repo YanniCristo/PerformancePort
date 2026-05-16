@@ -1,0 +1,21 @@
+{
+  "parOne": {
+    "title": "Préserver et faire croître votre patrimoine avec des rendements constants",
+    "description": "S'appuyer sur l'épargne gérée (banques, courtiers, fonds communs de placement) implique des frais qui réduisent le rendement net de votre portefeuille. Souvent, ces coûts ne sont pas justifiés par une amélioration des performances. Selon la théorie économique (Hypothèse d’Efficience des Marchés), les rendements excédentaires issus de la gestion active basée sur l’analyse fondamentale tendent à être nuls ou négatifs sur le long terme.\n\nAvec un accès régulier à des informations financières structurées, il est possible de gérer ses investissements de manière indépendante, en évitant les coûts inutiles et en obtenant des résultats supérieurs à la moyenne grâce à des modèles de portefeuille systématiques et fondés sur des données probantes."
+  },
+
+  "parTwo": {
+    "title": "Ce que propose PerformingPort",
+    "description": "Cadre structuré - Portefeuilles modèles cibles définis à travers des logiques cohérentes prenant en compte l’horizon temporel de l’investisseur, s’adaptant à l’évolution des conditions macroéconomiques et s’alignant sur les cycles de marché dominants.\n\nCette approche est conçue pour :\nPrésenter une sélection ciblée des composantes du modèle\nPermettre un suivi simplifié avec des ajustements périodiques limités\nFournir une comparaison analytique avec des références de marché pertinentes"
+  },
+
+  "parTre": {
+    "title": "",
+    "description": "Allocation macro - Définition de portefeuilles quantitatifs sur la Frontière Efficiente en fonction du cycle de marché actuel et des logiques macroéconomiques d’investissement.\n\nLe cadre définit une exposition via ETF/Fonds sur différents segments obligataires (souverains, corporate IG, corporate HY, maturités courtes/moyennes/longues) et sur des secteurs actions issus du S&P 500 et de l’indice européen."
+  },
+
+  "parQua": {
+    "title": "",
+    "description": "Allocation sur les principaux marchés actions - Portefeuilles modèles rééquilibrés mensuellement issus d’algorithmes backtestés entraînés sur des données historiques quotidiennes de momentum des prix :\nPortefeuilles basés sur 10 marchés d’Amérique du Nord et d’Europe\nSélection mensuelle de 7 à 10 actions de grande capitalisation issues des indices nationaux"
+  }
+}

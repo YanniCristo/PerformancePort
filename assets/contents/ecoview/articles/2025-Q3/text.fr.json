@@ -1,0 +1,25 @@
+{
+  "parOne": {
+    "title": "US",
+    "img": ["(1)", "(2)"],
+    "description": "L'économie américaine devrait entrer dans une période de faiblesse temporaire en raison de l'incertitude entourant la politique tarifaire de Trump.\nLe cycle économique devrait retrouver de l'élan grâce à la mise en œuvre du plan budgétaire expansionniste (« One, Big, Beautiful Bill »).\nL'inflation jouera un rôle crucial : elle devrait atteindre 3 à 4 % au cours des 12 prochains mois à mesure que les droits de douane seront progressivement répercutés sur les prix à la consommation.\n\nCependant, une fois l'inflation stabilisée, la Réserve fédérale devrait revenir à une politique monétaire plus accommodante."
+  },
+
+  "parTwo": {
+    "title": "EU",
+    "img": ["(3)", "(4)"],
+    "description": "La croissance de la zone euro devrait accélérer après une période de stagnation grâce à une nouvelle vague d'assouplissement budgétaire menée par l'Allemagne.\nL'inflation dispose encore d'une marge pour diminuer légèrement davantage, soutenue par un euro plus fort.\nPar conséquent, la BCE devrait maintenir son orientation monétaire accommodante actuelle."
+  },
+
+  "parTre": {
+    "title": "Asia",
+    "img": ["(1)", "(2)"],
+    "description": "L'économie chinoise poursuivra sa reprise modérée grâce à un soutien budgétaire ciblé et à un redressement progressif de la consommation intérieure, malgré la faiblesse persistante du secteur immobilier.\nLes pressions inflationnistes restent limitées, car les surcapacités, la faible demande des consommateurs et la baisse des prix immobiliers pèsent sur la dynamique générale des prix.\nCe contexte donne à la PBoC la possibilité de maintenir une politique monétaire de soutien, notamment par des injections de liquidités et une réduction des réserves obligatoires, tout en évitant une expansion généralisée du crédit."
+  },
+
+  "parFou": {
+    "title": "Macro Summary - Key Developments at a Glance",
+    "img": [],
+    "description": "Le sentiment des marchés actions devrait se reconstruire après la soi-disant Journée de Libération Tarifaire, alors que les attentes des investisseurs deviennent plus constructives après une période d'incertitude commerciale.\nL'inflation américaine devrait augmenter à court terme, reflétant la transmission différée des récents droits de douane. La Réserve fédérale devrait maintenir sa position actuelle puis reprendre son cycle d'assouplissement dans quelques trimestres à mesure que les pressions inflationnistes s'atténueront.\n\nDes politiques budgétaires et monétaires favorables aux États-Unis, dans la zone euro et en Chine créeront un environnement positif pour les marchés actions, dans un contexte mondial marqué par un regain de croissance en Europe et une stabilisation économique en Chine.\nAvant les principales données d'inflation américaines, une position de courte duration reste recommandée. Une fois que la Fed reprendra son cycle d'assouplissement, un repositionnement vers le long terme de la courbe des taux deviendra approprié.\n\nDans un contexte d'amélioration de la croissance mondiale, une exposition aux obligations d'entreprises High Yield et Investment Grade est recommandée, y compris dans la zone euro. Dans la zone euro, avec une inflation maîtrisée et un euro renforcé, une position de longue duration est privilégiée."
+  }
+}

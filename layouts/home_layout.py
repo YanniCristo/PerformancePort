@@ -39,7 +39,7 @@ def home_layout(lang='en'):
   
         html.Div([
             html.Img(
-                    src="/assets/contents/general/logo2.png",
+                    src="/assets/contents/general/logo2.svg",
                     style={"height": "65px"}
                     )
             ], style={"padding-top": "55px",

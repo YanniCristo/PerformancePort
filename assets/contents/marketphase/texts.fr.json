@@ -1,0 +1,11 @@
+{
+  "parOne": {
+    "title": "Phase des Actions",
+    "descr": "Les actions sont soutenues par\n\n\t1) la croissance économique, qui stimule les bénéfices des entreprises\n\t2) la baisse des taux d’intérêt, qui favorise le crédit pour la consommation et l’investissement.\n\nLe marché actions alterne entre des phases positives (zones ombrées) et des phases négatives.\nLa durée de ces phases tend à être relativement régulière et est déterminée par les fluctuations du cycle économique et des rendements obligataires.\nLes points de retournement des rendements obligataires précèdent souvent les points de retournement des marchés actions."
+  },
+
+  "parTwo": {
+    "title": "Phase des Rendements Obligataires",
+    "descr": "Les rendements obligataires fluctuent en cohérence avec les ajustements des taux directeurs des Banques Centrales.\nIl est avantageux de détenir des obligations pendant les périodes de baisse des rendements (zone ombrée), lorsque la Banque Centrale réduit les taux d’intérêt (pointillés rouges)."
+  }
+}

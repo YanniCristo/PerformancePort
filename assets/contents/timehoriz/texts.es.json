@@ -1,0 +1,18 @@
+{
+  "parOne": {
+    "title": "",
+    "descr": "En la asignación de cartera, el peso de los activos de riesgo debe aumentar progresivamente con el horizonte temporal y la tolerancia al riesgo del inversor, reflejando una mayor capacidad para absorber la volatilidad de corto plazo en busca de crecimiento a largo plazo"
+  },
+
+  "parTwo": {
+    "title": "Horizonte Temporal - Asignación en Renta Variable",
+    "descr": "La asignación entre renta variable y bonos depende del horizonte temporal del inversor.\nCuanto más largo sea el horizonte del inversor, mayor será la asignación en renta variable que resulta viable, ya que el riesgo asociado a las fluctuaciones de corto plazo disminuye con el tiempo. Históricamente, los mercados bursátiles han ofrecido mayores rendimientos a largo plazo en comparación con los bonos, compensando su mayor volatilidad.\n\nUn horizonte temporal más largo permite a los inversores soportar mejor las oscilaciones del mercado bursátil, aumentando la probabilidad de obtener resultados positivos.\nDado el horizonte previsto —ya sea necesario o preferido—, la asignación óptima en renta variable está impulsada por el nivel predominante de los rendimientos de los bonos. Tipos de interés más bajos hacen que la renta variable sea relativamente más atractiva, y viceversa.\n\nBasándose en la volatilidad del mercado, las correlaciones y los rendimientos esperados, pueden identificarse las asignaciones óptimas a lo largo de la denominada «Frontera Eficiente» para inversores con distintos perfiles de riesgo, dado su horizonte de inversión.",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Horizonte Temporal - Asignación Crediticia (Bonos Corporativos)",
+    "descr": "La asignación entre bonos corporativos y bonos gubernamentales también depende del horizonte temporal del inversor.\nAl considerar un país específico (por ejemplo, EE. UU., Alemania, etc.), los bonos corporativos suelen ofrecer mayores rendimientos para compensar un mayor riesgo crediticio en comparación con los bonos gubernamentales (también llamados «govies»).\n\nLa volatilidad de los bonos corporativos —más elevada en emisiones High Yield que en títulos Investment Grade— tiende a disminuir en períodos de inversión más largos. Cuanto más largo sea el horizonte temporal del inversor, mayor será la proporción de bonos corporativos que puede asignarse en la cartera.\n\nBasándose en los rendimientos esperados, la volatilidad y las correlaciones, puede determinarse el porcentaje óptimo de bonos corporativos a lo largo de la «Frontera Eficiente» para inversores con distintos perfiles de riesgo, dado su horizonte de inversión.",
+    "list": []
+  }
+}

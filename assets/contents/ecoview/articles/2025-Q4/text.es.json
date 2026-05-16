@@ -1,0 +1,25 @@
+{
+  "parOne": {
+    "title": "US",
+    "img": ["(1)-(8)", "(2)-(10)", "(7)"],
+    "description": "Se espera que la economía de EE. UU. entre en un período de debilidad temporal impulsado por la incertidumbre en torno a la política arancelaria de Trump.\nEs probable que el ciclo económico recupere impulso gracias a la implementación del plan fiscal expansivo (el 'One, Big, Beautiful Bill').\nLa inflación desempeñará un papel crucial: se prevé que aumente hasta el 3-4% en los próximos 12 meses a medida que los aranceles se trasladen gradualmente a los precios al consumidor.\n\nSin embargo, una vez que la inflación se estabilice, se espera que la Reserva Federal vuelva a adoptar una postura de política monetaria expansiva."
+  },
+
+  "parTwo": {
+    "title": "EU",
+    "img": ["(3)", "(4)", "(7)"],
+    "description": "Se espera que el crecimiento de la Eurozona se acelere tras un período de estancamiento impulsado por una nueva ola de flexibilización fiscal liderada por Alemania.\nLa inflación todavía tiene margen para descender ligeramente más, respaldada por un euro más fuerte.\nComo resultado, es probable que el BCE mantenga su actual postura acomodaticia de política monetaria."
+  },
+
+  "parTre": {
+    "title": "Asia",
+    "img": ["(1)", "(2)"],
+    "description": "La economía china prolongará su recuperación moderada impulsada por un apoyo fiscal específico y un repunte gradual del consumo interno, a pesar de la continua debilidad del sector inmobiliario.\nLas presiones inflacionarias siguen siendo moderadas, ya que el exceso de capacidad, la débil demanda de los consumidores y la caída de los precios inmobiliarios afectan la dinámica general de los precios.\nEste contexto da margen al PBoC para mantener una postura monetaria de apoyo, incluyendo inyecciones de liquidez y menores requisitos de reservas, evitando al mismo tiempo una expansión crediticia generalizada."
+  },
+
+  "parFou": {
+    "title": "Macro Summary - Key Developments at a Glance",
+    "img": [],
+    "description": "Se espera que el sentimiento de los mercados bursátiles se reconstruya tras el llamado Día de la Liberación Arancelaria, a medida que las expectativas de los inversores se vuelvan más constructivas después de un período de incertidumbre comercial.\nEs probable que la inflación en EE. UU. aumente a corto plazo reflejando el efecto retardado de los recientes aranceles. Se espera que la Reserva Federal mantenga su postura actual y reanude su ciclo de flexibilización dentro de algunos trimestres a medida que disminuyan las presiones inflacionarias.\n\nLas políticas fiscales y monetarias de apoyo en EE. UU., la Eurozona y China crearán un entorno favorable para los mercados bursátiles, dentro de un contexto global de renovado impulso de crecimiento en Europa y estabilización económica en China.\nAntes de los principales datos de inflación en EE. UU., sigue siendo aconsejable una posición de corta duración. Una vez que la Fed reanude su ciclo de flexibilización, será apropiado desplazarse hacia el tramo largo de la curva de rendimientos.\n\nEn un contexto de mejora del crecimiento global, se recomienda exposición a bonos corporativos High Yield e Investment Grade, incluyendo la Eurozona. En la Eurozona, con una inflación contenida y un euro fortalecido, se prefiere una posición de larga duración."
+  }
+}

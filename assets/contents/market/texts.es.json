@@ -1,0 +1,36 @@
+{
+  "parOne": {
+    "title": "Fases Risk-on / Risk-off",
+    "descr": "Una cartera bien estructurada combina activos de riesgo — renta variable frente a bonos, bonos corporativos frente a bonos gubernamentales — para lograr diversificación y rendimientos sostenibles.\nLa asignación entre activos de riesgo y activos de menor riesgo depende tanto de la fase del ciclo económico como del entorno predominante de tipos de interés.\nDurante períodos de expansión económica, los mercados suelen entrar en fases risk-on, favoreciendo posiciones sobreponderadas en renta variable y bonos corporativos. Por el contrario, durante desaceleraciones económicas predominan las fases risk-off, que requieren una asignación más defensiva con mayor peso en activos de bajo riesgo.\n\nLa interacción entre el ciclo económico (reflejado en las tendencias del PIB), la inflación y la dinámica de los tipos de interés (impulsada por la política de los bancos centrales) genera patrones relativamente regulares de rotación entre fases risk-on y risk-off.\nAl considerar la principal fuente de diversificación dentro de una cartera — que impulsa el equilibrio entre activos de riesgo y de bajo riesgo — la asignación entre renta variable y bonos gubernamentales debe responder a una pregunta clave: ¿En qué fase del ciclo se encuentran actualmente los mercados?\nEl análisis histórico de los últimos 60 años proporciona información valiosa sobre la dirección y duración típicas de las tendencias de mercado, información esencial para la asignación estratégica de carteras a lo largo del tiempo.\n\nDado su tamaño y papel central en la economía global, el mercado estadounidense sirve como principal referencia para analizar estas dinámicas. Considerando las tendencias del mercado bursátil y los rendimientos de los bonos del Tesoro a 10 años como indicadores de fases risk-on y risk-off, es posible estimar la duración media de los ciclos de mercado — tanto en la renta variable (S&P 500) como en los rendimientos de bonos a largo plazo — basándose en datos históricos de EE. UU."
+  },
+
+  "parTwo": {
+    "title": "Ciclos de Mercado - Renta Variable vs Bonos",
+    "descr": "La posición de la cartera debe ser coherente con la fase predominante del ciclo económico: la asignación a renta variable debe incrementarse en entornos risk-on y reducirse en períodos risk-off",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Ciclos de Mercado - Bonos Corporativos vs Gubernamentales",
+    "descr": "La asignación de la cartera de bonos también debe ajustarse al ciclo económico: la exposición a bonos corporativos (High Yield e Investment Grade) tiende a incrementarse durante fases risk-on, cuando los diferenciales de crédito generalmente se estrechan",
+    "list": []
+  },
+
+  "parFou": {
+    "title": "Ciclos de Mercado - Duración de los Bonos",
+    "descr": "A nivel agregado, los rendimientos de los bonos reflejan dos fuentes clave de riesgo:\n1. Riesgo de Inflación (IR)\n2. Riesgo Crediticio Sistémico (SCR) — representado por el spread crediticio agregado, es decir, la diferencia entre los rendimientos de bonos corporativos y bonos gubernamentales con el mismo vencimiento.\n\nEl peso relativo de estos dos componentes varía entre las distintas clases de activos de renta fija:\nBonos Gubernamentales (Govies): IR=80-90% | SCR=10-20%\nEn los bonos soberanos, el riesgo de impago se percibe como mínimo o insignificante. Los rendimientos reflejan principalmente expectativas sobre la inflación futura.\nEn países fiscalmente menos sólidos, el peso del riesgo crediticio puede aumentar ligeramente, aunque sigue siendo secundario respecto a la inflación.\nBonos Corporativos Investment Grade (por ejemplo Apple, IBM, ENI): IR=60-70% | SCR=30-40%\nLa inflación sigue siendo un factor clave. Sin embargo, el riesgo crediticio corporativo es real, aunque generalmente limitado.\nBonos Corporativos High Yield (por ejemplo Ford, Altice, Carnival): IR=20-30% | SCR=70-80%\nAquí, el riesgo de impago y el deterioro crediticio dominan claramente. La inflación tiene menor relevancia porque los rendimientos están impulsados principalmente por los spreads de crédito — la diferencia de rendimiento entre bonos corporativos y gubernamentales con el mismo vencimiento.",
+    "list": []
+  },
+
+  "parFiv": {
+    "title": "Ciclos de Mercado - Riesgo de Inflación (IR)",
+    "descr": "Cuando el Riesgo de Inflación (IR) disminuye, los rendimientos de los bonos gubernamentales y de los bonos corporativos IG tienden a caer (los precios suben). En este caso, la exposición de la cartera debería orientarse hacia vencimientos más largos (más sensibles que los cortos). Lo contrario ocurre cuando el IR aumenta.",
+    "list": []
+  },
+
+  "parSix": {
+    "title": "Ciclos de Mercado - Riesgo Crediticio Sistémico (SCR)",
+    "descr": "Cuando el Riesgo Crediticio Sistémico (SCR) disminuye — normalmente durante períodos de crecimiento económico positivo o recuperación (fase risk-on) — los spreads de crédito de los bonos High Yield (HY) y corporativos IG tienden a estrecharse (asumiendo que el IR permanece estable). En este caso, la exposición de la cartera debería orientarse hacia vencimientos más largos (más sensibles que los cortos). Lo contrario ocurre cuando el SCR aumenta.",
+    "list": []
+  }
+}

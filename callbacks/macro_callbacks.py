@@ -56,8 +56,7 @@ def register(app):
     def update_article(q, lang):
         lang = lang or 'en'
         
-        data = load_content(f'assets/contents/ecoview/articles/{q}/text.json')
-        base_path = Path(f'assets/contents/ecoview/articles/{q}')
+        data = load_content(f'assets/contents/ecoview/articles/{q}/text.json', lang)
         df = pd.read_excel(f'assets/contents/ecoview/articles/EcoData.xlsx', header=0, index_col=0)
 
         names = df.iloc[0,:]

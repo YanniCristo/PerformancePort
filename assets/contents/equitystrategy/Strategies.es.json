@@ -1,0 +1,82 @@
+{
+  "S&P": {
+    "title": "S&P Top Momentum 10",
+    "desc": "Selecciona cada mes las 10 acciones del S&P 500 con el impulso más fuerte. Busca aprovechar las tendencias del mercado estadounidense con una cartera dinámica centrada en los líderes actuales.",
+    "freq": "Updated: Monthly",
+    "value": "12.1%",
+    "tag": "SPMom10",
+    "color": "blue"
+  },
+
+  "Nasdaq": {
+    "title": "Nasdaq Top Momentum 10",
+    "desc": "Invierte en las 10 acciones del Nasdaq con la mejor fortaleza relativa, actualizadas mensualmente. Una estrategia orientada al crecimiento y a los sectores innovadores con mayor impulso alcista.",
+    "freq": "Updated: Monthly",
+    "value": "15.4%",
+    "tag": "QQMom10",
+    "color": "red"
+  },
+
+  "EuroStoxx600": {
+    "title": "EU600 Top Momentum 10",
+    "desc": "Identifica las 10 acciones más fuertes del Euro Stoxx 600 entre grandes, medianas y pequeñas capitalizaciones europeas. Ofrece una amplia exposición a las tendencias más sólidas del mercado continental.",
+    "freq": "Updated: Monthly",
+    "value": "8.4%",
+    "tag": "EUMom10",
+    "color": "purple"
+  },
+
+  "EuroStoxx50": {
+    "title": "EU50 Top Momentum 10",
+    "desc": "Selecciona las 10 mejores acciones entre los blue chips del Euro Stoxx 50. Busca combinar calidad y momentum entre las principales empresas de la Eurozona.",
+    "freq": "Updated: Monthly",
+    "value": "9.0%",
+    "tag": "EUMom10",
+    "color": "coral"
+  },
+
+  "ITMom10": {
+    "title": "ITA Top Momentum 10",
+    "desc": "Cartera mensual de las 10 acciones italianas con el mayor rendimiento relativo. Concentrada en las oportunidades más fuertes dentro de Piazza Affari.",
+    "freq": "Updated: Monthly",
+    "value": "11.3%",
+    "tag": "ITMom10",
+    "color": "amber"
+  },
+
+  "UKMom10": {
+    "title": "UK Top Momentum 10",
+    "desc": "Selecciona cada mes las 10 acciones más fuertes del mercado británico. Proporciona exposición a las mejores tendencias del Reino Unido en los sectores energético, financiero y de consumo.",
+    "freq": "Updated: Monthly",
+    "value": "7.4%",
+    "tag": "UKMom10",
+    "color": "red"
+  },
+
+  "FRMom10": {
+    "title": "CAC40 Top Momentum 10",
+    "desc": "Invierte en las 10 acciones francesas con mayor momentum, actualizadas mensualmente. Estrategia enfocada en los líderes del mercado parisino.",
+    "freq": "Updated: Monthly",
+    "value": "9.3%",
+    "tag": "FRMom10",
+    "color": "coral"
+  },
+
+  "DEMom10": {
+    "title": "DAX Top Momentum 10",
+    "desc": "Selecciona las 10 acciones alemanas más fuertes según tendencia y rendimiento relativo. Busca aprovechar la fortaleza industrial y financiera del mercado alemán.",
+    "freq": "Updated: Monthly",
+    "value": "8.8%",
+    "tag": "DEMom10",
+    "color": "purple"
+  },
+
+  "SPMom10": {
+    "title": "IBEX Top Momentum 10",
+    "desc": "Cartera de las 10 acciones españolas con mayor momentum, revisada mensualmente. Ofrece exposición a los líderes del mercado ibérico durante sus períodos de mayor fortaleza.",
+    "freq": "Updated: Monthly",
+    "value": "12.8%",
+    "tag": "SPMom10",
+    "color": "red"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parOne": {
+    "title": "Fase de la Renta Variable",
+    "descr": "La renta variable está respaldada por\n\n\t1) el crecimiento económico, que impulsa los beneficios corporativos\n\t2) la caída de los tipos de interés, que favorece el crédito para consumo e inversión.\n\nEl mercado bursátil alterna entre fases positivas (áreas sombreadas) y fases negativas.\nLa duración de estas fases tiende a ser bastante regular y está impulsada por las fluctuaciones del ciclo económico y de los rendimientos de los bonos.\nLos puntos de giro en los rendimientos de los bonos suelen preceder a los puntos de giro en los mercados bursátiles."
+  },
+
+  "parTwo": {
+    "title": "Fase de los Rendimientos de los Bonos",
+    "descr": "Los rendimientos de los bonos fluctúan en coherencia con las maniobras de tipos de interés de los Bancos Centrales.\nEs beneficioso mantener bonos durante períodos de caída de los rendimientos (área sombreada), cuando el Banco Central reduce los tipos de interés (línea roja discontinua)."
+  }
+}

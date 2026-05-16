@@ -1,0 +1,36 @@
+{
+  "parOne": {
+    "title": "Phases Risk-on / Risk-off",
+    "descr": "Un portefeuille bien structuré combine des actifs risqués — actions vs obligations, obligations d’entreprise vs obligations souveraines — afin d’obtenir diversification et rendements durables.\nL’allocation entre actifs risqués et actifs moins risqués dépend à la fois de la phase du cycle économique et de l’environnement de taux d’intérêt dominant.\nPendant les périodes d’expansion économique, les marchés entrent généralement dans des phases risk-on, favorisant une surpondération des actions et des obligations d’entreprise. À l’inverse, lors des ralentissements économiques, les phases risk-off dominent et appellent une allocation plus défensive avec un poids plus élevé d’actifs à faible risque.\n\nL’interaction entre le cycle économique (reflété par les tendances du PIB), l’inflation et la dynamique des taux d’intérêt (pilotée par la politique des banques centrales) génère des schémas relativement réguliers de rotation entre phases risk-on et risk-off.\nLorsqu’on considère la principale source de diversification au sein d’un portefeuille — déterminant l’équilibre entre actifs risqués et peu risqués — l’allocation entre actions et obligations souveraines doit répondre à une question clé : dans quelle phase du cycle se trouvent actuellement les marchés ?\nL’analyse historique des 60 dernières années fournit des indications précieuses sur la direction et la durée typiques des tendances de marché — des informations essentielles pour l’allocation stratégique de portefeuille dans le temps.\n\nCompte tenu de sa taille et de son rôle central dans l’économie mondiale, le marché américain sert de référence principale pour examiner ces dynamiques. En considérant les tendances des marchés actions et les rendements des Treasuries à 10 ans comme des indicateurs des phases risk-on et risk-off, il devient possible d’estimer la durée moyenne des cycles de marché — à la fois sur les actions (S&P 500) et les rendements obligataires à long terme — à partir des données historiques américaines."
+  },
+
+  "parTwo": {
+    "title": "Cycles de Marché - Actions vs Obligations",
+    "descr": "Le positionnement du portefeuille doit être cohérent avec la phase dominante du cycle économique : l’exposition aux actions doit être augmentée dans les environnements risk-on et réduite pendant les périodes risk-off",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Cycles de Marché - Obligations d’Entreprise vs Obligations Souveraines",
+    "descr": "L’allocation du portefeuille obligataire doit également s’adapter au cycle économique : l’exposition aux obligations d’entreprise (High Yield et Investment Grade) tend à augmenter pendant les phases risk-on, lorsque les spreads de crédit se resserrent généralement",
+    "list": []
+  },
+
+  "parFou": {
+    "title": "Cycles de Marché - Maturité des Obligations",
+    "descr": "À un niveau agrégé, les rendements obligataires reflètent deux sources principales de risque :\n1. Risque d’Inflation (IR)\n2. Risque de Crédit Systémique (SCR) — représenté par le spread de crédit agrégé, c’est-à-dire la différence entre les rendements des obligations d’entreprise et des obligations souveraines de même maturité.\n\nLe poids relatif de ces deux composantes varie selon les classes d’actifs obligataires :\nObligations Souveraines (Govies) : IR=80-90% | SCR=10-20%\nDans les obligations souveraines, le risque de défaut est perçu comme minimal ou négligeable. Les rendements reflètent principalement les anticipations d’inflation future.\nDans les pays fiscalement moins solides, le poids du risque de crédit peut légèrement augmenter mais reste secondaire par rapport à l’inflation.\nObligations d’Entreprise Investment Grade (ex. Apple, IBM, ENI) : IR=60-70% | SCR=30-40%\nL’inflation reste un moteur clé. Cependant, le risque de crédit d’entreprise est réel, bien que généralement limité.\nObligations d’Entreprise High Yield (ex. Ford, Altice, Carnival) : IR=20-30% | SCR=70-80%\nIci, le risque de défaut et la détérioration du crédit dominent clairement. L’inflation joue un rôle moindre car les rendements sont principalement déterminés par les spreads de crédit — la différence de rendement entre obligations d’entreprise et obligations souveraines de même maturité.",
+    "list": []
+  },
+
+  "parFiv": {
+    "title": "Cycles de Marché - Risque d’Inflation (IR)",
+    "descr": "Lorsque le Risque d’Inflation (IR) diminue, les rendements des obligations souveraines et des obligations d’entreprise IG tendent à baisser (les prix augmentent). Dans ce cas, l’exposition du portefeuille doit être orientée vers des maturités plus longues (plus sensibles que les courtes). L’inverse se produit lorsque l’IR augmente.",
+    "list": []
+  },
+
+  "parSix": {
+    "title": "Cycles de Marché - Risque de Crédit Systémique (SCR)",
+    "descr": "Lorsque le Risque de Crédit Systémique (SCR) diminue — généralement pendant les périodes de croissance économique positive ou de reprise (phase risk-on) — les spreads de crédit des obligations High Yield (HY) et IG tendent à se resserrer (en supposant que l’IR reste stable). Dans ce cas, l’exposition du portefeuille doit être orientée vers des maturités plus longues (plus sensibles que les courtes). L’inverse se produit lorsque le SCR augmente.",
+    "list": []
+  }
+}
