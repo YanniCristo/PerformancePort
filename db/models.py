@@ -6,6 +6,9 @@ from db.database import engine
 
 Base = declarative_base()
 
+# ──────────────────────────────────────────────────────────────────────────────
+# ── Users data ───────────────────────────────────────────────────────────────
+
 class User(UserMixin, Base):
     __tablename__ = "users"
 
@@ -52,6 +55,7 @@ class Subscription(Base):
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 
+# ──────────────────────────────────────────────────────────────────────────────
 # ── Market data ───────────────────────────────────────────────────────────────
 
 class StrategyPrice(Base):

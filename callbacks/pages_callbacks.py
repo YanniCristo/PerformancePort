@@ -3,6 +3,7 @@ import importlib
 
 from db.database import get_payment_by_id
 from payments.stripe_service import retrieve_checkout_session
+from layouts.success import success_layout
 import stripe
 
 PAGE_REGISTRY = {
@@ -36,7 +37,7 @@ def register(app):
         if path in PAGE_REGISTRY:
             return _load_layout(path, lang)
 
-        elif path == "/pagamento-completato":
+        elif path == "/pagamento-completato" or path.endswith("/pagamento-completato"):
             # Estrai session_id dalla query string (?session_id=cs_xxx)
             session_id = ""
             if search:

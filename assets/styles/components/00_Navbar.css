@@ -22,6 +22,11 @@
     color: var(--text-color) !important;
 }
 
+.navbar-container {
+    padding-left: 4rem !important;
+    padding-right: 1rem !important;
+}
+
 .main-navbar .dropdown-item {
     color: var(--text-color) !important;
 }
@@ -40,7 +45,7 @@
 }
 
 .navbar-brand img {
-    height: clamp(16px, 3.3vw, 50px);
+    height: clamp(20px, 3vw, 45px);
 }
 
 .theme-toggle-btn {
@@ -71,4 +76,30 @@
 .lang-btn.active-lang {
     opacity: 1;
     font-weight: bold;
+}
+
+/* DROPDOWN DELLA LINGUA */
+
+.lang-dropdown-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-flag {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.lang-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lang-option-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

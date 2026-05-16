@@ -1,0 +1,82 @@
+{
+  "S&P": {
+    "title": "S&P Top Momentum 10",
+    "desc": "Selects the 10 S&P 500 stocks with the strongest momentum every month. It aims to ride U.S. market trends with a dynamic portfolio focused on current leaders.",
+    "freq": "Updated: Monthly",
+    "value": "12.1%",
+    "tag": "SPMom10",
+    "color": "blue"
+  },
+
+  "Nasdaq": {
+    "title": "Nasdaq Top Momentum 10",
+    "desc": "Invests in the 10 Nasdaq stocks with the best relative strength, updated monthly. A strategy oriented towards growth and innovative sectors with the greatest upward drive.",
+    "freq": "Updated: Monthly",
+    "value": "15.4%",
+    "tag": "QQMom10",
+    "color": "red"
+  },
+
+  "EuroStoxx600": {
+    "title": "EU600 Top Momentum 10",
+    "desc": "Identifies the 10 strongest stocks in the Euro Stoxx 600 among European large, mid, and small caps. Offers broad exposure to the most solid trends in the continental market.",
+    "freq": "Updated: Monthly",
+    "value": "8.4%",
+    "tag": "EUMom10",
+    "color": "purple"
+  },
+
+  "EuroStoxx50": {
+    "title": "EU50 Top Momentum 10",
+    "desc": "Selects the top 10 stocks among the Euro Stoxx 50 blue chips. Aims to combine quality and momentum across the Eurozone's leading companies.",
+    "freq": "Updated: Monthly",
+    "value": "9.0%",
+    "tag": "EUMom10",
+    "color": "coral"
+  },
+
+  "ITMom10": {
+    "title": "ITA Top Momentum 10",
+    "desc": "Monthly portfolio of the 10 Italian stocks with the highest relative performance. Concentrated on the strongest opportunities within Piazza Affari.",
+    "freq": "Updated: Monthly",
+    "value": "11.3%",
+    "tag": "ITMom10",
+    "color": "amber"
+  },
+
+  "UKMom10": {
+    "title": "UK Top Momentum 10",
+    "desc": "Selects the 10 strongest stocks in the British market every month. Provides exposure to the best UK trends across energy, financials, and consumer sectors.",
+    "freq": "Updated: Monthly",
+    "value": "7.4%",
+    "tag": "UKMom10",
+    "color": "red"
+  },
+
+  "FRMom10": {
+    "title": "CAC40 Top Momentum 10",
+    "desc": "Invests in the 10 French stocks with the highest momentum, updated monthly. Strategy focused on the leaders of the Paris market.",
+    "freq": "Updated: Monthly",
+    "value": "9.3%",
+    "tag": "FRMom10",
+    "color": "coral"
+  },
+
+  "DEMom10": {
+    "title": "DAX Top Momentum 10",
+    "desc": "Selects the 10 strongest German stocks based on trend and relative performance. Aims to leverage the industrial and financial strength of the German market.",
+    "freq": "Updated: Monthly",
+    "value": "8.8%",
+    "tag": "DEMom10",
+    "color": "purple"
+  },
+
+  "SPMom10": {
+    "title": "IBEX Top Momentum 10",
+    "desc": "Portfolio of the 10 Spanish stocks with the highest momentum, reviewed monthly. Provides exposure to Iberian market leaders during their periods of greatest strength.",
+    "freq": "Updated: Monthly",
+    "value": "12.8%",
+    "tag": "SPMom10",
+    "color": "red"
+  }
+}

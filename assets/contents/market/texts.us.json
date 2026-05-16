@@ -1,0 +1,37 @@
+{
+  "parOne": {
+    "title": "Risk-on / Risk-off Phases",
+    "descr": "A well-structured portfolio blends risky assets - Equities vs Bonds, Corporate Bonds vs Government Bonds - to achieve diversification and sustainable returns.\nThe allocation between risky and lower-risk assets depends on both the stage of the Business Cycle and the prevailing Interest Rate environment.\nDuring periods of economic expansion, markets typically enter risk-on phases, favouring overweight positions in Equities and Corporate Bonds. Conversely, during economic slowdowns, risk-off phases prevail, calling for a more defensive allocation with a higher weight in low-risk assets.\n\nThe interplay between the Business Cycle (as reflected in GDP trends), Inflation and Interest Rate dynamics (driven by Central Bank policy) generates fairly regular patterns of rotation between risk-on and risk-off phases.\nWhen considering the main source of diversification within a portfolio - driving the balance between risk and low-risk assets - the allocation between Equities and Government Bonds should address a key question: In which phase of the cycle are the markets currently?\nHistorical analysis spanning the past 60 years provides valuable insights into the typical direction and duration of market trends - information essential for strategic portfolio allocation over time.\n\nGiven its size and central role in the global economy, the U.S. market serves as the primary reference for examining these dynamics. By considering Equity Market trends and 10-year Treasury yields as proxies for identifying risk-on and risk-off phases, it becomes possible to estimate the average duration of market cycles - both in the equity market (S&P 500) and in long-term bond yields - based on U.S. historical data."
+  },
+
+  "parTwo": {
+    "title": "Market Cycles - Equities vs Bonds",
+    "descr": "Portfolio positioning should be consistent with the prevailing phase of the business cycle: equity allocations should be raised in risk-on environments and trimmed in risk-off periods",
+    "list": []
+  },
+
+  "parTre": {
+    "title": "Market Cycles - Corporate vs Government Bonds",
+    "descr": "Bond portfolio allocation should also adjust to the business cycle: Corporate Bond exposure (High Yield & Investment Grade) tends to be increased during risk-on phases, when credit spreads generally tighten",
+    "list": []
+  },
+
+  "parFou": {
+    "title": "Market Cycles - Bonds maturity",
+    "descr": "At an aggregate level, bond yields reflect two key sources of risk:\n1. Inflation Risk (IR)\n2. Systemic Credit Risk (SCR) - represented by the aggregate credit spread i.e. the difference between corporate bond yields and government bond yields with the same maturity.\n\nThe relative weight of these two components varies across bond asset classes:\nGovernment Bonds (aka Govies): IR=80-90% | SCR=10-20%\nIn sovereign bonds, default risk is perceived as minimal or negligible. Yields primarily reflect expectations about future inflation.\nIn less fiscally sound countries, the weight of credit risk may rise slightly but remains secondary to inflation Investment Grade Corporate Bonds (e.g. Apple IBM, ENI): IR=60-70% | SCR=30-40%\nInflation remains a key driver. However, corporate credit risk is real-albeit generally limited\nHigh Yield Corporate Bonds (e.g. Ford, Altice, Carnival): IR=20-30% SCR=70-80%\nHere, default risk and credit deterioration clearly dominate. Inflation matters less because yields are primarily driven by credit spreads\n- the difference in yield between corporate bonds and government bonds with the same maturity.",
+    "list": []
+  },
+
+  "parFiv": {
+    "title": "Market Cycles - Inflation Risk (IR)",
+    "descr": "When Inflation Risk (IR) declines, yields on Govies and IG Corporate Bonds tend to fall (prices rise). In this case, portfolio exposure should be tilted toward longer maturities (more sensitive than shorter ones). The opposite holds when IR increases.",
+    "list": []
+  },
+
+  "parSix": {
+    "title": "Market Cycles - Systemic Credit Risk (SCR)",
+    "descr": "When Systemic Credit Risk (SCR) declines-typically during periods of positive economic growth or recovery (risk-on phase)-credit spreads on High Yield (HY) and IG Corporate Bonds tend to tighten (assuming IR remains stable). In this case, portfolio exposure should be tilted toward longer maturities (more sensitive than shorter ones). The opposite holds when SCR increases.",
+    "list": []
+  }
+
+}

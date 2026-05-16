@@ -8,7 +8,7 @@ def navbar():
         dbc.Container(
             [
                 # Logo
-                dbc.NavbarBrand(html.Img(src="/assets/contents/general/logo.png")),
+                dbc.NavbarBrand(html.Img(src="/assets/contents/general/logo.svg")),
 
                 # Hamburger toggle
                 dbc.NavbarToggler(id="navbar-toggler"),
@@ -34,12 +34,10 @@ def navbar():
 
                             # Sezione bottone a destra
                             html.Div(id="user-status"),
-                            html.Button("🌙", id="theme-button", n_clicks=0, className="theme-toggle-btn"),
+##                            html.Button("🌙", id="theme-button", n_clicks=0, className="theme-toggle-btn"),
 
                             html.Div([
-                                html.Button("EN", id="lang-en", n_clicks=0, className="lang-btn"),
-                                html.Span("|", className="lang-separator"),
-                                html.Button("IT", id="lang-it", n_clicks=0, className="lang-btn"),
+                                dd.lang_view()
                             ], className="lang-switcher"),
                             
                         ],
@@ -51,8 +49,7 @@ def navbar():
                 ),
             ],
             fluid=True,
-            style={"paddingLeft": "8%", "paddingRight": "8%"},
-            className="d-flex align-items-center"
+            className="navbar-container px-0 d-flex align-items-center"
         ),
         expand="lg",
         fixed="top",

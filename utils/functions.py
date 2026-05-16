@@ -11,7 +11,7 @@ import os
 
 def load_content(path, lang="en"):
     localized = path.replace(".json", f".{lang}.json")
-    with open(localized) as f:
+    with open(localized, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def load_image(path, name='images'):

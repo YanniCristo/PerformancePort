@@ -1,0 +1,14 @@
+{
+  "METRIC_INFO": {
+    "Return":       "Total return for the period: (Ending Value / Starting Value) - 1",
+    "Sharpe Ratio": "Risk-adjusted return: (Average annual return) / Annual volatility",
+    "Volatility": "Standard deviation of daily returns, annualized \u00D7 \u221A252",
+    "Max Drawdown": "Maximum peak-to-trough decline: min((Value - Peak) / Peak)",
+    "Calmar Ratio": "Total return / |Max Drawdown|. Measures return per unit of drawdown risk"
+  },
+
+  "INTEST": {
+    "descr": "Strategy description",
+    "topMO": "Selections of the month"
+  }
+}

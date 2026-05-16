@@ -1,0 +1,15 @@
+{
+  "info": {
+    "title": "¿Qué es PerformancePort?",
+    "description": "El Proyecto PP es una estrategia cuantitativa de inversión propietaria diseñada para generar alfa consistente aprovechando las ineficiencias del mercado mediante Modelado Multifactorial y Paridad Dinámica de Riesgo. Mientras que las estrategias tradicionales de 'Buy & Hold' son vulnerables a caídas sistémicas, PP utiliza un algoritmo de cambio de régimen para maximizar los rendimientos ajustados al riesgo en distintos ciclos de mercado."
+  },
+
+  "cards": {
+    "1": ["/assets/contents/home/dollar.png", "Explora el valor de la [Inversión Independiente](/indinvest)"],
+    "2": ["/assets/contents/home/center.png", "Comprende cómo el [Horizonte Temporal](/timehor) y el perfil de riesgo del inversor determinan los modelos de asignación"],
+    "3": ["/assets/contents/home/line.png", "Descubre cómo los [Ciclos de Mercado](/market) impulsan la asignación de inversiones"],
+    "4": ["/assets/contents/home/bars.png", "Mantente informado con una concisa [Visión Económica General](/ecoview): observa de un vistazo qué impulsa nuestra asignación macro"],
+    "5": ["/assets/contents/home/user.png", "Descubre la [Fase Actual del Mercado](/marketphase) y cómo impulsa la [Asignación Macro de Activos](/macroall) en los distintos perfiles de riesgo"],
+    "6": ["/assets/contents/home/folder.png", "Accede a la [Asignación de los Principales Mercados Bursátiles](/equitystrat), construida a partir de una selección de los principales componentes de índices, ajustada dinámicamente cada mes y comparada con sus índices de referencia"]
+  }
+}
