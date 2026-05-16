@@ -24,7 +24,7 @@
 }
 
 .Cont-indi {
-    background-color: var(--bg-color);
+    background-color: var(--color-bg);
 }
 
 .Cont-indi h1 {
@@ -32,21 +32,25 @@
     margin: 0px 14%;
     padding: 12px;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--color-text-title);
 }
+
+.ParOne-Indi {
+    margin: 0px 14% !important;
+} 
 
 .Cont-indi p {
     font-size: clamp(14px, 1.5vw, 20px);
-    margin: 0px 14%;
+    margin: 0px 4%;
     padding: 20px;
     font-weight: 300;
     white-space: pre-line;
     text-align: justify;
+    color: var(--color-text-lighter);
 }
 
 .Paragr-Indi {
-    background-color: #4e7bbbad;
-    margin-bottom: 1%;
+    background-color: var(--color-bg-soft);
 }
 
 .Content-Indi {
@@ -54,10 +58,12 @@
     align-items: center;
     gap: 20px;
     padding: 1% 15%;
+    background-color: var(--color-bg-soft);
+    margin-top: 40px;
 }
 
 .LeftColumn-Indi {
-    background: #396bb1dc;
+    background: var(--color-primary);
     display: flex;
     border-radius: 12px;
     flex-direction: column;

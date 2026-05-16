@@ -1,6 +1,26 @@
 /* default (light) */
 :root {
-    --bg-color: #f5f5f5;
+    --color-primary: #1E2B56;
+    --color-primary-hover: #2C3D73;
+  
+    --color-secondary: #4B866D;
+    --color-secondary-hover: #5B9B81;
+
+    --color-text-title: #1E2B56;
+    --color-text-par: #2F3645;
+    --color-text-light: #5F6B7A;
+    --color-text-lighter: #738091;
+
+    --color-bg: #F6F8FB;
+    --color-bg-soft: #EEF3F1;
+    --color-bg-soft2: #D7E4DE;
+
+    --color-border: #D9E1EA;
+    --color-divider: #E7ECF2;
+
+    --color-link: #2F5AA8;
+
+    --bg-color: #FFFFFF;
     --text-color: #111;
     --accent-color: #3b82f6;
     --cards-color: #22559D;

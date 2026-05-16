@@ -80,10 +80,17 @@
 
 /* DROPDOWN DELLA LINGUA */
 
+.lang-dropdown .dropdown-menu {
+    transform: translateX(20px) translateY(1px) !important;
+    min-width: unset !important;
+    width: 90px;
+}
+
 .lang-dropdown-label {
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-left: 30px;
 }
 
 .lang-flag {
