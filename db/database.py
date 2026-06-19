@@ -61,6 +61,32 @@ def update_user_to_paid_by_stripe_customer(customer_id: str):
     finally:
         db.close()
 
+def update_user_password(user_id: int, old_password: str, new_password: str) -> dict:
+    """Verifica la password attuale e, se corretta, aggiorna con quella nuova."""
+    from db.models import User
+    from werkzeug.security import check_password_hash, generate_password_hash
+
+    db = SessionLocal()
+    try:
+        user = db.get(User, user_id)
+        if user is None:
+            logger.warning(f"update_user_password: utente {user_id} non trovato.")
+            return {"success": False, "error": "Utente non trovato."}
+
+        if not check_password_hash(user.password_hash, old_password):
+            return {"success": False, "error": "La password attuale non è corretta."}
+
+        user.password_hash = generate_password_hash(new_password)
+        db.commit()
+        logger.info(f"update_user_password: password aggiornata per utente {user_id}.")
+        return {"success": True}
+    except Exception:
+        db.rollback()
+        logger.exception(f"update_user_password: errore per utente {user_id}.")
+        return {"success": False, "error": "Errore interno. Riprova più tardi."}
+    finally:
+        db.close()
+
 # ── Payment helpers ───────────────────────────────────────────────────────
 
 def save_payment(session):
@@ -168,3 +194,51 @@ def get_payment_by_id(session_id: str):
         }
     finally:
         db.close()
+
+# ── User Info ───────────────────────────────────────────────────────
+
+def save_info(user_id: int, field: str, value):
+    """Salvo informazioni inserite dall'utente nella modal settings"""
+    from db.models import User
+
+    ALLOWED_FIELDS = {"name":     "name",
+                      "surname":  "surname",
+                      "country":  "country",
+                      "birthday": "birthday",
+                      "number":   "number",
+                      "gender":   "gender"}
+
+    if field not in ALLOWED_FIELDS:
+        logger.warning(f"save_info: campo '{field}' non consentito, operazione ignorata.")
+        return
+
+    db_column = ALLOWED_FIELDS[field]
+
+    # Normalizza stringa vuota → None
+    if isinstance(value, str) and value.strip() == "":
+        value = None
+
+    # birthday: converte la stringa ISO in datetime (colonna DateTime nel modello)
+    if field == "birthday" and value is not None:
+        from datetime import datetime
+        try:
+            value = datetime.strptime(value, "%Y-%m-%d")
+        except ValueError:
+            logger.warning(f"save_info: formato data non valido '{value}', operazione ignorata.")
+            return
+
+    db = SessionLocal()
+    try:
+        user = db.get(User, user_id)
+        if user is None:
+            logger.warning(f"save_info: utente {user_id} non trovato.")
+            return
+        setattr(user, db_column, value)
+        db.commit()
+        logger.info(f"save_info: utente {user_id} → {db_column} aggiornato.")
+    except Exception:
+        db.rollback()
+        logger.exception(f"save_info: errore aggiornando {db_column} per utente {user_id}.")
+    finally:
+        db.close()
+        

@@ -16,11 +16,6 @@ def eco_view(lang='en'):
             
             # SliderCards per selezionare trimestre
             card_slider(lang=lang),
-##            dcc.Dropdown(id='quarter-dd',
-##                         options=[{'label': t, 'value': t} for t in macro],
-##                         value=macro[0],
-##                         clearable=False,
-##                         className='quarter-dd'),
             
             html.Div(id='artic-ecoview')
             

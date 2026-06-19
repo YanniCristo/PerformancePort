@@ -362,3 +362,13 @@
     font-size: 13px;
     padding: 12px 4px;
 }
+
+.eqy-disclamer {
+    background-color: var(--bg-color);
+    font-size: 13px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+    text-align: justify;
+    white-space: pre-wrap;
+}

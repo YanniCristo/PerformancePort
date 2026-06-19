@@ -55,7 +55,7 @@ def send_verification_email_Brevo(to_email, token):
         sender=sender,
         subject="Verify your account",
         html_content=f"""
-        <p>Thanks your registration.</p>
+        <p>Thanks for your registration.</p>
         <p>Click the button to verify your account:</p>
         <a href="{verify_link}">Click Here</a>
         """
@@ -66,7 +66,92 @@ def send_verification_email_Brevo(to_email, token):
     except ApiException as e:
         print(f"Errore durante l'invio tramite Brevo: {e}")
 
+def send_reset_password_email_Brevo(to_email: str, token: str):
+    """Invia all'utente un link per reimpostare la password via Brevo."""
+ 
+    configuration = sib_api_v3_sdk.Configuration()
+    configuration.api_key['api-key'] = os.getenv("BREVO_API_KEY")
+ 
+    api_instance = sib_api_v3_sdk.TransactionalEmailsApi(
+        sib_api_v3_sdk.ApiClient(configuration))
+ 
+    BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:8015")
+    reset_link = f"{BASE_URL}/reset-password?token={token}"
+ 
+    sender = {"name": "PerformingPort", "email": "riera89@hotmail.it"}
+    to     = [{"email": to_email}]
+ 
+    send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
+        to=to,
+        sender=sender,
+        subject="Reset your password – PerformingPort",
+        html_content=f"""
+        <p>Hi,</p>
+        <p>We received a request to reset the password for your account.</p>
+        <p>Click the button below to choose a new password. This link is valid for <strong>1 hour</strong>.</p>
+        <p style="margin: 24px 0;">
+            <a href="{reset_link}"
+               style="background:#4a90d9;color:#fff;padding:12px 24px;
+                      border-radius:6px;text-decoration:none;font-weight:bold;">
+                Reset password
+            </a>
+        </p>
+        <p>If you did not request a password reset, you can safely ignore this email.</p>
+        <p style="color:#888;font-size:12px;">
+            Or copy this link into your browser:<br>{reset_link}
+        </p>
+        """
+    )
+ 
+    try:
+        api_instance.send_transac_email(send_smtp_email)
+    except ApiException as e:
+        print(f"Errore invio reset email via Brevo: {e}")
+
+def send_subscription_confirmation_email_Brevo(to_email: str):
+    """Invia all'utente una mail di conferma dopo che il pagamento premium è andato a buon fine."""
+ 
+    configuration = sib_api_v3_sdk.Configuration()
+    configuration.api_key['api-key'] = os.getenv("BREVO_API_KEY")
+ 
+    api_instance = sib_api_v3_sdk.TransactionalEmailsApi(
+        sib_api_v3_sdk.ApiClient(configuration))
+ 
+    BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:8015")
+ 
+    sender = {"name": "PerformingPort", "email": "riera89@hotmail.it"}
+    to     = [{"email": to_email}]
+
+    print(to_email)
+ 
+    send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
+        to=to,
+        sender=sender,
+        subject="Welcome to PerformingPort Premium! 🎉",
+        html_content=f"""
+        <p>Hi,</p>
+        <p>Your Premium subscription has been activated successfully. You now have full access to all PerformingPort features.</p>
+        <p style="margin: 24px 0;">
+            <a href="{BASE_URL}"
+               style="background:#4a90d9;color:#fff;padding:12px 24px;
+                      border-radius:6px;text-decoration:none;font-weight:bold;">
+                Go to PerformingPort
+            </a>
+        </p>
+        <p>Thank you for subscribing. If you have any questions, feel free to reach out.</p>
+        <p style="color:#888;font-size:12px;">
+            The PerformingPort Team
+        </p>
+        """
+    )
+ 
+    try:
+        api_instance.send_transac_email(send_smtp_email)
+    except ApiException as e:
+        print(f"Errore invio subscription confirmation email via Brevo: {e}")
+
 def get_strategy(strategy_id: str, start_date, end_date) -> pd.DataFrame:
+        
         start_str = pd.to_datetime(start_date).strftime("%Y-%m-%d")
         end_str = pd.to_datetime(end_date).strftime("%Y-%m-%d")
 
@@ -116,3 +201,17 @@ def get_strategy(strategy_id: str, start_date, end_date) -> pd.DataFrame:
 
         return df_strategy
 
+def get_macros() -> pd.DataFrame:
+        
+        with engine.connect() as conn:
+                result = conn.execute(text("SELECT macro_id, macro_name, date, value FROM eco_macro ORDER BY date"))        
+                df_long = pd.DataFrame(result.fetchall())
+
+        # Pivot: righe = date, colonne = macro_id
+        df_wide = df_long.pivot(index="date", columns="macro_id", values="value")
+
+        # Lista dei nomi delle variabili e indice associato
+        df_names = df_long.drop_duplicates("macro_id").set_index("macro_id")["macro_name"]
+
+        return df_wide, df_names
+        

@@ -1,0 +1,252 @@
+#settings-modal .modal-content {
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+#settings-modal .modal-header {
+    background-color: var(--color-bg);
+    border-bottom-color: var(--color-border);
+}
+
+.sm-header-row {
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sm-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e8f0fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.sm-email {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--color-text-title);
+}
+
+/* Badge PRO / FREE */
+.sm-badge {
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 1px 5px;
+}
+
+.sm-badge--pro {
+    color: #B8860B;
+    border: 1px solid #B8860B;
+}
+
+.sm-badge--free {
+    color: #6b7280;
+    border: 1px solid #6b7280;
+}
+
+/* Tabs */
+.sm-tabs {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+#settings-modal .nav-link {
+    color: #6b7280;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#settings-modal .nav-link:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-secondary);
+    border-color: transparent;
+}
+
+/* Tab selezionata (active) */
+#settings-modal .nav-link.active {
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border-color: #e5e7eb #e5e7eb var(--color-bg);
+}
+
+/* Altezza fissa del modal body: la modal non si ridimensiona al cambio tab */
+#settings-modal .modal-body {
+    height: 80vh;
+    background-color: var(--color-bg);
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Il pannello tab occupa tutto lo spazio rimanente e scrolla se necessario */
+#settings-modal .tab-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#settings-modal .tab-content label {
+    color: var(--color-text-title) !important;
+    font-weight: 700;
+}
+
+#settings-modal .tab-content .form-control {
+    color: var(--color-text-title) !important;
+}
+
+/* Contenuto di ogni tab */
+.sm-tab-body {
+    padding: 20px 12px 0 12px;
+}
+
+/* Titolo sezione dentro una tab */
+.sm-section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Riquadro piano abbonamento attuale */
+.sm-plan-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 4px;
+}
+
+.sm-plan-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.sm-plan-info {
+    margin: 0;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.sm-upgrade-btn {
+    flex-shrink: 0;
+}
+
+/* Riga generica label + azione */
+.sm-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.sm-password-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Separatore */
+.sm-divider {
+    margin: 16px 0;
+    border-color: #e5e7eb;
+}
+
+/* Tasto salva info (allineato a destra) */
+.sm-save-btn {
+    display: block;
+    margin-left: auto;
+}
+
+/* Riga tema */
+.sm-setting-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sm-setting-hint {
+    font-size: 12px;
+    color: #6b7280;
+    display: block;
+}
+
+/* Toggle tema */
+.sm-theme-toggle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sm-theme-switch {
+    margin: 0 !important;
+}
+
+.sm-theme-icon {
+    font-size: 16px;
+    color: #9ca3af;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.sm-theme-icon--active {
+    color: #1a56db;
+}
+
+/* Footer */
+.sm-footer-row {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Navbar topbar */
+.sm-topbar-pro {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+    padding: 2px 5px;
+    letter-spacing: 0.5px;
+}
+
+.sm-topbar-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+/* Password field row inline with button */
+.sm-field-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.sm-field-row .form-control {
+    flex: 1;
+    margin-bottom: 0 !important;
+}
+
+.sm-inline-edit-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}

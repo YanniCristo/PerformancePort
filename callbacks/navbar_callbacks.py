@@ -1,5 +1,7 @@
 from dash import Input, Output, State
 
+LANGS = ["us", "it", "en", "es", "fr", "de", "ru"]
+
 def register(app):
     
     @app.callback(
@@ -13,38 +15,21 @@ def register(app):
         return is_open
 
 
-
     @app.callback(
         Output("lang-store", "data"),
-        Input("lang-us", "n_clicks"),
-        Input("lang-it", "n_clicks"),
-        Input("lang-en", "n_clicks"),
-        Input("lang-es", "n_clicks"),
-        Input("lang-fr", "n_clicks"),
-        Input("lang-de", "n_clicks"),
-        Input("lang-ru", "n_clicks"),
+        [Input(f"lang-{lang}", "n_clicks") for lang in LANGS],
         State("lang-store", "data"),
         prevent_initial_call=True
     )
-    def update_lang(n_us, n_it, n_en, n_es, n_fr, n_de, n_ru,
-                    current_lang):
+    def update_lang(*args):
         from dash import ctx
-        if ctx.triggered_id == "lang-us":
-            return "us"
-        elif ctx.triggered_id == "lang-it":
-            return "it"
-        elif ctx.triggered_id == "lang-en":
-            return "en"
-        elif ctx.triggered_id == "lang-es":
-            return "es"
-        elif ctx.triggered_id == "lang-fr":
-            return "fr"
-        elif ctx.triggered_id == "lang-de":
-            return "de"
-        elif ctx.triggered_id == "lang-ru":
-            return "ru"
-        return current_lang
+        
+        current_lang = args[-1]
 
+        if ctx.triggered_id:
+            return ctx.triggered_id.split("-")[1]
+
+        return current_lang
 
 
     @app.callback(

@@ -1,7 +1,59 @@
 {
-  "parOne": {
-    "title": "",
-    "descr": ""
+  "btn-whatis": {
+    "Q_1": "What is PerformingPort?",
+    "A_1": "Answer1",
+    "Q_2": "How it works?",
+    "A_2": "Answer2",
+    "Q_3": "Who is PerformingPort for?",
+    "A_3": "Answer3"
+  },
+
+  "btn-equity": {
+    "Q_1": "What are the equities Strategies?",
+    "A_1": "Answer1",
+    "Q_2": "What is the frequency of strategies upload?",
+    "A_2": "Answer2",
+    "Q_3": "How a strategy shoul be implemented in real life?",
+    "A_3": "Answer3",
+    "Q_4": "Should I expect to replicate the exact performance?",
+    "A_4": "Answer4"
+  },
+  "btn-bond": {
+    "Q_1": "What are the bonds Strategies?",
+    "A_1": "Answer1",
+    "Q_2": "What is the frequency of strategies upload?",
+    "A_2": "Answer2",
+    "Q_3": "How a strategy shoul be implemented in real life?",
+    "A_3": "Answer3",
+    "Q_4": "Should I expect to replicate the exact performance?",
+    "A_4": "Answer4"
+  },
+  "btn-SAA": {
+    "Q_1": "What is the asset allocation?",
+    "A_1": "Answer1"
+  },
+  "btn-econ": {
+    "Q_1": "What is the Economico Overview?",
+    "A_1": "Answer1",
+    "Q_2": "How often the view is updated?",
+    "A_2": "Answer2"
+  },
+  "btn-phase": {
+    "Q_1": "What is the asset allocation?",
+    "A_1": "Answer1",
+    "Q_2": "How often the Market Phase is updated?",
+    "A_2": "Answer2"
+  },
+  "btn-macro": {
+    "Q_1": "What is the asset allocation?",
+    "A_1": "Answer1",
+    "Q_2": "How often the Market Phase is updated?",
+    "A_2": "Answer2"
+  },
+  "btn-faqs": {
+    "Q_1": "How much it will cost?",
+    "A_1": "Answer1",
+    "Q_2": "How can i unsubscribe from the service?",
+    "A_2": "Answer2"
   }
-  
 }

@@ -1,0 +1,12 @@
+{
+  "buttons": [
+    ["btn-whatis",  "PerformingPort?",   "🚀"],
+    ["btn-equity",  "Equity Strategy",   "🤖"],
+    ["btn-bond",    "Bond Strategy",     "⚖️"],
+    ["btn-SAA",     "Asset Allocation",  "📈"],
+    ["btn-econ",    "Economic Overview", "🔍"],
+    ["btn-phase",   "Market Phase",      "🧠"],
+    ["btn-macro",   "Macro Allocation",  "💡"],
+    ["btn-faqs",    "FAQs",              "❓"]
+  ]
+}

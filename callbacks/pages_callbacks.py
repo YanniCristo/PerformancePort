@@ -4,6 +4,7 @@ import importlib
 from db.database import get_payment_by_id
 from payments.stripe_service import retrieve_checkout_session
 from layouts.success import success_layout
+from layouts.reset_password_layout import reset_password_layout
 import stripe
 
 PAGE_REGISTRY = {
@@ -15,6 +16,7 @@ PAGE_REGISTRY = {
     "/marketphase": ("layouts.marketphase",       "marketphase"),
     "/macroall":    ("layouts.macroallocation",   "macroallocation"),
     "/ecoview":     ("layouts.eco_view",          "eco_view"),
+    "/subs":        ("layouts.subs_layout",       "subscriptions_layout"),
     "/contact":     ("layouts.contact_layout",    "contact_layout"),
 }
  
@@ -33,10 +35,12 @@ def register(app):
     )
     def display_page(pathname, search, lang):
         path = pathname.rstrip("/") or "/"
-        
+
+        # ── Layout Standard  ────────────────────────────────────────────────────
         if path in PAGE_REGISTRY:
             return _load_layout(path, lang)
 
+        # ── Pagamento Stripe  ────────────────────────────────────────────────────
         elif path == "/pagamento-completato" or path.endswith("/pagamento-completato"):
             # Estrai session_id dalla query string (?session_id=cs_xxx)
             session_id = ""
@@ -62,7 +66,19 @@ def register(app):
 
             # Caso 3: session_id mancante o errore
             return success_layout(lang=lang)
-        
+
+        # ── Reset password ────────────────────────────────────────────────────
+        elif path == "/reset-password":
+            # Estrai il token dalla query string (?token=xxx)
+            token = None
+            if search:
+                for part in search.lstrip("?").split("&"):
+                    if part.startswith("token="):
+                        token = part.split("=", 1)[1]
+                        break
+            return reset_password_layout(token=token, lang=lang)
+
+        # ── Homepage (fallback) ───────────────────────────────────────────────
         else:
             from layouts.home_layout import home_layout
             return home_layout(lang=lang)

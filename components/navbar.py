@@ -7,13 +7,13 @@ def navbar():
     return dbc.Navbar(
         dbc.Container(
             [
-                # Logo
+                # Scritta logo
                 dbc.NavbarBrand(html.Img(src="/assets/contents/general/logo.svg")),
 
-                # Hamburger toggle
+                # Hidden hamburger toggle
                 dbc.NavbarToggler(id="navbar-toggler"),
 
-                # Collapse con link e pulsante
+                # Collapse con link e pulsanti
                 dbc.Collapse(
                     dbc.Container(
                         [
@@ -34,12 +34,7 @@ def navbar():
 
                             # Sezione bottone a destra
                             html.Div(id="user-status"),
-##                            html.Button("🌙", id="theme-button", n_clicks=0, className="theme-toggle-btn"),
-
-                            html.Div([
-                                dd.lang_view()
-                            ], className="lang-switcher"),
-                            
+                            html.Div([dd.lang_view()], className="lang-switcher"),
                         ],
                         className="d-flex flex-column flex-lg-row align-items-lg-center w-100"
                     ),

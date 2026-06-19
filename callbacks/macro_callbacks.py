@@ -1,4 +1,4 @@
-from utils.functions import load_content, load_image, q_to_dt
+from utils.functions import load_content, load_image, q_to_dt, get_macros
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 from dash import Input, Output
@@ -55,12 +55,13 @@ def register(app):
     )
     def update_article(q, lang):
         lang = lang or 'en'
-        
         data = load_content(f'assets/contents/ecoview/articles/{q}/text.json', lang)
-        df = pd.read_excel(f'assets/contents/ecoview/articles/EcoData.xlsx', header=0, index_col=0)
 
-        names = df.iloc[0,:]
-        df.drop('Nome Grafico', inplace=True)
+        # Estraggo i dati macro dal database
+        df, names = get_macros()
+        df.index = pd.to_datetime(df.index)
+
+        # Aggiusto la lunghezza della serie a seconda del trimestre
         end = pd.to_datetime(q_to_dt(q))
         df = df[df.index <= end]
         

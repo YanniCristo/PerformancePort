@@ -1,0 +1,45 @@
+{
+  "header": {
+    "subtitle": "Choose your plan",
+    "title": "Simple, Transparent Pricing",
+    "description": "No hidden fees. Cancel anytime."
+  },
+
+  "plans": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "price": "15",
+      "cents": "99",
+      "period": "per month",
+      "features": ["Free Support 24/7", "Databases Download"],
+      "cta": "Buy",
+      "highlighted": false,
+      "buttID": "pay-btn-10"
+    },
+
+    {
+      "id": "standard",
+      "name": "Standard",
+      "price": "25",
+      "cents": "99",
+      "period": "per month",
+      "features": ["Free Support 24/7", "Databases Download", "Maintenance Email"],
+      "cta": "Buy",
+      "highlighted": true,
+      "buttID": "pay-btn-10"
+    },
+
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price": "35",
+      "cents": "99",
+      "period": "per month",
+      "features": ["Free Support 24/7", "Databases Download", "Maintenance Email", "Unlimited Traffic"],
+      "cta": "Buy",
+      "highlighted": false,
+      "buttID": "pay-btn-10"
+    }
+  ]
+}

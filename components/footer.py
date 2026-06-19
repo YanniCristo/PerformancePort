@@ -21,19 +21,17 @@ def footer():
                                     html.Br(),
                                     "Tel. +39 02 1234567",
                                     html.Br(),
-                                    "info@ppconsulting.it"
+                                    "info@PerformingPort.it"
                                 ]),
 
                                 html.Br(),
 
                                 html.Div([
-                                    html.A("LinkedIn", href="#", className="social"),
-                                    html.A("YouTube", href="#", className="social"),
                                     html.A("Facebook", href="#", className="social"),
                                     html.A("Instagram", href="#", className="social"),
                                 ])
 
-                            ], md=3),
+                            ], md=4),
 
                             # COLONNA PP
                             dbc.Col([
@@ -42,24 +40,8 @@ def footer():
                                 html.Ul([
                                     html.Li(html.A("About us", href="#")),
                                     html.Li(html.A("Contact", href="/contact")),
-                                    html.Li(html.A("Blog", href="#")),
-                                    html.Li(html.A("Events", href="#")),
-                                    html.Li(html.A("Work with us", href="#")),
                                 ])
-                            ], md=3),
-
-                            # SERVIZI
-                            dbc.Col([
-                                html.H5("CONSULTANCY", className="footer-title"),
-
-                                html.Ul([
-                                    html.Li(html.A("Financial Analisys", href="#")),
-                                    html.Li(html.A("Investments", href="#")),
-                                    html.Li(html.A("Financial plan", href="#")),
-                                    html.Li(html.A("Retirement planning", href="#")),
-                                ]),
-
-                            ], md=3),
+                            ], md=4),
 
                             # NEWSLETTER
                             dbc.Col([
@@ -78,14 +60,15 @@ def footer():
                                 ),
 
                                 html.Div([
-                                    dbc.Checkbox(id="privacy"),
-                                    html.Span(
-                                        " I have read the Privacy Policy and I consent "
-                                        " to receive the newsletter. "
-                                    )
+                                        dbc.Checkbox(id="privacy"),
+                                        html.Label(
+                                                "I have read the Privacy Policy and I consent to receive the newsletter.",
+                                                htmlFor="privacy",
+                                                className="privacy-label"
+                                        )
                                 ], className="privacy-text")
 
-                            ], md=3)
+                            ], md={"size": 3, "offset": 1})
 
                         ]),
 

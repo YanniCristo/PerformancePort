@@ -1,5 +1,6 @@
 from db.database import save_payment, event_exists, save_event, save_subscription, update_user_to_paid_by_id, set_stripe_customer_id, update_user_to_paid_by_stripe_customer
 import logging, os, stripe
+from utils.functions import send_subscription_confirmation_email_Brevo
 
 logger = logging.getLogger(__name__)
 
@@ -34,12 +35,25 @@ def handle_webhook(request):
     try:
         session = event["data"]["object"]
 
+        print(event_type)
+
         # Evento principale
         if event_type == "checkout.session.completed":
             if session.mode == "payment":
                 save_payment(session)
                 if session.client_reference_id:
                     update_user_to_paid_by_id(int(session.client_reference_id))
+
+                    #Invio Mail
+                    try:
+                        user_email = session.customer_details.email
+                        if user_email:
+                            send_subscription_confirmation_email_Brevo(user_email)
+                            logger.info(f"Mail di conferma subscription inviata a {user_email}")
+                        else:
+                            logger.warning(f"invoice.paid: nessuna email trovata per customer {customer_id}")
+                    except Exception as email_err:
+                        logger.error(f"Errore invio mail conferma subscription: {email_err}")
                     
             elif session.mode == "subscription":
                 if session.client_reference_id and session.customer:
@@ -65,10 +79,27 @@ def handle_webhook(request):
             save_subscription(session)  # status sarà "canceled"
 
         elif event_type == "invoice.paid":
+            
             # Rinnovo mensile riuscito
             customer_id = session.customer
             if customer_id:
                 update_user_to_paid_by_stripe_customer(customer_id)
+
+            # Invia mail di conferma subscription solo al primo pagamento andato a buon fine
+            # billing_reason == "subscription_create" identifica il primo invoice (non i rinnovi)
+            billing_reason = session.get("billing_reason", "")
+            if billing_reason == "subscription_create":
+                try:
+                    customer = stripe.Customer.retrieve(customer_id)
+                    user_email = customer.email
+                    if user_email:
+                        send_subscription_confirmation_email_Brevo(user_email)
+                        logger.info(f"Mail di conferma subscription inviata a {user_email}")
+                    else:
+                        logger.warning(f"invoice.paid: nessuna email trovata per customer {customer_id}")
+                except Exception as email_err:
+                    logger.error(f"Errore invio mail conferma subscription: {email_err}")
+
             logger.info(f"Fattura pagata: {session.id}")
 
         elif event_type == "invoice.payment_failed":

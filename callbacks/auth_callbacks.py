@@ -22,6 +22,8 @@ def register(app):
                     children=[
                         dbc.DropdownMenuItem(f"{email}", header=True),
                         dbc.DropdownMenuItem(divider=True),
+                        dbc.DropdownMenuItem("Settings", id="open-settings-btn", n_clicks=0),
+                        dbc.DropdownMenuItem(divider=True),
                         dbc.DropdownMenuItem("Logout", href="/logout", external_link=True),
                     ],
                     color="primary",
@@ -39,7 +41,7 @@ def register(app):
                 children.append(
                     dbc.Button(
                         ["Upgrade now", html.Span("→", className="cta-icon")],
-                        id="pay-btn-10", color="primary",
+                        href="/subs", external_link=True, color="primary", # id="pay-btn-10",
                         className="cta-dg cta-dg-primary-white cta-dg-with-icon"
                     )
                 )
@@ -71,3 +73,17 @@ def register(app):
             ["Start now", html.Span("→", className="cta-icon")],
             id="start-btn", color="primary",
             className="cta-dg cta-dg-primary-white cta-dg-with-icon")
+
+    # ---------------------------------------------
+    # Imposto lo stato dell'utente
+    @app.callback(
+        Output("user-tier", "data"),
+        Input("url", "pathname"),
+        Input("auth-event", "data")
+    )
+    def update_user_tier(_path, _event):
+        if not current_user.is_authenticated:
+            return "anonymous"
+        if not current_user.is_paid:
+            return "registered"
+        return "pro"

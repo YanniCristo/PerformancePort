@@ -14,13 +14,6 @@ def signup_modal():
                 ),
                 
                 dbc.Input(
-                    id="signup-username",
-                    placeholder="Username",
-                    type="text",
-                    className="mb-3"
-                ),
-                
-                dbc.Input(
                     id="signup-password",
                     placeholder="Password",
                     type="password",

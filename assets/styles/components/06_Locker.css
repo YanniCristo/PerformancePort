@@ -1,0 +1,25 @@
+.lockable-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.locked-content-inner {
+    transition: filter 0.3s ease;  /* opzionale, animazione smooth */
+}
+
+.lock-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+}
+
+.lock-overlay-inner {
+    text-align: center;
+    color: white;
+}

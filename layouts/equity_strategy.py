@@ -1,12 +1,16 @@
 from utils.functions import load_content
 from components.strat_slider import card_slider
+
+from components.locked_section import locked_section
 from components.buttons import timeSelectbtn
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 from utils.data import data
+from utils.text_parser import parse_rich_text
 
 def equity_strategy(lang='en'):
     intest = load_content(f"assets/contents/equitystrategy/Info.json", lang)['INTEST']
+    discla = load_content(f"assets/contents/equitystrategy/Info.json", lang)['DISCLAMER']
 
     strategies = load_content('assets/contents/equitystrategy/Strategies.json', lang=lang)
     first_key = list(strategies.keys())[0]
@@ -42,6 +46,8 @@ def equity_strategy(lang='en'):
             html.Button("→", id="holdings-next-btn", className="holdings-nav-btn", n_clicks=0),
         ], className="holdings-nav-controls"),
     ], className="selection-box-header")
+
+    disclamer = html.Div(parse_rich_text(discla), className="eqy-disclamer")
     
 
     return html.Div([
@@ -61,10 +67,14 @@ def equity_strategy(lang='en'):
             html.Div([
 
                 # TOP PICKS
-                html.Div([
-                    selection_header,
-                    html.Div(id="selection-row", className="selection-row"),
-                ], className="selection-box"),
+                locked_section(
+                    content=html.Div([
+                        selection_header,
+                        html.Div(id="selection-row", className="selection-row"),
+                    ], className="selection-box"),
+                    required_tier="pro",
+                    section_id="top-picks-lock"
+                ),
                 
                 # GRAFICO
                 html.Div([
@@ -89,5 +99,6 @@ def equity_strategy(lang='en'):
 
         ], className='Cont-eqystr'),
 
-        html.Div(" ", className="Dist-eqystr"),  
+        html.Div(" ", className="Dist-eqystr"),
+        disclamer,
     ])

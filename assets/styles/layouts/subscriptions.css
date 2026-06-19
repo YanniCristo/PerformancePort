@@ -1,0 +1,260 @@
+/* ============================================================
+   SUBSCRIPTIONS PAGE
+   ============================================================ */
+
+.subs-content {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* ---- Header ---- */
+.subs-header {
+    text-align: center;
+    padding: 48px 20px 56px;
+}
+
+.subs-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    color: var(--accent-color, #6c8ebf);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.subs-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--text-color, #1a1a2e);
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+}
+
+.subs-description {
+    font-size: 1rem;
+    color: var(--text-muted, #666);
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* ---- Cards wrapper ---- */
+.subs-cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 0 24px;
+}
+
+/* ---- Single card ---- */
+.subs-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 22px;
+    width: 230px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 32px;
+}
+
+.subs-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+}
+
+/* Card highlighted: leggermente più grande e con ombra più marcata */
+.subs-card--highlighted {
+    transform: scale(1.05);
+    box-shadow: 0 16px 52px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+}
+
+.subs-card--highlighted:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+/* ---- Badge "Most Popular" ---- */
+.subs-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    z-index: 5;
+}
+
+/* ---- Piano nome ---- */
+.subs-plan-name {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 28px 16px 0;
+    color: #1a1a2e;
+    z-index: 1;
+}
+
+/* ---- Gradiente area features ---- */
+.subs-card-gradient {
+    width: 85%;
+    border-radius: 16px;
+    margin: 18px auto 0;
+    padding: 24px 18px;
+    flex: 1;
+}
+
+/* Basic: teal → cyan */
+.subs-card-gradient--basic {
+    background: linear-gradient(160deg, #00b4d8 0%, #48cae4 50%, #90e0ef 100%);
+}
+
+/* Standard: purple → blue */
+.subs-card-gradient--standard {
+    background: linear-gradient(160deg, #7b2ff7 0%, #6a60f0 50%, #5390d9 100%);
+}
+
+/* Premium: coral → orange → yellow */
+.subs-card-gradient--premium {
+    background: linear-gradient(160deg, #f72585 0%, #f4845f 50%, #ffd166 100%);
+}
+
+/* ---- Features list ---- */
+.subs-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subs-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.3;
+}
+
+.subs-feature-check {
+    font-size: 0.85rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+/* ---- Prezzo ---- */
+.subs-price-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.subs-currency {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.subs-price-amount {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #1a1a2e;
+    line-height: 1;
+}
+
+.subs-price-cents {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.subs-period {
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ---- CTA Button ---- */
+.subs-cta-btn {
+    margin-top: 40px;
+    padding: 12px 48px;
+    border: none;
+    border-radius: 40px;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.subs-cta-btn:hover {
+    background: #2d2d5e;
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+.subs-cta-btn:active {
+    transform: scale(0.98);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .subs-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .subs-card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .subs-card--highlighted {
+        transform: scale(1);
+    }
+
+    .subs-card--highlighted:hover {
+        transform: translateY(-8px);
+    }
+}

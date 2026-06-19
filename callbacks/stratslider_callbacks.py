@@ -3,12 +3,18 @@ from dash import Input, Output, State, ALL, ctx, html
 from utils.functions import load_content
 from db.query import get_rebalancing_dates, get_holdings_at_date
 from components.strat_holding import holdings_table
+from flask_login import current_user
 
 cards_DICT = load_content('assets/contents/equitystrategy/Strategies.json')
 cards = list(cards_DICT.values())
         
 CARD_WIDTH = 240
 GAP = 12
+
+# Dati placeholder per utenti non autorizzati
+PLACEHOLDER_HOLDINGS = [
+    {"ticker": f"Ticker{i}", "name":"Asset{i}", "buy_price": 100.0, "weight": round(10.0, 1)}
+    for i in range(1, 11)]
 
 def register(app):
 
@@ -116,16 +122,20 @@ def register(app):
         Output("holdings-next-btn", "disabled"),
         Input("selected-strategy", "data"),
         Input("holdings-date-index", "data"),
+        State("user-tier", "data")
     )
-    def update_holdings(strategy_tag, date_idx):
+    def update_holdings(strategy_tag, date_idx, user_tier):
+
+        # ── GUARDIA SICUREZZA ──────────────────────────────────────────
+        if not current_user.is_authenticated or not current_user.is_paid:
+            table = holdings_table(PLACEHOLDER_HOLDINGS)
+            return (table, "-", True, True)   # dati finti, frecce disabilitate
+        
         dates = get_rebalancing_dates(strategy_tag)
- 
+
         if not dates:
-            return (
-                html.Div("-", className="holdings-empty"),
-                "—",
-                True,
-                True)
+            return (html.Div("-", className="holdings-empty"),
+                    "—", True, True)
  
         date_idx = min(date_idx or 0, len(dates) - 1)
         selected_date = dates[date_idx]

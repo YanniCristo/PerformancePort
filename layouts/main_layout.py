@@ -1,5 +1,6 @@
 from components.signup_modal import signup_modal
 from components.login_modal import login_modal
+from components.settings_modal import settings_modal
 from components.navbar import navbar
 from components.footer import footer
 
@@ -20,17 +21,28 @@ def main_layout():
             # Store per forzare refresh auth state dopo login
             dcc.Store(id="auth-event", data=0),
 
+            # Store per tipo di utente (anonymous|registered|pro)
+            dcc.Store(id="user-tier", data="anonymous"),
+
             # Redirect pagamenti Stripe
             dcc.Location(id="redirect", refresh=True),
+
+            # Store per il checkout Stripe
+            dcc.Store(id="checkout-session", data={}),
+
+            # Store per il trigger del menù settings
+            dcc.Store(id="settings-trigger", data=0),
+
+            # Store per lo stile del sito
+            dcc.Store(id="theme-store", data="light"),
             
             navbar(),
             html.Div(id="page-content"),
+            footer(),
 
+            # Modals
             login_modal(),
+            settings_modal(),
             signup_modal(),
-            dcc.Store(id="checkout-session", data={}),
-            dcc.Store(id="theme-store", data="light"),
-
-            footer()
         ]
     )

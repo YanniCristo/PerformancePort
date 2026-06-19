@@ -12,47 +12,52 @@ Base = declarative_base()
 class User(UserMixin, Base):
     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True)
-    email = Column(String, unique=True, index=True, nullable=False)
-    username = Column(String, unique=True, nullable=False)
-    password_hash = Column(String, nullable=False)
-    signin_date = Column(DateTime, default=lambda: datetime.now(timezone.utc))
-    is_verified = Column(Boolean, default=False)
-    is_paid = Column(Boolean, default=False)
-    stripe_customer_id = Column(String, unique=True)
-    verification_token = Column(String, nullable=True)
+    id                  = Column(Integer, primary_key=True)
+    verification_token  = Column(String, nullable=True)
+    reset_password_token = Column(String, nullable=True)
+    reset_token_expiry   = Column(DateTime, nullable=True)
+    stripe_customer_id  = Column(String, unique=True)
+    is_verified         = Column(Boolean, default=False)
+    is_paid             = Column(Boolean, default=False)
+    expire_date         = Column(DateTime, nullable=True)
+    
+    email               = Column(String, unique=True, index=True, nullable=False)
+    password_hash       = Column(String, nullable=False)
+    signin_date         = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    name                = Column(String, nullable=True)
+    surname             = Column(String, nullable=True)
+    country             = Column(String, nullable=True)
+    number              = Column(String, nullable=True)
+    birthday            = Column(DateTime, nullable=True)
+    gender              = Column(String, nullable=True)
     
 class Payment(Base):
     __tablename__ = "payments"
 
-    username = Column(String, unique=False, nullable=True)
-    id = Column(String, primary_key=True)          # Stripe checkout session ID
-    amount = Column(Integer, nullable=False)
-    status = Column(String, nullable=False)
-    email = Column(String)
-    payment_intent = Column(String)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
-
+    id              = Column(String, primary_key=True) # Stripe checkout session ID
+    amount          = Column(Integer, nullable=False)
+    status          = Column(String, nullable=False)
+    email           = Column(String)
+    payment_intent  = Column(String)
+    created_at      = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 class StripeEvent(Base):
     __tablename__ = "stripe_events"
 
-    event_id = Column(String, primary_key=True)
-    type = Column(String)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
-
+    event_id    = Column(String, primary_key=True)
+    type        = Column(String)
+    created_at  = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 class Subscription(Base):
     __tablename__ = "subscriptions"
 
-    username = Column(String, unique=False, nullable=True)
-    subscription_id = Column(String, primary_key=True)
-    customer_id = Column(String, nullable=False)
-    email = Column(String)
-    status = Column(String, nullable=False)
-    price_id = Column(String)
-    current_period_end = Column(Integer) # unix timestamp
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    email               = Column(String)
+    subscription_id     = Column(String, primary_key=True)
+    customer_id         = Column(String, nullable=False)
+    status              = Column(String, nullable=False)
+    price_id            = Column(String)
+    current_period_end  = Column(Integer) # unix timestamp
+    created_at          = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -99,7 +104,7 @@ class StrategyBenchmark(Base):
     
 class StrategyHolding(Base):
     """
-    Composizione di ogni strategia nel tempo (Slowly Changing Dimension Type 2).
+    Composizione di ogni strategia nel tempo.
     Ogni ribilanciamento chiude i record correnti (valid_to = data ribilanciamento)
     e apre nuovi record (valid_from = data ribilanciamento, valid_to = None).
     valid_to = None indica la composizione attualmente in vigore.
@@ -110,10 +115,24 @@ class StrategyHolding(Base):
     id             = Column(Integer, primary_key=True, autoincrement=True)
     strategy_id    = Column(String, nullable=False, index=True)
     ticker         = Column(String, nullable=False)
-    name           = Column(String)                 # nome leggibile, es. "Stellantis NV"
-    weight         = Column(Float)                  # peso percentuale nel portafoglio
-    valid_from     = Column(Date,   nullable=False) # inizio validità composizione
-    valid_to       = Column(Date,   nullable=True)  # fine validità; NULL = attuale
-    BuyPrice       = Column(Float,   nullable=False)# 
-    SellPrice      = Column(Float,   nullable=True) # 
-    
+    name           = Column(String) # nome leggibile, es. "Stellantis NV"
+    weight         = Column(Float) # peso percentuale nel portafoglio
+    valid_from     = Column(Date, nullable=False) # inizio validità composizione
+    valid_to       = Column(Date, nullable=True) # fine validità; NULL = attuale
+    BuyPrice       = Column(Float, nullable=False)
+    SellPrice      = Column(Float, nullable=True)
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ── Eco Macro data ────────────────────────────────────────────────────────────
+
+class EcoMacroData(Base):
+    """Serie storiche dei dati macro"""
+    __tablename__ = "eco_macro"
+    __table_args__ = (UniqueConstraint("macro_id", "date"),)
+ 
+    id          = Column(Integer, primary_key=True, autoincrement=True)
+    macro_id    = Column(String, nullable=False, index=True)
+    macro_name  = Column(String, nullable=False)
+    date        = Column(Date,   nullable=False, index=True)
+    value       = Column(Float,  nullable=False)
